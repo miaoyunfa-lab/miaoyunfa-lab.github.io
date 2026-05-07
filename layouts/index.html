@@ -6,9 +6,9 @@
     <p class="lead">{{ site.Params.hero_text }}</p>
     <p class="lead">{{ site.Params.hero_subtext }}</p>
     <div class="button-row" aria-label="Primary pages">
-      <a class="button" href="{{ "/research/" | relURL }}">Research</a>
-      <a class="button button-secondary" href="{{ "/people/" | relURL }}">People</a>
-      <a class="button button-secondary" href="{{ "/publications/" | relURL }}">Publications</a>
+      <a class="button" href="{{ "/research/" | relURL }}">研究方向</a>
+      <a class="button button-secondary" href="{{ "/people/" | relURL }}">课题组成员</a>
+      <a class="button button-secondary" href="{{ "/publications/" | relURL }}">论文发表</a>
     </div>
   </div>
 
@@ -26,8 +26,8 @@
       </div>
     </div>
     <p class="structure-caption">
-      <strong>SrTiO<sub>3</sub> perovskite</strong>
-      <span>Cubic ABO<sub>3</sub> structure.</span>
+      <strong>SrTiO<sub>3</sub> 钙钛矿</strong>
+      <span>立方 ABO<sub>3</sub> 结构。</span>
     </p>
   </div>
 </section> -->
@@ -45,9 +45,9 @@
     </p>
 
     <div class="button-row" aria-label="Primary pages">
-      <a class="button" href="{{ "/research/" | relURL }}">Research</a>
-      <a class="button button-secondary" href="{{ "/people/" | relURL }}">People</a>
-      <a class="button button-secondary" href="{{ "/publications/" | relURL }}">Publications</a>
+      <a class="button" href="{{ "/research/" | relURL }}">研究方向</a>
+      <a class="button button-secondary" href="{{ "/people/" | relURL }}">课题组成员</a>
+      <a class="button button-secondary" href="{{ "/publications/" | relURL }}">论文发表</a>
     </div>
   </div>
 
@@ -65,8 +65,8 @@
       </div>
     </div>
     <p class="structure-caption">
-      <strong>SrTiO<sub>3</sub> perovskite</strong>
-      <span>Cubic ABO<sub>3</sub> structure.</span>
+      <strong>SrTiO<sub>3</sub> 钙钛矿</strong>
+      <span>立方 ABO<sub>3</sub> 结构。</span>
     </p>
   </div>
 </section>
@@ -76,7 +76,7 @@
   <article class="research-group-card">
     <div class="research-group-heading">
       <h2>{{ .title }}</h2>
-      <a href="{{ "/research/" | relURL }}">Learn more</a>
+      <a href="{{ "/research/" | relURL }}">了解更多</a>
     </div>
 
     <div class="research-topic-grid">
@@ -93,26 +93,26 @@
 
 <section class="grid two-up home-sections">
   <section class="panel">
-    <h2>About the lab</h2>
+    <h2>关于我们</h2>
     <p>
-      This starter site is ready for a research group to customize with its own mission, methods, people, projects, and selected outputs.
+      欢迎访问课题组主页。请在此处填写课题组的简介、研究方向和代表性成果。
     </p>
   </section>
   <section class="panel link-panel">
-    <h2>Explore</h2>
+    <h2>快速导航</h2>
     <ul class="section-links">
-      <li><a href="{{ "/research/" | relURL }}">Research directions</a></li>
-      <li><a href="{{ "/people/" | relURL }}">Group members</a></li>
-      <li><a href="{{ "/publications/" | relURL }}">Publications</a></li>
-      <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
+      <li><a href="{{ "/research/" | relURL }}">研究方向</a></li>
+      <li><a href="{{ "/people/" | relURL }}">课题组成员</a></li>
+      <li><a href="{{ "/publications/" | relURL }}">论文发表</a></li>
+      <li><a href="{{ "/contact/" | relURL }}">联系我们</a></li>
     </ul>
   </section>
 </section>
 
 <section class="publication-preview">
   <div class="section-heading">
-    <h2>Latest Publications</h2>
-    <a href="{{ "/publications/" | relURL }}">View all</a>
+    <h2>最新论文</h2>
+    <a href="{{ "/publications/" | relURL }}">查看全部</a>
   </div>
   <ul class="publication-list">
     {{ range first 3 site.Data.publications }}
@@ -123,7 +123,7 @@
       {{ if .doi_url }}<a href="{{ .doi_url }}" target="_blank" rel="noopener">DOI</a>{{ else if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">Link</a>{{ end }}
     </li>
     {{ else }}
-    <li>Publications will appear here soon.</li>
+    <li>论文列表即将更新。</li>
     {{ end }}
   </ul>
 </section>
