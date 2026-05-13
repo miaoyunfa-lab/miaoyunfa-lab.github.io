@@ -63,7 +63,7 @@ a {
 
 .site-brand img {
   display: block;
-  width: min(260px, 48vw);
+  width: min(400px, 55vw);
   height: auto;
 }
 
