@@ -1,29 +1,8 @@
-# Replace these examples with publications from your group bibliography.
-- title: "A reusable workflow for open academic websites"
-  authors: "Alex Rivera, Morgan Lee, Taylor Chen"
-  journal: "Journal of Open Research Infrastructure"
-  year: 2026
-  volume: "12"
-  number: "1"
-  pages: "15-28"
-  doi: "10.0000/example.2026.001"
-  doi_url: "https://doi.org/10.0000/example.2026.001"
-  sort_date: "2026-01-15"
-- title: "Teaching reproducible computational research with lightweight templates"
-  authors: "Morgan Lee, Priya Patel, Alex Rivera"
-  journal: "Computational Education Reports"
-  year: 2025
-  volume: "8"
-  pages: "101-116"
-  doi: "10.0000/example.2025.014"
-  doi_url: "https://doi.org/10.0000/example.2025.014"
-  sort_date: "2025-09-03"
-- title: "Data-driven discovery in a model materials dataset"
-  authors: "Taylor Chen, Jordan Kim, Priya Patel"
-  journal: "Example Materials Letters"
-  year: 2025
-  volume: "34"
-  pages: "220-227"
-  doi: "10.0000/example.2025.008"
-  doi_url: "https://doi.org/10.0000/example.2025.008"
-  sort_date: "2025-04-22"
+# 课题组论文列表
+- title: "A new biologic paleoaltimetry indicating Late Miocene rapid uplift of northern Tibet Plateau"
+  authors: "Miao Y*, Fang X*, Sun J, et al."
+  journal: "Science"
+  year: 2022
+  doi: "10.1126/science.abo2475"
+  doi_url: "https://doi.org/10.1126/science.abo2475"
+  sort_date: "2022-01-01"
