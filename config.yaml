@@ -6,9 +6,9 @@ params:
   lab_name: "课题组名称"
   tagline: "欢迎访问我们的学术主页"
   pi_name: "苗运法"
-  affiliation: "中国科学院 | 某研究所"
+  affiliation: "中国科学院西北生态环境资源研究院"
   email: "contact@example.edu"
-  address: "中国北京市"
+  address: "中国甘肃省兰州市"
   hero_text: "一个面向现代学术研究团队的网站模板。"
   hero_subtext: "用来展示团队成员、研究方向、新闻动态、论文发表和联系方式。"
   research_groups:

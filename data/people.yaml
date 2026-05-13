@@ -1,11 +1,26 @@
 - name: "苗运法"
-  role: "课题组PI"
+  role: "研究员，沙漠与沙漠化研究室主任"
   group: "pi"
-  time: "2024-present"
+  time: "2018-至今"
   email: "contact@example.edu"
   website: "https://example.edu"
   photo: "/images/people/miaoyunfa.jpg"
-  bio: "课题组负责人，主要从事孢粉学与古环境重建研究。"
+  bio: >
+    男，1978年生，江苏人。主要从事古生态与干旱环境演化研究。<br><br>
+    <strong>教育背景</strong><br>
+    1997.09–2007.06，兰州大学，自然地理学，学士、硕-博士<br><br>
+    <strong>工作经历</strong><br>
+    2007.07–2010.06，中国科学院青藏高原研究所，博士后<br>
+    2010.06–2010.12，中国科学院寒区旱区环境与工程研究所，助理研究员<br>
+    2011.01–2017.12，中国科学院寒区旱区环境与工程研究所，副研究员<br>
+    2018.01–至今，中国科学院西北生态环境资源研究院，研究员<br><br>
+    <strong>获奖及荣誉</strong><br>
+    国家杰出青年科学基金获得者<br>
+    国家高层次人才特殊支持计划青年拔尖人才<br>
+    中国科学院青年创新促进会优秀会员<br>
+    国家重点研发计划项目负责人<br>
+    甘肃省领军人才<br>
+    自然资源部科技二等奖
 - name: "Morgan Lee"
   role: "Postdoctoral Researcher"
   group: "postdoc"
