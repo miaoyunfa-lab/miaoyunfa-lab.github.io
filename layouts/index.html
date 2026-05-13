@@ -1,36 +1,4 @@
 {{ define "main" }}
-<!-- <section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">{{ site.Params.affiliation }}</p>
-    <h1>{{ site.Params.lab_name }}</h1>
-    <p class="lead">{{ site.Params.hero_text }}</p>
-    <p class="lead">{{ site.Params.hero_subtext }}</p>
-    <div class="button-row" aria-label="Primary pages">
-      <a class="button" href="{{ "/research/" | relURL }}">研究方向</a>
-      <a class="button button-secondary" href="{{ "/people/" | relURL }}">课题组成员</a>
-      <a class="button button-secondary" href="{{ "/publications/" | relURL }}">论文发表</a>
-    </div>
-  </div>
-
-  <div class="hero-visual">
-    <div id="perovskite-viewer" class="crystal-viewer" aria-label="Rotating cubic PbTiO3 perovskite structure">
-      <div class="viewer-fallback" data-viewer-fallback aria-hidden="true">
-        <span class="atom atom-sr atom-corner-1"></span>
-        <span class="atom atom-sr atom-corner-2"></span>
-        <span class="atom atom-sr atom-corner-3"></span>
-        <span class="atom atom-sr atom-corner-4"></span>
-        <span class="atom atom-ti atom-center"></span>
-        <span class="atom atom-o atom-face-1"></span>
-        <span class="atom atom-o atom-face-2"></span>
-        <span class="atom atom-o atom-face-3"></span>
-      </div>
-    </div>
-    <p class="structure-caption">
-      <strong>SrTiO<sub>3</sub> 钙钛矿</strong>
-      <span>立方 ABO<sub>3</sub> 结构。</span>
-    </p>
-  </div>
-</section> -->
 <section class="hero">
   <div class="hero-copy">
     <p class="eyebrow">{{ site.Params.affiliation }}</p>
@@ -52,21 +20,10 @@
   </div>
 
   <div class="hero-visual">
-    <div id="perovskite-viewer" class="crystal-viewer" aria-label="Rotating cubic PbTiO3 perovskite structure">
-      <div class="viewer-fallback" data-viewer-fallback aria-hidden="true">
-        <span class="atom atom-sr atom-corner-1"></span>
-        <span class="atom atom-sr atom-corner-2"></span>
-        <span class="atom atom-sr atom-corner-3"></span>
-        <span class="atom atom-sr atom-corner-4"></span>
-        <span class="atom atom-ti atom-center"></span>
-        <span class="atom atom-o atom-face-1"></span>
-        <span class="atom atom-o atom-face-2"></span>
-        <span class="atom atom-o atom-face-3"></span>
-      </div>
-    </div>
+    <img class="hero-image" src="{{ "images/research/hero.jpg" | relURL }}" alt="课题组研究示意图">
     <p class="structure-caption">
-      <strong>SrTiO<sub>3</sub> 钙钛矿</strong>
-      <span>立方 ABO<sub>3</sub> 结构。</span>
+      <strong>孢粉学与生态环境研究</strong>
+      <span>古生态与干旱环境演化</span>
     </p>
   </div>
 </section>
@@ -127,108 +84,4 @@
     {{ end }}
   </ul>
 </section>
-
-<script src="https://3Dmol.org/build/3Dmol-min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const viewerElement = document.getElementById("perovskite-viewer");
-  if (!viewerElement || !window.$3Dmol) {
-    return;
-  }
-
-  const fallback = viewerElement.querySelector("[data-viewer-fallback]");
-  if (fallback) {
-    fallback.remove();
-  }
-
-  const viewer = $3Dmol.createViewer("perovskite-viewer", {
-    backgroundColor: "#f6f8f5"
-  });
-
-  const a = 3.905;
-  const cells = 2;
-  const atoms = [];
-  const seen = new Set();
-
-  function addAtom(element, x, y, z) {
-    const key = `${element}:${x.toFixed(3)}:${y.toFixed(3)}:${z.toFixed(3)}`;
-    if (seen.has(key)) {
-      return;
-    }
-    seen.add(key);
-    atoms.push(`${element} ${x.toFixed(3)} ${y.toFixed(3)} ${z.toFixed(3)}`);
-  }
-
-  for (let i = 0; i <= cells; i++) {
-    for (let j = 0; j <= cells; j++) {
-      for (let k = 0; k <= cells; k++) {
-        addAtom("Sr", i * a, j * a, k * a);
-      }
-    }
-  }
-
-  for (let i = 0; i < cells; i++) {
-    for (let j = 0; j < cells; j++) {
-      for (let k = 0; k < cells; k++) {
-        addAtom("Ti", (i + 0.5) * a, (j + 0.5) * a, (k + 0.5) * a);
-        addAtom("O", (i + 0.5) * a, (j + 0.5) * a, k * a);
-        addAtom("O", (i + 0.5) * a, j * a, (k + 0.5) * a);
-        addAtom("O", i * a, (j + 0.5) * a, (k + 0.5) * a);
-      }
-    }
-  }
-
-  const xyz = [atoms.length, "SrTiO3 cubic perovskite supercell", ...atoms].join("\n");
-
-  viewer.addModel(xyz, "xyz");
-
-  viewer.setStyle({elem: "Sr"}, {
-    sphere: {radius: 0.52, color: "#2f9e44"}
-  });
-
-  viewer.setStyle({elem: "Ti"}, {
-    sphere: {radius: 0.34, color: "#2563eb"}
-  });
-
-  viewer.setStyle({elem: "O"}, {
-    sphere: {radius: 0.28, color: "#dc2626"}
-  });
-
-  const length = a * cells;
-  const edgeColor = "#94a3b8";
-  const corners = [
-    [0, 0, 0], [length, 0, 0], [0, length, 0], [0, 0, length],
-    [length, length, 0], [length, 0, length], [0, length, length],
-    [length, length, length]
-  ];
-  const edges = [
-    [0, 1], [0, 2], [0, 3], [1, 4], [1, 5], [2, 4],
-    [2, 6], [3, 5], [3, 6], [4, 7], [5, 7], [6, 7]
-  ];
-
-  edges.forEach(function ([startIndex, endIndex]) {
-    const start = corners[startIndex];
-    const end = corners[endIndex];
-    viewer.addLine({
-      start: {x: start[0], y: start[1], z: start[2]},
-      end: {x: end[0], y: end[1], z: end[2]},
-      color: edgeColor,
-      linewidth: 2
-    });
-  });
-
-  viewer.zoomTo();
-  viewer.rotate(18, "x");
-  viewer.rotate(28, "y");
-  viewer.render();
-
-  function animate() {
-    viewer.rotate(0.45, "y");
-    viewer.render();
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-});
-</script>
 {{ end }}
