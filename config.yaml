@@ -5,7 +5,7 @@ summaryLength: 30
 params:
   lab_name: "课题组名称"
   tagline: "欢迎访问我们的学术主页"
-  pi_name: "PI 姓名"
+  pi_name: "苗运法"
   affiliation: "中国科学院 | 某研究所"
   email: "contact@example.edu"
   address: "中国北京市"
