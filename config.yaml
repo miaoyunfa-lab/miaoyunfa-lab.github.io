@@ -1,9 +1,9 @@
 baseURL: "https://miaoyunfa-lab.github.io/"
 languageCode: "zh-cn"
-title: "课题组名称"
+title: "孢粉学与生态环境研究组"
 summaryLength: 30
 params:
-  lab_name: "课题组名称"
+  lab_name: "孢粉学与生态环境研究组"
   tagline: "欢迎访问我们的学术主页"
   pi_name: "苗运法"
   affiliation: "中国科学院西北生态环境资源研究院"
