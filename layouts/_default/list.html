@@ -6,16 +6,16 @@
 
 {{ if eq .Section "people" }}
 {{ $filters := slice
-  (dict "key" "pi" "label" "PI")
-  (dict "key" "postdoc" "label" "Postdoc")
-  (dict "key" "students" "label" "Students")
-  (dict "key" "visiting-student" "label" "Visiting Student")
-  (dict "key" "visiting-scholar" "label" "Visiting Scholar")
-  (dict "key" "alumni" "label" "Alumni")
+  (dict "key" "pi" "label" "首席研究员")
+  (dict "key" "postdoc" "label" "博士后")
+  (dict "key" "students" "label" "学生")
+  (dict "key" "visiting-student" "label" "访问学生")
+  (dict "key" "visiting-scholar" "label" "访问学者")
+  (dict "key" "alumni" "label" "校友")
 }}
 
 <section class="people-tools" aria-label="People filters">
-  <button class="people-filter is-active" type="button" data-people-filter="all">All</button>
+  <button class="people-filter is-active" type="button" data-people-filter="all">全部</button>
   {{ range $filters }}
   <button class="people-filter" type="button" data-people-filter="{{ .key }}">{{ .label }}</button>
   {{ end }}
@@ -73,7 +73,7 @@
 
         {{ with .website }}
         <p class="person-link">
-          <a href="{{ . }}" target="_blank" rel="noopener">Personal website</a>
+          <a href="{{ . }}" target="_blank" rel="noopener">个人主页</a>
         </p>
         {{ end }}
       </div>
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 {{ else if eq .Section "publications" }}
 {{ $pubs := sort site.Data.publications "sort_date" "desc" }}
 <section class="publication-overview">
-  <p><strong>{{ len $pubs }}</strong> publications imported from the group bibliography.</p>
+  <p><strong>{{ len $pubs }}</strong> 篇论文（课题组文献库）.</p>
 </section>
 
 <section class="publication-catalog" aria-label="Full publication list">
@@ -163,8 +163,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="{{ . }}"
                target="_blank"
                rel="noopener"
-               {{ with $freeSource }}title="Full free text via {{ . }}"{{ end }}>
-              Full free text
+               {{ with $freeSource }}title="全文 via {{ . }}"{{ end }}>
+              全文
             </a>
             {{ end }}
           </div>
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </article>
     </li>
     {{ else }}
-    <li>Publications will appear here soon.</li>
+    <li>论文列表即将更新</li>
     {{ end }}
   </ol>
 </section>
@@ -182,10 +182,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 {{ else if eq .Section "contact" }}
 <section class="card contact-card">
-  <p><strong>PI:</strong> {{ site.Params.pi_name }}</p>
-  <p><strong>Email:</strong> <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
-  <p><strong>Affiliation:</strong> {{ site.Params.affiliation }}</p>
-  <p><strong>Address:</strong> {{ site.Params.address }}</p>
+  <p><strong>课题组负责人：</strong> {{ site.Params.pi_name }}</p>
+  <p><strong>邮箱：</strong> <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+  <p><strong>单位：</strong> {{ site.Params.affiliation }}</p>
+  <p><strong>地址：</strong> {{ site.Params.address }}</p>
 </section>
 
 {{ else }}

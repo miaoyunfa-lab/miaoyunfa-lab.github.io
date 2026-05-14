@@ -1,5 +1,5 @@
 ---
-title: "News"
+title: "新闻"
 draft: false
 ---
 

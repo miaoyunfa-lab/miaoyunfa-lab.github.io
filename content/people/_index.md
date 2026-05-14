@@ -1,6 +1,6 @@
 ---
-title: "People"
+title: "课题组成员"
 draft: false
 ---
 
-Meet the members of the group. Replace these example profiles with your principal investigator, students, staff, visitors, and alumni.
+课题组全体成员，包括研究员、博士后、博士生和硕士生。

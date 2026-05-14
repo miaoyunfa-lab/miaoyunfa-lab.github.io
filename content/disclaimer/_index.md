@@ -1,5 +1,5 @@
 ---
-title: "Disclaimer"
+title: "免责声明"
 ---
 
 ## Website Disclaimer
