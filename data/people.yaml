@@ -1,44 +1,154 @@
-- name: "苗运法"
-  role: "研究员，沙漠与沙漠化研究室主任"
-  group: "pi"
-  time: "2018-至今"
-  email: "yunfine2000@sina.com"
-  website: "https://example.edu"
-  photo: "/images/people/miaoyunfa.jpg"
-  bio: >
-    男，1978年生，江苏人。主要从事古生态与干旱环境演化研究。<br><br>
-    <strong>教育背景</strong><br>
-    1997.09–2007.06，兰州大学，自然地理学，学士、硕-博士<br><br>
-    <strong>工作经历</strong><br>
-    2007.07–2010.06，中国科学院青藏高原研究所，博士后<br>
-    2010.06–2010.12，中国科学院寒区旱区环境与工程研究所，助理研究员<br>
-    2011.01–2017.12，中国科学院寒区旱区环境与工程研究所，副研究员<br>
-    2018.01–至今，中国科学院西北生态环境资源研究院，研究员<br><br>
-    <strong>获奖及荣誉</strong><br>
-    国家杰出青年科学基金获得者<br>
-    国家高层次人才特殊支持计划青年拔尖人才<br>
-    中国科学院青年创新促进会优秀会员<br>
-    国家重点研发计划项目负责人<br>
-    甘肃省领军人才<br>
-    自然资源部科技二等奖
-- name: "Morgan Lee"
-  role: "Postdoctoral Researcher"
-  group: "postdoc"
-  time: "2025-present"
-  email: "morgan.lee@example.edu"
-  photo: "/images/people/profile-placeholder.svg"
-  bio: "Works on example computational methods, reproducible workflows, and collaborative research projects."
-- name: "Priya Patel"
-  role: "PhD Student"
-  group: "students"
-  time: "2025-present"
-  email: "priya.patel@example.edu"
-  photo: "/images/people/profile-placeholder.svg"
-  bio: "Studies a sample research topic and helps maintain shared datasets for the group."
-- name: "Taylor Chen"
-  role: "Visiting Scholar"
-  group: "visiting-scholar"
-  time: "2026"
-  email: "taylor.chen@example.edu"
-  photo: "/images/people/profile-placeholder.svg"
-  bio: "Collaborates on a short-term example project that connects theory, computation, and experiment."
+- name: 苗运法
+  en_name: Yunfa Miao
+  role: 研究员
+  group: pi
+  email: miaoyunfa@lzb.ac.cn
+  photo: /images/people/miaoyunfa.jpg
+  bio: 研究方向：孢粉学与环境变化
+- name: 赵永涛
+  en_name: YongTao Zhao
+  role: 副研究员
+  group: postdoc
+  email: zhaoyt2018@lzb.ac.cn
+  photo: /images/people/zhaoyongtao.jpg
+  bio: 研究方向：孢粉学与古气候和古生态
+- name: 王雪莲
+  en_name: Xuelian Wang
+  role: 副研究员（特聘研究岗）
+  group: postdoc
+  email: wangxuelian@nieer.ac.cn
+  photo: /images/people/wangxuelian.jpg
+  bio: 研究方向：生物多样性与环境演变
+- name: 王树源
+  en_name: Shuyuan Wang
+  role: 博士后
+  group: postdoc
+  email: wangshuyuan@nieer.ac.cn
+  photo: /images/people/wangshuyuan.jpg
+  bio: 研究方向：生态环境与气候变化
+- name: 王海涛
+  en_name: Haitao Wang
+  role: 博士后
+  group: postdoc
+  email: wanghaitao@nieer.ac.cn
+  photo: /images/people/wanghaitao.jpg
+  bio: 研究方向：孢粉现代过程
+- name: 杨永恒
+  en_name: Yongheng Yang
+  role: 博士后
+  group: postdoc
+  email: yangyongheng17@mails.ucas.ac.cn
+  photo: /images/people/profile-placeholder.svg
+  bio: 研究方向：新生代孢粉学
+- name: Shabir Ahmad
+  en_name: Shabir Ahmad
+  role: 博士后
+  group: postdoc
+  email: shabir@bs.qau.edu.pk
+  photo: /images/people/ahmadshabir.jpg
+  bio: 研究方向：古植物学
+- name: 邹亚国
+  en_name: Yaguo Zou
+  role: 博士生
+  group: students
+  email: zouyaguo@126.com
+  photo: /images/people/zouyaguo.jpg
+  bio: 研究方向：生物分布与迁徙
+- name: 牛改红
+  en_name: Gaihong Niu
+  role: 博士生
+  group: students
+  email: niugaihong@lzb.ac.cn
+  photo: /images/people/ngh.jpg
+  bio: 研究方向：古环境演化
+- name: 张孜越
+  en_name: Ziyue Zhang
+  role: 博士生
+  group: students
+  email: zhangziyue22@mails.ucas.ac.cn
+  photo: /images/people/zhangziyue.jpg
+  bio: 研究方向：荒漠化与极端气候事件
+- name: 马林原
+  en_name: Linyuan Ma
+  role: 博士生
+  group: students
+  email: malinyuan24@mails.ucas.ac.cn
+  photo: /images/people/malinyuan.jpg
+  bio: 研究方向：孢粉学与环境变化
+- name: 李小乐
+  en_name: Xiaole Li
+  role: 博士生
+  group: students
+  email: lixiaole0629@163.com
+  photo: /images/people/lixiaole.jpg
+  bio: 研究方向：土壤微生物
+- name: 谭宁静
+  en_name: Ningjing Tan
+  role: 博士生
+  group: students
+  email: tanningjing22@mails.ucas.ac.cn
+  photo: /images/people/tanningjing.jpg
+  bio: 研究方向：古气候模拟
+- name: 成清娴
+  en_name: Qingxian Cheng
+  role: 博士生
+  group: students
+  email: 736447206@qq.com
+  photo: /images/people/chengqingxian.jpg
+  bio: 研究方向：沙漠化、沙漠环境、风沙物理、风沙地貌与风沙工程
+- name: 孙玥晗
+  en_name: Yuehan Sun
+  role: 硕士生
+  group: students
+  email: viviansunyuehan@163.com
+  photo: /images/people/sunyuehan.jpg
+  bio: 研究方向：城市绿地
+- name: 于芳涛
+  en_name: Yu Fangtao
+  role: 硕士生
+  group: students
+  email: yufangtao24@mails.ucas.ac.cn
+  photo: /images/people/YuFangtao.jpg
+  bio: 研究方向：孢粉学与古生态
+- name: 景向楠
+  en_name: Xiangnan Jing
+  role: 硕士生
+  group: students
+  email: jingxiangnan25@mails.ucas.ac.cn
+  photo: /images/people/jingxiangnan.jpg
+  bio: 研究方向：干旱环境演化、环境健康
+- name: 高雁茹
+  en_name: Yanru Gao
+  role: 硕士生
+  group: students
+  email: gaoyanru@sxu.edu
+  photo: /images/people/gaoyanru.jpg
+  bio: 研究方向：微地形与植被
+- name: 许非凡
+  en_name: Feifan Xu
+  role: 硕士生
+  group: students
+  email: x309125350@163.com
+  photo: /images/people/xufeifan.jpg
+  bio: 研究方向：微炭屑
+- name: 王馨悦
+  en_name: Xinyue Wang
+  role: 硕士生
+  group: students
+  email: 2847147806@qq.com
+  photo: /images/people/wangxinyue.jpg
+  bio: 研究方向：柴达木盆地空气孢粉组成及其影响因素分析
+- name: 段蓉骅
+  en_name: Ronghua Duan
+  role: 硕士生
+  group: students
+  email: 3359928094@qq.com
+  photo: /images/people/duanronghua.jpg
+  bio: ''
+- name: 王金东
+  en_name: Jindong Wang
+  role: 硕士生
+  group: students
+  email: wangjindong@sxu.edu.cn
+  photo: /images/people/wangjindong.jpg
+  bio: 研究方向：古环境变化
