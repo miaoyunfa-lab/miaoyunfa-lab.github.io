@@ -65,11 +65,17 @@
     {{ $patentCount := len (default slice .matched_patents) }}
 
     <div class="person-detail-tabs">
-      <div class="person-detail-section">
-      <button class="detail-collapse" type="button" onclick="this.classList.toggle('is-open')">
+      <button class="detail-tab" type="button" data-detail="papers">
         相关论文 {{ if gt $paperCount 0 }}<span class="detail-badge">{{ $paperCount }}</span>{{ end }}
       </button>
-      <div class="detail-collapse-body">
+      <button class="detail-tab" type="button" data-detail="awards">
+        奖项 {{ if gt $awardCount 0 }}<span class="detail-badge">{{ $awardCount }}</span>{{ end }}
+      </button>
+      <button class="detail-tab" type="button" data-detail="patents">
+        专利 {{ if gt $patentCount 0 }}<span class="detail-badge">{{ $patentCount }}</span>{{ end }}
+      </button>
+
+      <div class="detail-body" data-detail="papers">
         {{ with .matched_papers }}
         {{ if gt (len .) 0 }}
         <ul class="detail-list">
@@ -85,13 +91,8 @@
         {{ end }}
         {{ if eq $paperCount 0 }}<p class="detail-empty">暂无</p>{{ end }}
       </div>
-    </div>
 
-    <div class="person-detail-section">
-      <button class="detail-collapse" type="button" onclick="this.classList.toggle('is-open')">
-        奖项 {{ if gt $awardCount 0 }}<span class="detail-badge">{{ $awardCount }}</span>{{ end }}
-      </button>
-      <div class="detail-collapse-body">
+      <div class="detail-body" data-detail="awards">
         {{ with .matched_awards }}
         {{ if gt (len .) 0 }}
         <ul class="detail-list">
@@ -106,13 +107,8 @@
         {{ end }}
         {{ if eq $awardCount 0 }}<p class="detail-empty">暂无</p>{{ end }}
       </div>
-    </div>
 
-    <div class="person-detail-section">
-      <button class="detail-collapse" type="button" onclick="this.classList.toggle('is-open')">
-        专利 {{ if gt $patentCount 0 }}<span class="detail-badge">{{ $patentCount }}</span>{{ end }}
-      </button>
-      <div class="detail-collapse-body">
+      <div class="detail-body" data-detail="patents">
         {{ with .matched_patents }}
         {{ if gt (len .) 0 }}
         <ul class="detail-list">
@@ -128,7 +124,6 @@
         {{ end }}
         {{ if eq $patentCount 0 }}<p class="detail-empty">暂无</p>{{ end }}
       </div>
-    </div>
     </div>
   </article>
   {{ end }}
@@ -152,6 +147,18 @@ document.addEventListener("DOMContentLoaded", function () {
   filterButtons.forEach(function (button) {
     button.addEventListener("click", function () {
       setFilter(button.dataset.peopleFilter);
+    });
+  });
+
+  // Detail tab toggle
+  document.querySelectorAll(".detail-tab").forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      var target = this.dataset.detail;
+      var body = this.parentElement.querySelector('.detail-body[data-detail="' + target + '"]');
+      var isOpen = this.classList.toggle("is-open");
+      if (body) {
+        body.classList.toggle("is-open", isOpen);
+      }
     });
   });
 });

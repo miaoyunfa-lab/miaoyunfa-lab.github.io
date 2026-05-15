@@ -636,58 +636,57 @@ a {
 }
 
 .person-detail-tabs {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
 
-.person-detail-section {
-  flex: 1;
-  min-width: 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.detail-collapse {
+.detail-tab {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  width: 100%;
-  padding: 0.45rem 0.75rem;
-  border: 0;
-  border-radius: 0;
+  min-width: 0;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   background: var(--surface-soft);
   color: var(--text);
   font: inherit;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
   cursor: pointer;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.detail-collapse:hover {
+.detail-tab:hover {
   background: #eaf5f2;
   color: var(--accent);
 }
 
-.detail-collapse::after {
+.detail-tab::after {
   content: '+';
   margin-left: auto;
   font-size: 1.1rem;
   font-weight: 400;
+  flex-shrink: 0;
 }
 
-.detail-collapse.is-open::after {
+.detail-tab.is-open::after {
   content: '−';
 }
 
-.detail-collapse-body {
+.detail-body {
   display: none;
+  grid-column: 1 / -1;
   padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
 }
 
-.detail-collapse.is-open + .detail-collapse-body {
+.detail-body.is-open {
   display: block;
 }
 
