@@ -64,7 +64,8 @@
     {{ $awardCount := len (default slice .matched_awards) }}
     {{ $patentCount := len (default slice .matched_patents) }}
 
-    <div class="person-detail-section">
+    <div class="person-detail-tabs">
+      <div class="person-detail-section">
       <button class="detail-collapse" type="button" onclick="this.classList.toggle('is-open')">
         相关论文 {{ if gt $paperCount 0 }}<span class="detail-badge">{{ $paperCount }}</span>{{ end }}
       </button>
@@ -127,6 +128,7 @@
         {{ end }}
         {{ if eq $patentCount 0 }}<p class="detail-empty">暂无</p>{{ end }}
       </div>
+    </div>
     </div>
   </article>
   {{ end }}

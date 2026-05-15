@@ -635,8 +635,15 @@ a {
   display: none;
 }
 
-.person-detail-section {
+.person-detail-tabs {
+  display: flex;
+  gap: 0.5rem;
   margin-top: 0.5rem;
+}
+
+.person-detail-section {
+  flex: 1;
+  min-width: 0;
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
