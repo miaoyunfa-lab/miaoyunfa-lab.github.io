@@ -95,7 +95,7 @@
           <li>
             <strong>{{ .title }}</strong>
             <span class="detail-meta">{{ .journal }} ({{ .year }})</span>
-            {{ with .doi_url }}<a href="{{ . }}" target="_blank" rel="noopener" class="detail-link">DOI</a>{{ end }}
+            {{ with .doi_url }}<a href="{{ . }}" target="_blank" rel="noopener" class="detail-link">{{ . }}</a>{{ end }}
           </li>
           {{ end }}
         </ul>
