@@ -62,34 +62,15 @@
 
     {{ $paperCount := len (default slice .matched_papers) }}
     {{ $awardCount := len (default slice .matched_awards) }}
-    <button class="person-detail-toggle" type="button" onclick="this.closest('.person-card').classList.toggle('is-expanded')">
-      详细信息
-      {{ if gt $paperCount 0 }}<span class="detail-badge">{{ $paperCount }}篇</span>{{ end }}
-      {{ if gt $awardCount 0 }}<span class="detail-badge">{{ $awardCount }}项奖项</span>{{ end }}
-    </button>
+    {{ $patentCount := len (default slice .matched_patents) }}
 
-    <div class="person-detail">
-      {{ with .matched_awards }}
-      {{ if gt (len .) 0 }}
-      <div class="detail-section">
-        <h4>奖项与专利</h4>
-        <ul class="detail-list">
-          {{ range . }}
-          <li>
-            <strong>{{ .name }}</strong>
-            {{ with .year }}<span class="detail-meta">{{ . }}</span>{{ end }}
-            {{ with .type }}<span class="detail-meta">{{ . }}</span>{{ end }}
-          </li>
-          {{ end }}
-        </ul>
-      </div>
-      {{ end }}
-      {{ end }}
-
-      {{ with .matched_papers }}
-      {{ if gt (len .) 0 }}
-      <div class="detail-section">
-        <h4>相关论文</h4>
+    <div class="person-detail-section">
+      <button class="detail-collapse" type="button" onclick="this.classList.toggle('is-open')">
+        相关论文 {{ if gt $paperCount 0 }}<span class="detail-badge">{{ $paperCount }}</span>{{ end }}
+      </button>
+      <div class="detail-collapse-body">
+        {{ with .matched_papers }}
+        {{ if gt (len .) 0 }}
         <ul class="detail-list">
           {{ range . }}
           <li>
@@ -99,13 +80,53 @@
           </li>
           {{ end }}
         </ul>
+        {{ end }}
+        {{ end }}
+        {{ if eq $paperCount 0 }}<p class="detail-empty">暂无</p>{{ end }}
       </div>
-      {{ end }}
-      {{ end }}
+    </div>
 
-      {{ if and (eq $paperCount 0) (eq $awardCount 0) }}
-      <p class="detail-empty">暂无相关记录</p>
-      {{ end }}
+    <div class="person-detail-section">
+      <button class="detail-collapse" type="button" onclick="this.classList.toggle('is-open')">
+        奖项 {{ if gt $awardCount 0 }}<span class="detail-badge">{{ $awardCount }}</span>{{ end }}
+      </button>
+      <div class="detail-collapse-body">
+        {{ with .matched_awards }}
+        {{ if gt (len .) 0 }}
+        <ul class="detail-list">
+          {{ range . }}
+          <li>
+            <strong>{{ .name }}</strong>
+            {{ with .year }}<span class="detail-meta">{{ . }}</span>{{ end }}
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+        {{ end }}
+        {{ if eq $awardCount 0 }}<p class="detail-empty">暂无</p>{{ end }}
+      </div>
+    </div>
+
+    <div class="person-detail-section">
+      <button class="detail-collapse" type="button" onclick="this.classList.toggle('is-open')">
+        专利 {{ if gt $patentCount 0 }}<span class="detail-badge">{{ $patentCount }}</span>{{ end }}
+      </button>
+      <div class="detail-collapse-body">
+        {{ with .matched_patents }}
+        {{ if gt (len .) 0 }}
+        <ul class="detail-list">
+          {{ range . }}
+          <li>
+            <strong>{{ .name }}</strong>
+            {{ with .year }}<span class="detail-meta">{{ . }}</span>{{ end }}
+            {{ with .details }}<span class="detail-meta">{{ . }}</span>{{ end }}
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+        {{ end }}
+        {{ if eq $patentCount 0 }}<p class="detail-empty">暂无</p>{{ end }}
+      </div>
     </div>
   </article>
   {{ end }}

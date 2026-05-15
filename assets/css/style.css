@@ -635,57 +635,64 @@ a {
   display: none;
 }
 
-.person-detail-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
-  padding: 0.4rem 0.8rem;
+.person-detail-section {
+  margin-top: 0.5rem;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: var(--surface);
-  color: var(--accent);
+  overflow: hidden;
+}
+
+.detail-collapse {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.45rem 0.75rem;
+  border: 0;
+  border-radius: 0;
+  background: var(--surface-soft);
+  color: var(--text);
   font: inherit;
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
+  text-align: left;
 }
 
-.person-detail-toggle:hover {
-  border-color: var(--accent);
+.detail-collapse:hover {
   background: #eaf5f2;
+  color: var(--accent);
+}
+
+.detail-collapse::after {
+  content: '+';
+  margin-left: auto;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.detail-collapse.is-open::after {
+  content: '−';
+}
+
+.detail-collapse-body {
+  display: none;
+  padding: 0.5rem 0.75rem;
+}
+
+.detail-collapse.is-open + .detail-collapse-body {
+  display: block;
 }
 
 .detail-badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.15rem 0.45rem;
+  padding: 0.1rem 0.4rem;
   border-radius: 4px;
   background: var(--accent);
   color: #ffffff;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
-}
-
-.person-detail {
-  display: none;
-  margin-top: 0.85rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--border);
-}
-
-.person-card.is-expanded .person-detail {
-  display: block;
-}
-
-.detail-section {
-  margin-bottom: 0.75rem;
-}
-
-.detail-section h4 {
-  margin: 0 0 0.4rem;
-  font-size: 0.95rem;
-  color: var(--accent);
 }
 
 .detail-list {
@@ -697,9 +704,9 @@ a {
 .detail-list li {
   display: grid;
   gap: 0.15rem;
-  padding: 0.4rem 0;
+  padding: 0.35rem 0;
   border-bottom: 1px solid var(--border);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
 }
 
 .detail-list li:last-child {
@@ -708,19 +715,21 @@ a {
 
 .detail-meta {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
 }
 
 .detail-link {
   width: fit-content;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
+  word-break: break-all;
 }
 
 .detail-empty {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
+  padding: 0.25rem 0;
 }
 
 .news-timeline {

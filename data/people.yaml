@@ -6,7 +6,7 @@
   photo: /images/people/miaoyunfa.jpg
   bio: 研究方向：孢粉学与环境变化
   matched_papers:
-  - &id018
+  - &id017
     title: Relative pollen productivity estimates for major plant taxa in the Qaidam
       Basin, northern Tibetan Plateau
     authors: Ma L, Zhang S, ... Miao Y*.
@@ -15,7 +15,7 @@
     sort_date: '2026-01-01'
     doi_url: https://doi.org/10.1016/j.revpalbo.2026.105581
     status: 已发表
-  - &id008
+  - &id007
     title: 'Late Cenozoic wildfire evolution in East-Central Asia: A microcharcoal
       record from the Junggar Basin'
     authors: Niu G, Miao Y*, Wang X, et al.
@@ -24,7 +24,7 @@
     sort_date: '2026-02-01'
     doi_url: https://doi.org/10.1016/j.palaeo.2025.113488
     status: 已发表
-  - &id017
+  - &id016
     title: 'AI-driven microcharcoal recognition: Advancing intelligent automation
       for paleofire reconstruction'
     authors: Zhang Z, Wang Z, Miao Y*, et al.
@@ -33,28 +33,7 @@
     sort_date: '2026-03-01'
     doi_url: https://doi.org/10.1016/j.gloplacha.2026.105356
     status: 已发表
-  - &id001
-    title: 'AI-driven microcharcoal recognition: Advancing intelligent automation
-      for paleofire reconstruction'
-    authors: Zhang Ziyue,  Wang Zisha，Miao Yunfa, Zou Yaguo, Zhao Yongtao, Niu Gaihong,
-      Sophie Warny
-    journal: Global and Planetary Change
-    year: 2026
-    sort_date: '2026-05-01'
-    doi_url: https://doi.org/10.1016/j.gloplacha.2026.105356
-    status: 已发表
-    code_url: https://doi.org/10.6084/m9.figshare.29901263.v3
-  - &id013
-    title: Relative pollen productivity estimates for major plant taxa in the Qaidam
-      Basin, northern Tibetan Plateau
-    authors: Ma Linyuan, Zhang Shengrui, Sun Yuanhao, Wang Haitao, Xu Qinghai, Li
-      Dehui, Zhang Ruchun, Miao Yunfa
-    journal: Review of Palaeobotany and Palynology
-    year: 2026
-    sort_date: '2026-06-01'
-    doi_url: https://doi.org/10.1016/j.revpalbo.2026.105581
-    status: 已发表
-  - &id009
+  - &id008
     title: How “wet islands” form – A case study of the Qilian Mountains on the arid
       northern Tibetan Plateau during the Middle Miocene
     authors: Yang Y, Miao Y*, Wang X, et al.
@@ -63,7 +42,7 @@
     sort_date: '2025-11-01'
     doi_url: https://doi.org/10.1016/j.earscirev.2025.105041
     status: 已发表
-  - &id019
+  - &id018
     title: 'Relative pollen productivity in subtropical evergreen broadleaved forest:
       Implications for reconstructing paleovegetation dynamics in East Asia'
     authors: Ma L, Zhang S, ... Miao Y*.
@@ -72,7 +51,7 @@
     sort_date: '2025-12-01'
     doi_url: https://doi.org/10.1016/j.ecolind.2025.114112
     status: 已发表
-  - &id015
+  - &id014
     title: A new method of automatic microcharcoal identification and its demonstration
       in revealing the spatial heterogeneity of fire over the past 40,000 years in
       China
@@ -82,16 +61,7 @@
     sort_date: '2025-13-01'
     doi_url: https://doi.org/10.1016/j.quaint.2025.109743
     status: 已发表
-  - &id020
-    title: 'Relative pollen productivity in subtropical evergreen broadleaved forest:
-      Implications for reconstructing paleovegetation dynamics in East Asia'
-    authors: Ma Linyuan, Zhang Shengrui, Xu Qinghai, Zhou Zhongze, Miao Yunfa
-    journal: Ecological Indicators
-    year: 2025
-    sort_date: '2025-18-01'
-    doi_url: https://doi.org/10.1016/j.ecolind.2025.114112
-    status: 已发表
-  - &id021
+  - &id019
     title: Review of relative pollen productivity estimates for the Tibetan Plateau
     authors: Ma Linyuan, Xu Qinghai, Zhang Shengrui, Li Yuecong, Miao Yunfa, Cao Xianyong
     journal: Science China-Earth Sciences.
@@ -99,7 +69,7 @@
     sort_date: '2025-19-01'
     doi_url: https://doi.org/10.1360/SSTe-2024-0277
     status: 已发表
-  - &id010
+  - &id009
     title: How “wet islands” form – A case study of the Qilian Mountains on the arid  northern
       Tibetan Plateau during the Middle Miocene
     authors: Yang Yongheng， Miao Yunfa， Wang Xuelian， Wu Jie， Ren Yulong， Zhang Tao，
@@ -109,7 +79,7 @@
     sort_date: '2025-22-01'
     doi_url: https://doi.org/10.1016/j.earscirev.2025.105041
     status: 已发表
-  - &id011
+  - &id010
     title: 'New Discovery of Calamitaceae from the Cisuralian in Northwest China:
       Morphological Evolution of Strobilus'
     authors: Wang X, Miao Y*, Ji Y, et al.
@@ -118,7 +88,7 @@
     sort_date: '2024-23-01'
     doi_url: https://doi.org/10.3390/biology13050347
     status: 已发表
-  - &id012
+  - &id011
     title: High-elevation Qilian Mountains and its inspiration for tectonics and  biodiversity
       during the late Middle Miocene
     authors: Yang Yongheng， Miao Yunfa， Wang Xuelian， Zhang Tao， Li Liwu
@@ -127,7 +97,7 @@
     sort_date: '2024-32-01'
     doi_url: https://doi.org/10.1016/j.gloplacha.2024.104632
     status: 已发表
-  - &id016
+  - &id015
     title: Microcharcoals reveal more grass than trees during the Mid-Holocene Optimum
       on the Chinese Loess Plateau
     authors: Wang Z, Miao Y*, Zou Y, et al.
@@ -144,7 +114,7 @@
     sort_date: '2023-34-01'
     doi_url: https://doi.org/10.1016/j.palaeo.2023.111514
     status: 已发表
-  - &id002
+  - &id001
     title: The effects of meteorological conditions on allergenic airborne pollen
       in arid Northwest China
     authors: Lei Y, Miao Y*, Zhao Y, et al.
@@ -153,7 +123,7 @@
     sort_date: '2023-35-01'
     doi_url: https://doi.org/10.1016/j.atmosenv.2023.119647
     status: 已发表
-  - &id003
+  - &id002
     title: Extreme-wind events in China in the past 50 years and their impacts on
       sandstorm variations
     authors: Jiang Y, Miao Y*, Zhao Y, et al.
@@ -186,7 +156,7 @@
     sort_date: '2022-42-01'
     doi_url: https://doi.org/10.1016/j.gloplacha.2022.103808
     status: 已发表
-  - &id004
+  - &id003
     title: Holocene hydroclimate changes revealed by multiple proxies from an alpine
       lake in the central Tianshan Mountains, Northwest China
     authors: Zhao Y, Miao Y*, Huang X, et al.
@@ -195,7 +165,7 @@
     sort_date: '2022-43-01'
     doi_url: https://doi.org/10.1016/j.palaeo.2022.111004
     status: 已发表
-  - &id005
+  - &id004
     title: Non-linear response of mid-latitude Asian dryland vegetation to Holocene
       climate fluctuations
     authors: Zhao Y, Miao Y*, Li Y, et al.
@@ -212,7 +182,7 @@
     sort_date: '2022-45-01'
     doi_url: https://doi.org/10.3389/feart.2022.850809
     status: 已发表
-  - &id014
+  - &id012
     title: 'Lake Changes during the Past Five Decades in Central East Asia: Links
       with Climate Change and Climate Future Forecasting'
     authors: Yang Y*, Wu J, Miao Y*, et al.
@@ -221,7 +191,7 @@
     sort_date: '2022-46-01'
     doi_url: https://doi.org/10.3390/w14223661
     status: 已发表
-  - &id006
+  - &id005
     title: Progress, problems and prospects of palynology in reconstructing environmental
       change in inland arid areas of Asia
     authors: Zhao Y, Miao Y*, Lei Y, et al.
@@ -230,7 +200,7 @@
     sort_date: '2021-53-01'
     doi_url: https://doi.org/10.3724/SP.J.1226.2021.20049.
     status: 已发表
-  - &id007
+  - &id006
     title: 'Investigation of factors affecting surface pollen assemblages in the Balikun
       Basin, central Asia: Implications for palaeoenvironmental reconstructions'
     authors: Zhao Y, Miao Y*, Fang Y. et al.
@@ -407,8 +377,10 @@
     doi_url: https://doi.org/10.1016/j.quaint.2010.08.014
     status: 已发表
   matched_awards: []
-  paper_count: 47
+  paper_count: 44
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 赵永涛
   en_name: YongTao Zhao
   role: 副研究员
@@ -417,16 +389,28 @@
   photo: /images/people/zhaoyongtao.jpg
   bio: 研究方向：孢粉学与古气候和古生态
   matched_papers:
+  - &id013
+    title: 'AI-driven microcharcoal recognition: Advancing intelligent automation
+      for paleofire reconstruction'
+    authors: Zhang Ziyue,  Wang Zisha，Miao Yunfa, Zou Yaguo, Zhao Yongtao, Niu Gaihong,
+      Sophie Warny
+    journal: Global and Planetary Change
+    year: 2026
+    sort_date: '2026-05-01'
+    doi_url: https://doi.org/10.1016/j.gloplacha.2026.105356
+    status: 已发表
+    code_url: https://doi.org/10.6084/m9.figshare.29901263.v3
   - *id001
   - *id002
   - *id003
   - *id004
   - *id005
   - *id006
-  - *id007
   matched_awards: []
   paper_count: 7
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 王雪莲
   en_name: Xuelian Wang
   role: 副研究员（特聘研究岗）
@@ -435,11 +419,11 @@
   photo: /images/people/wangxuelian.jpg
   bio: 研究方向：生物多样性与环境演变
   matched_papers:
+  - *id007
   - *id008
   - *id009
   - *id010
   - *id011
-  - *id012
   matched_awards:
   - year: 2025
     name: 甘肃省“陇原人才”
@@ -456,13 +440,15 @@
     recipient: 王雪莲
     type: ''
     details: ''
+  paper_count: 5
+  award_count: 3
+  matched_patents:
   - year: 2019
     name: 一种针对植物化石角质层提取的前处理方法
     recipient: 熊聪慧, 王雪莲
     type: 发明专利
     details: 已发表
-  paper_count: 5
-  award_count: 4
+  patent_count: 1
 - name: 王树源
   en_name: Shuyuan Wang
   role: 博士后
@@ -474,6 +460,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 王海涛
   en_name: Haitao Wang
   role: 博士后
@@ -482,7 +470,16 @@
   photo: /images/people/wanghaitao.jpg
   bio: 研究方向：孢粉现代过程
   matched_papers:
-  - *id013
+  - &id020
+    title: Relative pollen productivity estimates for major plant taxa in the Qaidam
+      Basin, northern Tibetan Plateau
+    authors: Ma Linyuan, Zhang Shengrui, Sun Yuanhao, Wang Haitao, Xu Qinghai, Li
+      Dehui, Zhang Ruchun, Miao Yunfa
+    journal: Review of Palaeobotany and Palynology
+    year: 2026
+    sort_date: '2026-06-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2026.105581
+    status: 已发表
   - title: 'Miocene lake evolution in the western Qaidam Basin, northern Tibetan Plateau:
       Evidence from aquatic-plant pollen'
     authors: Wang Haitao,Wu Fuli,Yang Liye,Fang Xiaomin
@@ -494,6 +491,8 @@
   matched_awards: []
   paper_count: 2
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 杨永恒
   en_name: Yongheng Yang
   role: 博士后
@@ -502,13 +501,15 @@
   photo: /images/people/yangyongheng.jpg
   bio: 研究方向：新生代孢粉学
   matched_papers:
+  - *id008
   - *id009
-  - *id010
+  - *id011
   - *id012
-  - *id014
   matched_awards: []
   paper_count: 4
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: Shabir Ahmad
   en_name: Shabir Ahmad
   role: 博士后
@@ -520,6 +521,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 邹亚国
   en_name: Yaguo Zou
   role: 博士生
@@ -528,9 +531,9 @@
   photo: /images/people/zouyaguo.jpg
   bio: 研究方向：生物分布与迁徙
   matched_papers:
-  - *id001
+  - *id013
+  - *id014
   - *id015
-  - *id016
   - title: A new automatic statistical microcharcoal analysis method based on image
       processing, demonstrated in the Weiyuan Section, northwest China
     authors: Zou Y, Miao F*, Yang L, et al.
@@ -542,6 +545,8 @@
   matched_awards: []
   paper_count: 4
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 牛改红
   en_name: Gaihong Niu
   role: 博士生
@@ -550,11 +555,13 @@
   photo: /images/people/ngh.jpg
   bio: 研究方向：古环境演化
   matched_papers:
-  - *id008
-  - *id001
+  - *id007
+  - *id013
   matched_awards: []
   paper_count: 2
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 张孜越
   en_name: Ziyue Zhang
   role: 博士生
@@ -563,11 +570,12 @@
   photo: /images/people/zhangziyue.jpg
   bio: 研究方向：荒漠化与极端气候事件
   matched_papers:
-  - *id017
-  - *id001
+  - *id016
   matched_awards: []
-  paper_count: 2
+  paper_count: 1
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 马林原
   en_name: Linyuan Ma
   role: 博士生
@@ -576,11 +584,9 @@
   photo: /images/people/malinyuan.jpg
   bio: 研究方向：孢粉学与环境变化
   matched_papers:
+  - *id017
   - *id018
-  - *id013
   - *id019
-  - *id020
-  - *id021
   - title: Modern pollen assemblages from the interland of the Tibetan Plateau and
       their significance for reconstructions of past vegetation
     authors: Ma Linyuan, Li Zhiguang, Xu Qinghai, Li Hongmei, Zhang Kailong, Li Yuecong,Zhang
@@ -591,8 +597,10 @@
     doi_url: https://doi.org/10.1111/bor.12641
     status: 已发表
   matched_awards: []
-  paper_count: 6
+  paper_count: 4
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 李小乐
   en_name: Xiaole Li
   role: 博士生
@@ -604,6 +612,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 谭宁静
   en_name: Ningjing Tan
   role: 博士生
@@ -615,6 +625,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 成清娴
   en_name: Qingxian Cheng
   role: 博士生
@@ -626,6 +638,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 孙玥晗
   en_name: Yuehan Sun
   role: 硕士生
@@ -634,10 +648,12 @@
   photo: /images/people/sunyuehan.jpg
   bio: 研究方向：城市绿地
   matched_papers:
-  - *id013
+  - *id020
   matched_awards: []
   paper_count: 1
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 于芳涛
   en_name: Yu Fangtao
   role: 硕士生
@@ -660,6 +676,8 @@
   matched_awards: []
   paper_count: 1
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 景向楠
   en_name: Xiangnan Jing
   role: 硕士生
@@ -671,6 +689,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 高雁茹
   en_name: Yanru Gao
   role: 硕士生
@@ -682,6 +702,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 许非凡
   en_name: Feifan Xu
   role: 硕士生
@@ -693,6 +715,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 王馨悦
   en_name: Xinyue Wang
   role: 硕士生
@@ -701,14 +725,16 @@
   photo: /images/people/wangxinyue.jpg
   bio: 研究方向：柴达木盆地空气孢粉组成及其影响因素分析
   matched_papers:
+  - *id007
   - *id008
   - *id009
   - *id010
   - *id011
-  - *id012
   matched_awards: []
   paper_count: 5
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 段蓉骅
   en_name: Ronghua Duan
   role: 硕士生
@@ -720,6 +746,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 王金东
   en_name: Jindong Wang
   role: 硕士生
@@ -731,6 +759,8 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 谢景怡
   en_name: JingYi Xie
   role: 硕士生
@@ -742,3 +772,5 @@
   matched_awards: []
   paper_count: 0
   award_count: 0
+  matched_patents: []
+  patent_count: 0
