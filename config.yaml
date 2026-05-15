@@ -34,9 +34,6 @@ menu:
     - name: "成员"
       url: "/people/"
       weight: 4
-    - name: "论文"
-      url: "/publications/"
-      weight: 5
     - name: "联系"
       url: "/contact/"
       weight: 6

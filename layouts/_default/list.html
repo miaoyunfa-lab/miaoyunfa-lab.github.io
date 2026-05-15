@@ -1,7 +1,6 @@
 {{ define "main" }}
 <article class="page-header">
   <h1>{{ .Title }}</h1>
-  <!-- {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }} -->
 </article>
 
 {{ if eq .Section "people" }}
@@ -39,8 +38,6 @@
       {{ end }}
     {{ else if in $role "alumni" }}
       {{ $personGroup = "alumni" }}
-    {{ else if or (in $role "student") (in $role "phd") }}
-      {{ $personGroup = "students" }}
     {{ else }}
       {{ $personGroup = "students" }}
     {{ end }}
@@ -56,32 +53,60 @@
 
       <div>
         <h2>{{ $personName }}</h2>
-
-        {{ with .role }}
-        <p class="muted">{{ . }}</p>
-        {{ end }}
-
-        {{ with .time }}
-        <p class="person-time">{{ . }}</p>
-        {{ end }}
-
-        {{ with .email }}
-        <p class="person-email">
-          <a href="mailto:{{ . }}">{{ . }}</a>
-        </p>
-        {{ end }}
-
-        {{ with .website }}
-        <p class="person-link">
-          <a href="{{ . }}" target="_blank" rel="noopener">个人主页</a>
-        </p>
-        {{ end }}
+        {{ with .role }}<p class="muted">{{ . }}</p>{{ end }}
+        {{ with .email }}<p class="person-email"><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
       </div>
     </div>
 
-    {{ with .bio }}
-    <p class="person-bio">{{ . }}</p>
-    {{ end }}
+    {{ with .bio }}<p class="person-bio">{{ . }}</p>{{ end }}
+
+    {{ $paperCount := len (default slice .matched_papers) }}
+    {{ $awardCount := len (default slice .matched_awards) }}
+    <button class="person-detail-toggle" type="button" onclick="this.closest('.person-card').classList.toggle('is-expanded')">
+      详细信息
+      {{ if gt $paperCount 0 }}<span class="detail-badge">{{ $paperCount }}篇</span>{{ end }}
+      {{ if gt $awardCount 0 }}<span class="detail-badge">{{ $awardCount }}项奖项</span>{{ end }}
+    </button>
+
+    <div class="person-detail">
+      {{ with .matched_awards }}
+      {{ if gt (len .) 0 }}
+      <div class="detail-section">
+        <h4>奖项与专利</h4>
+        <ul class="detail-list">
+          {{ range . }}
+          <li>
+            <strong>{{ .name }}</strong>
+            {{ with .year }}<span class="detail-meta">{{ . }}</span>{{ end }}
+            {{ with .type }}<span class="detail-meta">{{ . }}</span>{{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{ with .matched_papers }}
+      {{ if gt (len .) 0 }}
+      <div class="detail-section">
+        <h4>相关论文</h4>
+        <ul class="detail-list">
+          {{ range . }}
+          <li>
+            <strong>{{ .title }}</strong>
+            <span class="detail-meta">{{ .journal }} ({{ .year }})</span>
+            {{ with .doi_url }}<a href="{{ . }}" target="_blank" rel="noopener" class="detail-link">DOI</a>{{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{ if and (eq $paperCount 0) (eq $awardCount 0) }}
+      <p class="detail-empty">暂无相关记录</p>
+      {{ end }}
+    </div>
   </article>
   {{ end }}
 </section>
@@ -121,51 +146,29 @@ document.addEventListener("DOMContentLoaded", function () {
     <li class="publication-item">
       <article class="publication-entry">
         <div class="publication-year-pill">{{ .year }}</div>
-
         <div class="publication-body">
           <div class="publication-title-row">
             <h2>{{ .title }}</h2>
-
             {{ with .doi }}
             <div class="publication-altmetric">
-              <div class="altmetric-embed"
-                   data-badge-popover="right"
-                   data-doi="{{ . }}">
-              </div>
+              <div class="altmetric-embed" data-badge-popover="right" data-doi="{{ . }}"></div>
             </div>
             {{ end }}
           </div>
-
-          <p class="publication-authors">
-            {{ .authors }}
-          </p>
-
+          <p class="publication-authors">{{ .authors }}</p>
           <p class="publication-meta">
             {{ with .journal }}<span>{{ . }}</span>{{ end }}
             {{ with .volume }}<span>Vol. {{ . }}</span>{{ end }}
             {{ with .number }}<span>No. {{ . }}</span>{{ end }}
             {{ with .pages }}<span>{{ . }}</span>{{ end }}
           </p>
-
           {{ $doiURL := .doi_url }}
-          {{ if and (not $doiURL) .doi }}
-            {{ $doiURL = printf "https://doi.org/%s" .doi }}
-          {{ end }}
-
+          {{ if and (not $doiURL) .doi }}{{ $doiURL = printf "https://doi.org/%s" .doi }}{{ end }}
           {{ if or $doiURL .free_full_text_url }}
           <div class="publication-actions">
-            {{ with $doiURL }}
-            <a href="{{ . }}" target="_blank" rel="noopener">DOI</a>
-            {{ end }}
-
-            {{ $freeSource := .free_full_text_source }}
+            {{ with $doiURL }}<a href="{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}
             {{ with .free_full_text_url }}
-            <a href="{{ . }}"
-               target="_blank"
-               rel="noopener"
-               {{ with $freeSource }}title="全文 via {{ . }}"{{ end }}>
-              全文
-            </a>
+            <a href="{{ . }}" target="_blank" rel="noopener" {{ with .free_full_text_source }}title="全文 via {{ . }}"{{ end }}>全文</a>
             {{ end }}
           </div>
           {{ end }}
@@ -189,8 +192,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </section>
 
 {{ else }}
-<section class="card">
-  {{ .Content }}
-</section>
+<section class="card">{{ .Content }}</section>
 {{ end }}
 {{ end }}
