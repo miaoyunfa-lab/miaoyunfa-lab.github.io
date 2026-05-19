@@ -5,11 +5,9 @@
 
 {{ if eq .Section "people" }}
 {{ $filters := slice
-  (dict "key" "pi" "label" "首席研究员")
+  (dict "key" "staff" "label" "在职人员")
   (dict "key" "postdoc" "label" "博士后")
   (dict "key" "students" "label" "学生")
-  (dict "key" "visiting-student" "label" "访问学生")
-  (dict "key" "visiting-scholar" "label" "访问学者")
   (dict "key" "alumni" "label" "已毕业学生")
 }}
 
@@ -27,15 +25,9 @@
   {{ if not $personGroup }}
     {{ $role := lower (default "" .role) }}
     {{ if in $role "principal investigator" }}
-      {{ $personGroup = "pi" }}
+      {{ $personGroup = "staff" }}
     {{ else if in $role "postdoc" }}
       {{ $personGroup = "postdoc" }}
-    {{ else if in $role "visiting" }}
-      {{ if in $role "scholar" }}
-        {{ $personGroup = "visiting-scholar" }}
-      {{ else }}
-        {{ $personGroup = "visiting-student" }}
-      {{ end }}
     {{ else if in $role "alumni" }}
       {{ $personGroup = "alumni" }}
     {{ else }}
