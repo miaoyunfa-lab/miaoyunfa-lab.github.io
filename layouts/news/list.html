@@ -6,13 +6,15 @@
 
 {{ $news := sort .RegularPages "File.BaseFileName" "desc" }}
 {{ $filters := slice
-  (dict "key" "honors" "label" "Honors")
-  (dict "key" "output" "label" "Output")
-  (dict "key" "life" "label" "Life")
+  (dict "key" "media" "label" "新闻报道")
+  (dict "key" "outreach" "label" "科普")
+  (dict "key" "honors" "label" "荣誉")
+  (dict "key" "output" "label" "成果")
+  (dict "key" "life" "label" "日常")
 }}
 
 <section class="news-tools" aria-label="News filters">
-  <button class="news-filter is-active" type="button" data-news-filter="all">All</button>
+  <button class="news-filter is-active" type="button" data-news-filter="all">全部</button>
   {{ range $filters }}
   <button class="news-filter" type="button" data-news-filter="{{ .key }}">{{ .label }}</button>
   {{ end }}

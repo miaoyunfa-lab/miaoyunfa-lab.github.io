@@ -3,4 +3,4 @@ title: "新闻"
 draft: false
 ---
 
-News from the group, including honors, research outputs, and life in the lab.
+课题组新闻动态，包括科研成果、科普活动、荣誉奖励与实验室日常。
