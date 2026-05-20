@@ -5,6 +5,377 @@
   email: miaoyunfa@lzb.ac.cn
   photo: /images/people/miaoyunfa.jpg
   bio: 研究方向：孢粉学与环境变化
+  matched_papers:
+  - title: Relative pollen productivity estimates for major plant taxa in the Qaidam Basin, northern Tibetan Plateau
+    authors: Ma L, Zhang S, ... Miao Y*.
+    journal: Review of Palaeobotany and Palynology
+    year: 2026
+    sort_date: '2026-01-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2026.105581
+    status: 已发表
+  - title: 'Late Cenozoic wildfire evolution in East-Central Asia: A microcharcoal record from the Junggar Basin'
+    authors: Niu G, Miao Y*, Wang X, et al.
+    journal: Palaeogeography, Palaeoclimatology, Palaeoecology
+    year: 2026
+    sort_date: '2026-02-01'
+    doi_url: https://doi.org/10.1016/j.palaeo.2025.113488
+    status: 已发表
+  - title: 'AI-driven microcharcoal recognition: Advancing intelligent automation for paleofire reconstruction'
+    authors: Zhang Z, Wang Z, Miao Y*, et al.
+    journal: Global and Planetary Change
+    year: 2026
+    sort_date: '2026-03-01'
+    doi_url: https://doi.org/10.1016/j.gloplacha.2026.105356
+    status: 已发表
+  - title: How “wet islands” form – A case study of the Qilian Mountains on the arid northern Tibetan Plateau during the Middle Miocene
+    authors: Yang Y, Miao Y*, Wang X, et al.
+    journal: Earth-Science Reviews
+    year: 2025
+    sort_date: '2025-11-01'
+    doi_url: https://doi.org/10.1016/j.earscirev.2025.105041
+    status: 已发表
+  - title: 'Relative pollen productivity in subtropical evergreen broadleaved forest: Implications for reconstructing paleovegetation dynamics in East Asia'
+    authors: Ma L, Zhang S, ... Miao Y*.
+    journal: Ecological Indicators
+    year: 2025
+    sort_date: '2025-12-01'
+    doi_url: https://doi.org/10.1016/j.ecolind.2025.114112
+    status: 已发表
+  - title: A new method of automatic microcharcoal identification and its demonstration in revealing the spatial heterogeneity of fire over the past 40,000 years in China
+    authors: Zou Y, Miao Y, Li Y, et al.
+    journal: Quaternary International
+    year: 2025
+    sort_date: '2025-13-01'
+    doi_url: https://doi.org/10.1016/j.quaint.2025.109743
+    status: 已发表
+  - title: 青藏高原地区相对花粉产量综述
+    authors: 马林原, 许清海, 张生瑞, 李月丛, 苗运法, 曹现勇
+    journal: 中国科学：地球科学
+    year: 2025
+    sort_date: '2025-20-01'
+    doi_url: https://doi.org/10.1360/SSTe-2024-0277
+    status: 已发表
+  - title: 'New Discovery of Calamitaceae from the Cisuralian in Northwest China: Morphological Evolution of Strobilus'
+    authors: Wang X, Miao Y*, Ji Y, et al.
+    journal: Biology
+    year: 2024
+    sort_date: '2024-23-01'
+    doi_url: https://doi.org/10.3390/biology13050347
+    status: 已发表
+  - title: 亚洲内陆干旱区空气孢粉研究现状及展望
+    authors: 苗运法*, 雷艳, 赵永涛, 等.
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-24-01'
+    doi_url: https://doi.org/10.11928/j.issn.1001-7410.2024.03.06
+    status: 已发表
+  - title: 我国中西部表层沉积物中微炭屑记录的火活动信息
+    authors: 王梓莎, 苗运法*, 赵永涛, 等
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-25-01'
+    doi_url: https://doi.org/10.11928/j.isssn.1001-7410.2024.01.15
+    status: 已发表
+  - title: 青藏高原柴达木盆地中新世单籽豆属（Podocarpium）化石的发现及其生物地理学意义
+    authors: 王雪莲，苗运法，牛改红，周莹莹，杨永恒，张腾，赵永涛，孟庆泉，宋春晖，张扬
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-27-01'
+    doi_url: ｄｏｉ：１０．１１９２８／ｊ．ｉｓｓｎ．１００１７４１０．２０２４．０６．０２
+    status: 已发表
+  - title: Microcharcoals reveal more grass than trees during the Mid-Holocene Optimum on the Chinese Loess Plateau
+    authors: Wang Z, Miao Y*, Zou Y, et al.
+    journal: Geophysical Research Letters
+    year: 2023
+    sort_date: '2023-33-01'
+    doi_url: https://doi.org/10.1029/2023GL103637
+    status: 已发表
+  - title: Pollen assemblages reflect a Mid-Miocene precipitation gradient in the northeastern Tibetan Plateau
+    authors: Miao Y*, Zhang T, Huang K, et al.
+    journal: Palaeogeography, Palaeoclimatology, Palaeoecology
+    year: 2023
+    sort_date: '2023-34-01'
+    doi_url: https://doi.org/10.1016/j.palaeo.2023.111514
+    status: 已发表
+  - title: The effects of meteorological conditions on allergenic airborne pollen in arid Northwest China
+    authors: Lei Y, Miao Y*, Zhao Y, et al.
+    journal: Atmospheric Environment
+    year: 2023
+    sort_date: '2023-35-01'
+    doi_url: https://doi.org/10.1016/j.atmosenv.2023.119647
+    status: 已发表
+  - title: Extreme-wind events in China in the past 50 years and their impacts on sandstorm variations
+    authors: Jiang Y, Miao Y*, Zhao Y, et al.
+    journal: Frontiers in Earth Science
+    year: 2023
+    sort_date: '2023-36-01'
+    doi_url: https://doi.org/10.3389/feart.2022.1058275
+    status: 已发表
+  - title: A new biologic paleoaltimetry indicating Late Miocene rapid uplift of northern Tibet Plateau
+    authors: Miao Y*, Fang X*, Sun J, et al.
+    journal: Science
+    year: 2022
+    sort_date: '2022-40-01'
+    doi_url: https://doi.org/10.1126/science.abo2475
+    status: 已发表
+  - title: Comment on “An equable subtropical climate throughout China in the Miocene based on palaeofloral evidence”
+    authors: Miao Y*, Xiang M, Zhang T, et al.
+    journal: Earth-Science Reviews
+    year: 2022
+    sort_date: '2022-41-01'
+    doi_url: https://doi.org/10.1016/j.earscirev.2022.104020
+    status: 已发表
+  - title: Palynomorph assemblages evidence for river reorganization 8.5 million years ago in Southeast Asia
+    authors: Miao Y*, Warny S*, Liu C, et al.
+    journal: Global and Planetary Change
+    year: 2022
+    sort_date: '2022-42-01'
+    doi_url: https://doi.org/10.1016/j.gloplacha.2022.103808
+    status: 已发表
+  - title: Holocene hydroclimate changes revealed by multiple proxies from an alpine lake in the central Tianshan Mountains, Northwest China
+    authors: Zhao Y, Miao Y*, Huang X, et al.
+    journal: Palaeogeography, Palaeoclimatology, Palaeoecology
+    year: 2022
+    sort_date: '2022-43-01'
+    doi_url: https://doi.org/10.1016/j.palaeo.2022.111004
+    status: 已发表
+  - title: Non-linear response of mid-latitude Asian dryland vegetation to Holocene climate fluctuations
+    authors: Zhao Y, Miao Y*, Li Y, et al.
+    journal: Catena
+    year: 2022
+    sort_date: '2022-44-01'
+    doi_url: https://doi.org/10.1016/j.catena.2022.106212
+    status: 已发表
+  - title: Early Oligocene—Late Miocene Wildfire History in the Northern Tibetan Plateau and Links to Temperature-Driven Precipitation Changes
+    authors: Miao Y, Chang H*, Li L, et al.
+    journal: Frontiers in Earth Science
+    year: 2022
+    sort_date: '2022-45-01'
+    doi_url: https://doi.org/10.3389/feart.2022.850809
+    status: 已发表
+  - title: 'Lake Changes during the Past Five Decades in Central East Asia: Links with Climate Change and Climate Future Forecasting'
+    authors: Yang Y*, Wu J, Miao Y*, et al.
+    journal: Water
+    year: 2022
+    sort_date: '2022-46-01'
+    doi_url: https://doi.org/10.3390/w14223661
+    status: 已发表
+  - title: '一种基于图像光谱原理的炭屑自动统计方
+
+      法'
+    authors: 邹亚国，苗运法，赵永涛，王梓莎，杜安霞
+    journal: 中国发明专利
+    year: 2022
+    sort_date: '2022-52-01'
+    doi_url: https://kns.cnki.net/kcms2/article/abstract?v=ZMT4ddBD2nzbSO9QXro54aC0f8JNXPfF7Dpgi7M6QbSRCLU7hzoQPnD5cjrV1S7eykZInVcpBb8PIF5mgf8PF-XK1MyQH3O9dkJFxFvcOJvKHdf9SMD0K3u4n-e_1UH0LNYcw1zauQj_BhgmuB_Elg==&uniplatform=NZKPT&language=CHS
+    status: 已发表
+  - title: Progress, problems and prospects of palynology in reconstructing environmental change in inland arid areas of Asia
+    authors: Zhao Y, Miao Y*, Lei Y, et al.
+    journal: Sciences in Cold and Arid Regions
+    year: 2021
+    sort_date: '2021-53-01'
+    doi_url: https://doi.org/10.3724/SP.J.1226.2021.20049.
+    status: 已发表
+  - title: 'Investigation of factors affecting surface pollen assemblages in the Balikun Basin, central Asia: Implications for palaeoenvironmental reconstructions'
+    authors: Zhao Y, Miao Y*, Fang Y. et al.
+    journal: Ecological Indicators
+    year: 2021
+    sort_date: '2021-54-01'
+    doi_url: https://doi.org/10.1016/j.ecolind.2020.107332
+    status: 已发表
+  - title: Late Pleistocene fire in the Ili Basin, Central Asia, and its potential links to paleoclimate change and human activities
+    authors: Miao Y*, Song Y*, Li Y, et al.
+    journal: Palaeogeography, Palaeoclimatology, Palaeoecology
+    year: 2020
+    sort_date: '2020-60-01'
+    doi_url: https://doi.org/10.1016/j.palaeo.2020.109700
+    status: 已发表
+  - title: 以孢粉学方法为例浅论黄土沉积物中微体炭屑的统计问题
+    authors: 王梓莎, 赵永涛, 苗运法*, 等
+    journal: 干旱区地理
+    year: 2020
+    sort_date: '2020-61-01'
+    doi_url: https://doi.org/10.12118/j. issn. 1000－6060. 2020. 03.12
+    status: 已发表
+  - title: 柴达木盆地北缘湖泊表层沉积物炭屑特征及其环境意义
+    authors: 王梓莎, 苗运法*, 赵永涛, 等
+    journal: 中国沙漠
+    year: 2020
+    sort_date: '2020-62-01'
+    doi_url: https://doi.org/10.7522/j.issn.1000-694X.2020.00012
+    status: 已发表
+  - title: Miocene fire intensification linked to continuous aridification on the Tibetan Plateau
+    authors: Miao Y*, Wu F*, Warny S, et al.
+    journal: Geology
+    year: 2019
+    sort_date: '2019-65-01'
+    doi_url: https://doi.org/10.1130/G45720.1
+    status: 已发表
+  - title: 亚洲内陆干旱区巴里坤湖记录的 H1 突变事件
+    authors: 赵永涛, 安成邦, 赵家驹, 李渊, 段阜涛, 苗运法
+    journal: 第四纪研究
+    year: 2019
+    sort_date: '2019-67-01'
+    doi_url: https://doi.org/10.11928/j.issn.1001-7410.2019.04.11
+    status: 已发表
+  - title: Climatic or tectonic control on organic matter deposition in the South China Sea? A lesson learned from a comprehensive Neogene palynological study of IODP Site U1433
+    authors: Miao Y*, Warny S*, Clift P et al.
+    journal: International Journal of Coal Geology
+    year: 2018
+    sort_date: '2018-69-01'
+    doi_url: https://doi.org/10.1016/j.coal.2017.10.003
+    status: 已发表
+  - title: 青藏高原北部柴达木盆地中新世菌孢子变化及其意义初探
+    authors: 苗运法*, 吴福莉, 方小敏, 等
+    journal: 第四纪研究
+    year: 2018
+    sort_date: '2018-70-01'
+    doi_url: https://doi.org/10.11928/j.issn.1001-7410.2018.01.05
+    status: 已发表
+  - title: Evidence of continuous Asian summer monsoon weakening as a response to global cooling over the last 8 Ma
+    authors: Miao Y, Warny S*, Clift P, et al.
+    journal: Gondwana Research
+    year: 2017
+    sort_date: '2017-74-01'
+    doi_url: https://doi.org/10.1016/j.gr.2017.09.003
+    status: 已发表
+  - title: 'Neogene fungal record from IODP Site U1433, South China Sea: Implications for paleoenvironmental change and the onset of the Mekong River'
+    authors: Miao Y, Warny S*, Liu C, et al.
+    journal: Marine Geology
+    year: 2017
+    sort_date: '2017-75-01'
+    doi_url: http://dx.doi.org/10.1016/j.margeo.2017.08.019
+    status: 已发表
+  - title: Holocene fire on the northeast Tibetan Plateau in relation to climate change and human activity
+    authors: Miao Y*, Zhang D, Cai X, et al.
+    journal: Quaternary International
+    year: 2017
+    sort_date: '2017-76-01'
+    doi_url: https://doi.org/10.1016/j.quaint.2016.05.029
+    status: 已发表
+  - title: 'Late Cenozoic fire enhancement response to aridification in mid-latitude Asia: Evidence from microcharcoal records.'
+    authors: Miao Y*, Fang X*, Song C, et al.
+    journal: Quaternary Science Reviews
+    year: 2016
+    sort_date: '2016-80-01'
+    doi_url: http://dx.doi.org/10.1016/j.quascirev.2016.02.030
+    status: 已发表
+  - title: Late Cenozoic pollen concentration in the western Qaidam Basin, northern Tibetan Plateau, and its significance for paleoclimate and tectonics
+    authors: Miao Y*, Fang X, Liu Y, et al.
+    journal: Review of Palaeobotany and Palynology
+    year: 2016
+    sort_date: '2016-81-01'
+    doi_url: http://dx.doi.org/10.1016/j.revpalbo.2016.04.008
+    status: 已发表
+  - title: Human activity accelerating the rapid desertification of the Mu Us Sandy Lands, North China
+    authors: Miao Y, Jin H, & Cui, J
+    journal: Scientific reports
+    year: 2016
+    sort_date: '2016-82-01'
+    doi_url: https://doi.org/10.1038/srep23003
+    status: 已发表
+  - title: 新疆青海地区现代地表沉积物颜色指标与气候参数关系
+    authors: 严永耀，安聪荣，苗运法*
+    journal: 干旱区地理
+    year: 2016
+    sort_date: '2016-83-01'
+    doi_url: https://doi.org/10.13826/j.cnki.cn65-1103/x.2017.02.014
+    status: 已发表
+  - title: Late Cenozoic genus Fupingopollenites development and its implications for the Asian summer monsoon evolution
+    authors: Miao Y, Song C, Fang X, et al.
+    journal: Gondwana Research
+    year: 2016
+    sort_date: '2016-84-01'
+    doi_url: http://dx.doi.org/10.1016/j.gr.2014.12.007
+    status: 已发表
+  - title: A Late-Eocene palynological record fromthe Hoh Xil Basin, northern Tibetan Plateau, and its implications for stratigraphic age, paleoclimate and paleoelevation
+    authors: Miao Y, Wu F*, Chang H, et al.
+    journal: Gondwana Research
+    year: 2016
+    sort_date: '2016-85-01'
+    doi_url: https://doi.org/10.1016/j.gr.2015.01.007
+    status: 已发表
+  - title: Holocene climate change on the northeastern Tibetan Plateau inferred from mountain-slope pollen and non-pollen palynomorphs
+    authors: Miao Y, Jin H*, Liu B, et al.
+    journal: Review of Palaeobotany and Palynology
+    year: 2015
+    sort_date: '2015-86-01'
+    doi_url: http://dx.doi.org/10.1016/j.revpalbo.2015.05.006
+    status: 已发表
+  - title: Late Quaternary pollen records from the Yangtze River Delta, East China, and its implications for the Asian monsoon evolution
+    authors: Miao Y, Zhang P*, Lu S, et al.
+    journal: Arabian Journal of Geosciences
+    year: 2015
+    sort_date: '2015-87-01'
+    doi_url: https://doi.org/10.1007/s12517-015-1777-8
+    status: 已发表
+  - title: 'Natural ecosystem response and recovery after the 8.2 ka cold event: Evidence from slope sediments on the northeastern Tibetan Plateau'
+    authors: Miao Y *, Jin H, Liu B, et al.
+    journal: Journal of Arid Environments
+    year: 2014
+    sort_date: '2014-90-01'
+    doi_url: http://dx.doi.org/10.1016/j.jaridenv.2014.01.021
+    status: 已发表
+  - title: 我国西北干旱区现代地表沉积物颜色指标与降水关系
+    authors: 苗运法, 杨胜利, 卓世新, 等
+    journal: 海洋地质与第四纪地质
+    year: 2013
+    sort_date: '2013-92-01'
+    doi_url: https://doi.org/10.3724/SP.J.1140.2013.04077
+    status: 已发表
+  - title: Pollen and fossil wood’s linkage with Mi-1 Glaciation in northeastern Tibetan Plateau, China
+    authors: Miao Y, Fang X*, Song C, et al.
+    journal: Palaeoworld
+    year: 2013
+    sort_date: '2013-93-01'
+    doi_url: http://dx.doi.org/10.1016/j.palwor.2013.06.001
+    status: 已发表
+  - title: 'Late early Oligocene East Asian summer monsoon in the NE Tibetan Plateau: Evidence from a palynological record from the Lanzhou Basin, China'
+    authors: Miao Y, Wu F*, Herrmann M, et al.
+    journal: Journal of Asian Earth Sciences
+    year: 2013
+    sort_date: '2013-94-01'
+    doi_url: http://dx.doi.org/10.1016/j.jseaes.2013.07.003
+    status: 已发表
+  - title: 'Late Cenozoic continuous aridification in the western Qaidam Basin: evidence from sporopollen records'
+    authors: Miao Y, Fang X, Wu F et al.
+    journal: Climate of the Past
+    year: 2013
+    sort_date: '2013-95-01'
+    doi_url: https://doi.org/10.5194/cp-9-1863-2013
+    status: 已发表
+  - title: 'What controlled Mid-Late Miocene long-term aridification in Central Asia? –Global cooling or Tibetan Plateau uplift: A review'
+    authors: Miao Y*, Herrmann M, Wu F, et al.
+    journal: Earth-Science Reviews
+    year: 2012
+    sort_date: '2012-97-01'
+    doi_url: https://doi.org/10.1016/j.earscirev.2012.02.003
+    status: 已发表
+  - title: Cenozoic Ephedraceae adaptation to global cooling in Northwestern China
+    authors: Miao Y, Yan X, Shao Y, et al.
+    journal: Sciences in Cold and Arid Regions
+    year: 2011
+    sort_date: '2011-98-01'
+    status: 已发表
+  - title: Miocene pollen record of KC–1 core in the Qaidam Basin, NE Tibetan Plateau and implications for evolution of the East Asian monsoon
+    authors: Miao Y, Fang X*, Herrmann M, et al.
+    journal: Palaeogeography, Palaeoclimatology, Palaeoecology
+    year: 2011
+    sort_date: '2011-99-01'
+    doi_url: https://doi.org/10.1016/j.palaeo.2010.10.026
+    status: 已发表
+  - title: 'Origin and development of Artemisia (Asteraceae) in Asia and its implications for the uplift history of the Tibetan Plateau: a review'
+    authors: Miao Y, Meng Q*, Fang X, et al.
+    journal: Quaternary International
+    year: 2011
+    sort_date: 2011-100-01
+    doi_url: https://doi.org/10.1016/j.quaint.2010.08.014
+    status: 已发表
+  paper_count: 52
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 赵永涛
   en_name: YongTao Zhao
   role: 副研究员
@@ -12,6 +383,85 @@
   email: zhaoyt2018@lzb.ac.cn
   photo: /images/people/zhaoyongtao.jpg
   bio: 研究方向：孢粉学与古气候和古生态
+  matched_papers:
+  - title: 'Pollen sources and deposition processes of modern pollen in arid areas and their implications: A case study from the Sugan Lake watershed, NW China'
+    authors: Fangtao Yu, Yongtao Zhao, Xuelian Wang, Yongheng Yang, Linyuan Ma, Haitao Wang, Shuyuan Wang, Yan Lei, Jingyi Xie, Ziyue Zhang, Gen Wang, Shabir Ahmad, Teng Zhang, Yunfa Miao
+    journal: Review of Palaeobotany and Palynology
+    year: 2026
+    sort_date: '2026-10-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2026.105556
+    status: 已发表
+    code_url: https://doi.org/10.1016/j.revpalbo.2026.105556
+  - title: 亚洲内陆干旱区空气孢粉研究现状及展望
+    authors: 苗运法*, 雷艳, 赵永涛, 等.
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-24-01'
+    doi_url: https://doi.org/10.11928/j.issn.1001-7410.2024.03.06
+    status: 已发表
+  - title: 我国中西部表层沉积物中微炭屑记录的火活动信息
+    authors: 王梓莎, 苗运法*, 赵永涛, 等
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-25-01'
+    doi_url: https://doi.org/10.11928/j.isssn.1001-7410.2024.01.15
+    status: 已发表
+  - title: 青藏高原柴达木盆地中新世单籽豆属（Podocarpium）化石的发现及其生物地理学意义
+    authors: 王雪莲，苗运法，牛改红，周莹莹，杨永恒，张腾，赵永涛，孟庆泉，宋春晖，张扬
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-27-01'
+    doi_url: ｄｏｉ：１０．１１９２８／ｊ．ｉｓｓｎ．１００１７４１０．２０２４．０６．０２
+    status: 已发表
+  - title: 青藏高原东北缘祁连山区现代孢粉空间分布与搬运过程
+    authors: 赵永涛, 安成邦, 陈玉凤, 赵家驹, 周爱锋, 施超
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-28-01'
+    doi_url: https://doi.org/10.11928/j.issn.1001-7410.2024.03.04
+    status: 已发表
+  - title: '一种基于图像光谱原理的炭屑自动统计方
+
+      法'
+    authors: 邹亚国，苗运法，赵永涛，王梓莎，杜安霞
+    journal: 中国发明专利
+    year: 2022
+    sort_date: '2022-52-01'
+    doi_url: https://kns.cnki.net/kcms2/article/abstract?v=ZMT4ddBD2nzbSO9QXro54aC0f8JNXPfF7Dpgi7M6QbSRCLU7hzoQPnD5cjrV1S7eykZInVcpBb8PIF5mgf8PF-XK1MyQH3O9dkJFxFvcOJvKHdf9SMD0K3u4n-e_1UH0LNYcw1zauQj_BhgmuB_Elg==&uniplatform=NZKPT&language=CHS
+    status: 已发表
+  - title: 以孢粉学方法为例浅论黄土沉积物中微体炭屑的统计问题
+    authors: 王梓莎, 赵永涛, 苗运法*, 等
+    journal: 干旱区地理
+    year: 2020
+    sort_date: '2020-61-01'
+    doi_url: https://doi.org/10.12118/j. issn. 1000－6060. 2020. 03.12
+    status: 已发表
+  - title: 柴达木盆地北缘湖泊表层沉积物炭屑特征及其环境意义
+    authors: 王梓莎, 苗运法*, 赵永涛, 等
+    journal: 中国沙漠
+    year: 2020
+    sort_date: '2020-62-01'
+    doi_url: https://doi.org/10.7522/j.issn.1000-694X.2020.00012
+    status: 已发表
+  - title: 亚洲内陆干旱区巴里坤湖记录的 H1 突变事件
+    authors: 赵永涛, 安成邦, 赵家驹, 李渊, 段阜涛, 苗运法
+    journal: 第四纪研究
+    year: 2019
+    sort_date: '2019-67-01'
+    doi_url: https://doi.org/10.11928/j.issn.1001-7410.2019.04.11
+    status: 已发表
+  - title: 晚冰期以来乌伦古湖沉积物多指标高分辨率的古环境演化
+    authors: 赵永涛, 蓝小玉, 雷艳, 王梓莎, 常婧, 陈雪梅, 张孜越, 王雪莲, 汪亘, 詹科杰
+    journal: 干旱区地理
+    year: 2014
+    sort_date: '2014-91-01'
+    doi_url: http://alg.xjegi.com/CN/Y2014/V37/I2/222
+    status: 已发表
+  paper_count: 10
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 王雪莲
   en_name: Xuelian Wang
   role: 副研究员（特聘研究岗）
@@ -19,6 +469,143 @@
   email: wangxuelian@nieer.ac.cn
   photo: /images/people/wangxuelian.jpg
   bio: 研究方向：生物多样性与环境演变
+  matched_papers:
+  - title: 'Late Cenozoic wildfire evolution in East-Central Asia: A microcharcoal record from the Junggar Basin'
+    authors: Gaihong Niu, Yunfa Miao, Xuelian Wang, Xiaoze Li, Ziyue Zhang, Yaguo Zou, Shabir Ahmad
+    journal: Palaeogeography, Palaeoclimatology, Palaeoecology
+    year: 2026
+    sort_date: '2026-08-01'
+    doi_url: https://doi.org/10.1016/j.palaeo.2025.113488.
+    status: 已发表
+  - title: 'Pollen sources and deposition processes of modern pollen in arid areas and their implications: A case study from the Sugan Lake watershed, NW China'
+    authors: Fangtao Yu, Yongtao Zhao, Xuelian Wang, Yongheng Yang, Linyuan Ma, Haitao Wang, Shuyuan Wang, Yan Lei, Jingyi Xie, Ziyue Zhang, Gen Wang, Shabir Ahmad, Teng Zhang, Yunfa Miao
+    journal: Review of Palaeobotany and Palynology
+    year: 2026
+    sort_date: '2026-10-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2026.105556
+    status: 已发表
+    code_url: https://doi.org/10.1016/j.revpalbo.2026.105556
+  - title: "Holocene vegetation evolution on the Tibetan Plateau: An integrated \napproach utilising plant functional types"
+    authors: Yang Zhang, Xuelian Wang, Yunfa Miao, Xianyong Cao, Yongheng Yang, Yongtao Zhao, Gaihong Niu, Dong Yang, Yingying Zhou
+    journal: Palaeogeography, Palaeoclimatology, Palaeoecology
+    year: 2025
+    sort_date: '2025-14-01'
+    doi_url: https://doi.org/10.1016/j.palaeo.2025.112749
+    status: 已发表
+  - title: "Spatiotemporal decoupling of floristic endemism in response \nto Qinghai–Tibet Plateau uplift"
+    authors: Bao Yang, Xuelian Wang
+    journal: PNAS
+    year: 2025
+    sort_date: '2025-15-01'
+    doi_url: https://doi.org/10.1073/pnas.2513876122
+    status: 已发表
+  - title: "The cuticles of late Palaeozoic sterile leaves from the Cisuralian (Permian) in the \nHexi Corridor, northwest China, and its palaeoenvironmental significance"
+    authors: Yanzhao Ji, Xuelian Wang, Yifan Hua, Bainian Sun, Feng Lu, Fenxiang Li, Yao Lin
+    journal: Historical Biology
+    year: 2025
+    sort_date: '2025-16-01'
+    doi_url: https://doi.org/10.1080/08912963.2025.2557941
+    status: 已发表
+  - title: How “wet islands” form – A case study of the Qilian Mountains on the arid  northern Tibetan Plateau during the Middle Miocene
+    authors: Yang Yongheng， Miao Yunfa， Wang Xuelian， Wu Jie， Ren Yulong， Zhang Tao， Li Liwu，Fang Xiaomin
+    journal: Earth-Science Reviews
+    year: 2025
+    sort_date: '2025-22-01'
+    doi_url: https://doi.org/10.1016/j.earscirev.2025.105041
+    status: 已发表
+  - title: 'New Discovery of Calamitaceae from the Cisuralian
+
+      in Northwest China: Morphological Evolution of Strobilus'
+    authors: Xuelian Wang, Yunfa Miao, Yanzhao Ji, Bainian Sun
+    journal: Biology
+    year: 2024
+    sort_date: '2024-26-01'
+    doi_url: https://doi.org/10.3390/biology13050347
+    status: 已发表
+  - title: 青藏高原柴达木盆地中新世单籽豆属（Podocarpium）化石的发现及其生物地理学意义
+    authors: 王雪莲，苗运法，牛改红，周莹莹，杨永恒，张腾，赵永涛，孟庆泉，宋春晖，张扬
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-27-01'
+    doi_url: ｄｏｉ：１０．１１９２８／ｊ．ｉｓｓｎ．１００１７４１０．２０２４．０６．０２
+    status: 已发表
+  - title: High-elevation Qilian Mountains and its inspiration for tectonics and  biodiversity during the late Middle Miocene
+    authors: Yang Yongheng， Miao Yunfa， Wang Xuelian， Zhang Tao， Li Liwu
+    journal: Global and Planetary Change
+    year: 2024
+    sort_date: '2024-32-01'
+    doi_url: https://doi.org/10.1016/j.gloplacha.2024.104632
+    status: 已发表
+  - title: '甘肃永昌乌拉尔世 Sphenopteris ( 楔羊齿) 新记录:
+
+      兼论晚古生代 Sphenopteris 多样性及古地理演化'
+    authors: 王雪莲, 熊聪慧, 孙柏年
+    journal: 古地理学报
+    year: 2023
+    sort_date: '2023-37-01'
+    doi_url: 'DOI: 10．7605 /gdlxb．2023．02．029'
+    status: 已发表
+  - title: 'Hexicladia, a new genus of the Cisuralian conifer from Hexi
+
+      Corridor, China'
+    authors: Xuelian Wang, Yongheng Yang, Yifan Hua, Bainian Sun,, Yunfa Miao
+    journal: Review of Palaeobotany and Palynology
+    year: 2022
+    sort_date: '2022-47-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2022.104789
+    status: 已发表
+  - title: Summary and exploration of analysis experment technology on fossil plant cuticles
+    authors: Xuelian Wang, Conghui Xiong, Bainian Sun, Jingyu Wu, Baoxia Du
+    journal: Acta GeologicaSinica
+    year: 2020
+    sort_date: '2020-63-01'
+    doi_url: ｄｏｉ：１０．１９７６２／ｊ．ｃｎｋｉ．ｄｉｚｈｉｘｕｅｂａｏ．２０２００２４
+    status: 已发表
+  - title: 'New materials of Mariopteris from the Cisuralian
+
+      of northwestern China and their implications for
+
+      palaeogeographic diversification'
+    authors: Xuelian Wang, Yanzhao Ji, Yifan Hua, Conghui Xiong, Bainian Sun
+    journal: Historical Biology
+    year: 2019
+    sort_date: '2019-66-01'
+    doi_url: https://doi.org/10.1080/08912963.2019.1675054
+    status: 已发表
+  - title: 'Vein density of angiosperms as a paleoclimate proxy: a case study using
+
+      fossil leaves of Zelkova and Machilus'
+    authors: Xuelian Wang, Zixi Wang, Ruiyun Li, Peng Deng, Li Ma, Bainian Sun
+    journal: Palaeoworld
+    year: 2017
+    sort_date: '2017-77-01'
+    doi_url: http://dx.doi.org/10.1016/j.palwor.2015.11.002
+    status: 已发表
+  paper_count: 14
+  matched_awards:
+  - year: 2025
+    name: 甘肃省“陇原人才”
+    recipient: 王雪莲
+    type: ''
+    details: ''
+  - year: 2020
+    name: 甘肃省优秀学位论文
+    recipient: 王雪莲
+    type: ''
+    details: ''
+  - year: 2020
+    name: 兰州大学优秀学位论文
+    recipient: 王雪莲
+    type: ''
+    details: ''
+  award_count: 3
+  matched_patents:
+  - year: 2019
+    name: 一种针对植物化石角质层提取的前处理方法
+    recipient: 熊聪慧, 王雪莲
+    type: 发明专利
+    details: 已发表
+  patent_count: 1
 - name: 王树源
   en_name: Shuyuan Wang
   role: 博士后
@@ -26,6 +613,47 @@
   email: wangshuyuan@nieer.ac.cn
   photo: /images/people/wangshuyuan.jpg
   bio: 研究方向：生态环境与气候变化
+  matched_papers:
+  - title: Magnetic properties of surface soils in the upper and middle reaches of the Yarlung Zangbo River, southern Tibetan Plateau, and their environmental significance
+    authors: Shuyuan Wang, Zixuan Chen, Junhuai Yang, et al.
+    journal: Geophysical Journal International
+    year: 2023
+    sort_date: '2023-38-01'
+    doi_url: 10.1093/gji/ggac511
+    status: 已发表
+  - title: Variation of surface soil δ13Corg in the upper and middle reaches of the Yarlung Zangbo river basin, southern Tibetan Plateau, and its climatic implications
+    authors: Shuyuan Wang, Dunsheng Xia, Yijiao Fan, et al.
+    journal: Sedimentary Geology
+    year: 2022
+    sort_date: '2022-50-01'
+    doi_url: 10.1016/j.sedgeo.2022.106135
+    status: 已发表
+  - title: 雅鲁藏布江中上游地区表土碳同位素变化及其影响因素初探
+    authors: 王树源，范义姣，杨军怀，等
+    journal: 冰川冻土
+    year: 2022
+    sort_date: '2022-51-01'
+    doi_url: 10. 7522/j. issn. 1000-0240. 2022. 0105
+    status: 已发表
+  - title: 七种云杉针叶非结构性碳与光合特性随物候期的动态变化特征
+    authors: 王树源，王富，唐佳琪，等
+    journal: 生态学杂志
+    year: 2019
+    sort_date: '2019-68-01'
+    doi_url: 10.13292/j.1000-4890.201908.008
+    status: 已发表
+  - title: 干早胁迫对油松和柴松钾钙离子流的影响
+    authors: 王树源，王明浩，牛颖芝，等
+    journal: 西北农林科技大学学报（自然科学版）
+    year: 2018
+    sort_date: '2018-71-01'
+    doi_url: 10.13207/i.cnki,jnwafu,20l8.01.004
+    status: 已发表
+  paper_count: 5
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 王海涛
   en_name: Haitao Wang
   role: 博士后
@@ -33,6 +661,26 @@
   email: wanghaitao@nieer.ac.cn
   photo: /images/people/wanghaitao.jpg
   bio: 研究方向：孢粉现代过程
+  matched_papers:
+  - title: 'Miocene lake evolution in the western Qaidam Basin, northern Tibetan Plateau: Evidence from aquatic-plant pollen'
+    authors: Wang Haitao,Wu Fuli,Yang Liye,Fang Xiaomin
+    journal: 期刊
+    year: 2023
+    sort_date: '2023-39-01'
+    doi_url: 10.1016/j.jseaes.2023.105634
+    status: 已发表
+  - title: 中中新世气候适宜期西北内陆干旱区气候演化特征
+    authors: 王海涛, 吴福莉, 方小敏,杨立业
+    journal: 期刊
+    year: 2020
+    sort_date: '2020-64-01'
+    doi_url: 10.7515/JEE192020
+    status: 已发表
+  paper_count: 2
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 杨永恒
   en_name: Yongheng Yang
   role: 博士后
@@ -40,6 +688,42 @@
   email: yangyongheng17@mails.ucas.ac.cn
   photo: /images/people/yangyongheng.jpg
   bio: 研究方向：新生代孢粉学
+  matched_papers:
+  - title: How “wet islands” form – A case study of the Qilian Mountains on the arid  northern Tibetan Plateau during the Middle Miocene
+    authors: Yang Yongheng， Miao Yunfa， Wang Xuelian， Wu Jie， Ren Yulong， Zhang Tao， Li Liwu，Fang Xiaomin
+    journal: Earth-Science Reviews
+    year: 2025
+    sort_date: '2025-22-01'
+    doi_url: https://doi.org/10.1016/j.earscirev.2025.105041
+    status: 已发表
+  - title: 青藏高原柴达木盆地中新世单籽豆属（Podocarpium）化石的发现及其生物地理学意义
+    authors: 王雪莲，苗运法，牛改红，周莹莹，杨永恒，张腾，赵永涛，孟庆泉，宋春晖，张扬
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-27-01'
+    doi_url: ｄｏｉ：１０．１１９２８／ｊ．ｉｓｓｎ．１００１７４１０．２０２４．０６．０２
+    status: 已发表
+  - title: High-elevation Qilian Mountains and its inspiration for tectonics and  biodiversity during the late Middle Miocene
+    authors: Yang Yongheng， Miao Yunfa， Wang Xuelian， Zhang Tao， Li Liwu
+    journal: Global and Planetary Change
+    year: 2024
+    sort_date: '2024-32-01'
+    doi_url: https://doi.org/10.1016/j.gloplacha.2024.104632
+    status: 已发表
+  - title: 'Hexicladia, a new genus of the Cisuralian conifer from Hexi
+
+      Corridor, China'
+    authors: Xuelian Wang, Yongheng Yang, Yifan Hua, Bainian Sun,, Yunfa Miao
+    journal: Review of Palaeobotany and Palynology
+    year: 2022
+    sort_date: '2022-47-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2022.104789
+    status: 已发表
+  paper_count: 4
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: Shabir Ahmad
   en_name: Shabir Ahmad
   role: 博士后
@@ -47,6 +731,12 @@
   email: shabir@bs.qau.edu.pk
   photo: /images/people/ahmadshabir.jpg
   bio: 研究方向：古植物学
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 邹亚国
   en_name: Yaguo Zou
   role: 博士生
@@ -54,6 +744,78 @@
   email: zouyaguo@126.com
   photo: /images/people/zouyaguo.jpg
   bio: 研究方向：生物分布与迁徙
+  matched_papers:
+  - title: 'Urban Green Spaces Under Dual Pressures of Human Activity and Climate Change: A Comprehensive Review'
+    authors: Yuehan Sun,Yunfa Miao,Yaguo Zou ,Xiangnan Jing
+    journal: Sustainability
+    year: 2026
+    sort_date: '2026-07-01'
+    doi_url: https://doi.org/10.3390/su18052365
+    status: 已发表
+  - title: 'Microtopography-driven water redistribution shapes vegetation patterns: a case plot in Gobi Desert'
+    authors: Yaguo Zou, Teng Zhang, Ziyue Zhang, Yunfa Miao, Yanru Gao, Yuehan Sun
+    journal: 投稿中
+    year: 2026
+    sort_date: '2026-09-01'
+    doi_url: 投稿中
+    status: 投稿中
+  - title: 'A new method of automatic microcharcoal identification and its
+
+      demonstration in revealing the spatial heterogeneity of fire over the past
+
+      40,000 years in China'
+    authors: 'Yaguo Zou, Yunfa Miao, Yimin Li, Zisha Wang, Ziyue Zhang,
+
+      Yongtao Zhao, Gaihong Niu, Ping Zhang, Yan Nie'
+    journal: Quaternary International
+    year: 2025
+    sort_date: '2025-21-01'
+    doi_url: https://doi.org/10.1016/j.quaint.2025.109743
+    status: 已发表
+  - title: '一种基于图像光谱原理的炭屑自动统计方
+
+      法'
+    authors: 邹亚国，苗运法，赵永涛，王梓莎，杜安霞
+    journal: 中国发明专利
+    year: 2022
+    sort_date: '2022-52-01'
+    doi_url: https://kns.cnki.net/kcms2/article/abstract?v=ZMT4ddBD2nzbSO9QXro54aC0f8JNXPfF7Dpgi7M6QbSRCLU7hzoQPnD5cjrV1S7eykZInVcpBb8PIF5mgf8PF-XK1MyQH3O9dkJFxFvcOJvKHdf9SMD0K3u4n-e_1UH0LNYcw1zauQj_BhgmuB_Elg==&uniplatform=NZKPT&language=CHS
+    status: 已发表
+  - title: A New Automatic Statistical Microcharcoal Analysis Method Based on Image Processing, Demonstrated in the Weiyuan Section, Northwest China
+    authors: 'Yaguo Zou, Yunfa Miao, Shiling Yang, Yongtao Zhao, Zisha Wang,
+
+      Guoqian Tang, Shengli Yang'
+    journal: Frontiers in Earth Science
+    year: 2021
+    sort_date: '2021-59-01'
+    doi_url: https://doi.org/10.3389/feart.2021.609916
+    status: 已发表
+  - title: 基于GIS的中国历代诗词地名提及的时空格局与归因
+    authors: 邹亚国，刘寅，彭文甫，彭秀华，李加安，钱秋红，苟思敏，田　涵，刘亮，孙林艳
+    journal: 地理信息世界
+    year: 2018
+    sort_date: '2018-72-01'
+    doi_url: https://kns.cnki.net/kcms2/article/abstract?v=ZMT4ddBD2nxoZ9zLSe5F5EJRgnJI_zn8y-Z7OGyCWijHI7yokiaeGZNFe4odT5W201RCR3Lq2MBPyLscg5ZzUyNmG0slYJGFwXtmru3VwHZ7oCqHmmNpBIvosX-kdgrHz_O797H7cbFD29MkHc8q_HIqBYLQ_cdbDcwR3wWpR4am4rzOgIEHLA==&uniplatform=NZKPT&language=CHS
+    status: 已发表
+  - title: 基于GIS的中国历代名人人生轨迹研究
+    authors: 邹亚国，林先成，刘寅，邬舒玛，邱莎莎，赵灿，钟梦
+    journal: 地理信息世界
+    year: 2018
+    sort_date: '2018-73-01'
+    doi_url: https://kns.cnki.net/kcms2/article/abstract?v=ZMT4ddBD2ny0Pq_wj1ta3baagwdyXdeDbhnQ9bQsWZZtnTuGNYP75v7s4FlC6Y20JBrO9yfIB6auUApQRVWNHm8dflxpxCbFfOo-iKxR0kxT-0Gq1pkZVDzoZAtySwlTGrGWWuLr3XVCIhl1CV-a2caXFbXCWdBP&uniplatform=NZKPT&language=CHS
+    status: 已发表
+  paper_count: 7
+  matched_awards: []
+  award_count: 0
+  matched_patents:
+  - year: 2022
+    name: '一种基于图像光谱原理的炭屑自动统计方
+
+      法'
+    recipient: 邹亚国，苗运法，赵永涛，王梓莎，杜安霞
+    type: 发明专利
+    details: 已发表
+  patent_count: 1
 - name: 牛改红
   en_name: Gaihong Niu
   role: 博士生
@@ -61,6 +823,26 @@
   email: niugaihong@lzb.ac.cn
   photo: /images/people/ngh.jpg
   bio: 研究方向：古环境演化
+  matched_papers:
+  - title: 'Late Cenozoic wildfire evolution in East-Central Asia: A microcharcoal record from the Junggar Basin'
+    authors: Gaihong Niu, Yunfa Miao, Xuelian Wang, Xiaoze Li, Ziyue Zhang, Yaguo Zou, Shabir Ahmad
+    journal: Palaeogeography, Palaeoclimatology, Palaeoecology
+    year: 2026
+    sort_date: '2026-08-01'
+    doi_url: https://doi.org/10.1016/j.palaeo.2025.113488.
+    status: 已发表
+  - title: 青藏高原柴达木盆地中新世单籽豆属（Podocarpium）化石的发现及其生物地理学意义
+    authors: 王雪莲，苗运法，牛改红，周莹莹，杨永恒，张腾，赵永涛，孟庆泉，宋春晖，张扬
+    journal: 第四纪研究
+    year: 2024
+    sort_date: '2024-27-01'
+    doi_url: ｄｏｉ：１０．１１９２８／ｊ．ｉｓｓｎ．１００１７４１０．２０２４．０６．０２
+    status: 已发表
+  paper_count: 2
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 张孜越
   en_name: Ziyue Zhang
   role: 博士生
@@ -68,6 +850,34 @@
   email: zhangziyue22@mails.ucas.ac.cn
   photo: /images/people/zhangziyue.jpg
   bio: 研究方向：荒漠化与极端气候事件
+  matched_papers:
+  - title: 'AI-driven microcharcoal recognition: Advancing intelligent automation for paleofire reconstruction'
+    authors: Zhang Ziyue,  Wang Zisha，Miao Yunfa, Zou Yaguo, Zhao Yongtao, Niu Gaihong, Sophie Warny
+    journal: Global and Planetary Change
+    year: 2026
+    sort_date: '2026-05-01'
+    doi_url: https://doi.org/10.1016/j.gloplacha.2026.105356
+    status: 已发表
+    code_url: https://doi.org/10.6084/m9.figshare.29901263.v3
+  - title: 'Microtopography-driven water redistribution shapes vegetation patterns: a case plot in Gobi Desert'
+    authors: Yaguo Zou, Teng Zhang, Ziyue Zhang, Yunfa Miao, Yanru Gao, Yuehan Sun
+    journal: 投稿中
+    year: 2026
+    sort_date: '2026-09-01'
+    doi_url: 投稿中
+    status: 投稿中
+  - title: 晚冰期以来乌伦古湖沉积物多指标高分辨率的古环境演化
+    authors: 赵永涛, 蓝小玉, 雷艳, 王梓莎, 常婧, 陈雪梅, 张孜越, 王雪莲, 汪亘, 詹科杰
+    journal: 干旱区地理
+    year: 2014
+    sort_date: '2014-91-01'
+    doi_url: http://alg.xjegi.com/CN/Y2014/V37/I2/222
+    status: 已发表
+  paper_count: 3
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 马林原
   en_name: Linyuan Ma
   role: 博士生
@@ -75,6 +885,47 @@
   email: malinyuan24@mails.ucas.ac.cn
   photo: /images/people/malinyuan.jpg
   bio: 研究方向：孢粉学与环境变化
+  matched_papers:
+  - title: Relative pollen productivity estimates for major plant taxa in the Qaidam Basin, northern Tibetan Plateau
+    authors: Ma Linyuan, Zhang Shengrui, Sun Yuanhao, Wang Haitao, Xu Qinghai, Li Dehui, Zhang Ruchun, Miao Yunfa
+    journal: Review of Palaeobotany and Palynology
+    year: 2026
+    sort_date: '2026-06-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2026.105581
+    status: 已发表
+  - title: 'Relative pollen productivity in subtropical evergreen broadleaved forest: Implications for reconstructing paleovegetation dynamics in East Asia'
+    authors: Ma Linyuan, Zhang Shengrui, Xu Qinghai, Zhou Zhongze, Miao Yunfa
+    journal: Ecological Indicators
+    year: 2025
+    sort_date: '2025-18-01'
+    doi_url: https://doi.org/10.1016/j.ecolind.2025.114112
+    status: 已发表
+  - title: Review of relative pollen productivity estimates for the Tibetan Plateau
+    authors: Ma Linyuan, Xu Qinghai, Zhang Shengrui, Li Yuecong, Miao Yunfa, Cao Xianyong
+    journal: Science China-Earth Sciences.
+    year: 2025
+    sort_date: '2025-19-01'
+    doi_url: https://doi.org/10.1360/SSTe-2024-0277
+    status: 已发表
+  - title: 青藏高原地区相对花粉产量综述
+    authors: 马林原, 许清海, 张生瑞, 李月丛, 苗运法, 曹现勇
+    journal: 中国科学：地球科学
+    year: 2025
+    sort_date: '2025-20-01'
+    doi_url: https://doi.org/10.1360/SSTe-2024-0277
+    status: 已发表
+  - title: Modern pollen assemblages from the interland of the Tibetan Plateau and their significance for reconstructions of past vegetation
+    authors: Ma Linyuan, Li Zhiguang, Xu Qinghai, Li Hongmei, Zhang Kailong, Li Yuecong,Zhang Ruchun, Cao Xianyong, Zhang Shengrui
+    journal: Boreas
+    year: 2024
+    sort_date: '2024-29-01'
+    doi_url: https://doi.org/10.1111/bor.12641
+    status: 已发表
+  paper_count: 5
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 李小乐
   en_name: Xiaole Li
   role: 博士生
@@ -82,6 +933,12 @@
   email: lixiaole0629@163.com
   photo: /images/people/lixiaole.jpg
   bio: 研究方向：土壤微生物
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 谭宁静
   en_name: Ningjing Tan
   role: 博士生
@@ -89,6 +946,26 @@
   email: tanningjing22@mails.ucas.ac.cn
   photo: /images/people/tanningjing.jpg
   bio: 研究方向：古气候模拟
+  matched_papers:
+  - title: Assessment of desertification sensitivity using an improved MEDALUS model in Northern China
+    authors: Ningjing Tan, Caixia Zhang, Yingying Wu, Zhenting Wang
+    journal: Research in Cold and Arid Regions
+    year: 2024
+    sort_date: '2024-30-01'
+    doi_url: https://doi.org/10.1016/j.rcar.2024.07.003
+    status: 已发表
+  - title: Biocrust as a surface protection of erodible nebkhas
+    authors: Ningjing Tan, Xiaomei Luo, Zhenting Wang
+    journal: Earth Surface Processes and Landforms
+    year: 2024
+    sort_date: '2024-31-01'
+    doi_url: https://doi.org/10.1002/esp.5958
+    status: 已发表
+  paper_count: 2
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 成清娴
   en_name: Qingxian Cheng
   role: 博士生
@@ -96,6 +973,12 @@
   email: 736447206@qq.com
   photo: /images/people/chengqingxian.jpg
   bio: 研究方向：沙漠化、沙漠环境、风沙物理、风沙地貌与风沙工程
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 孙玥晗
   en_name: Yuehan Sun
   role: 硕士生
@@ -103,6 +986,19 @@
   email: viviansunyuehan@163.com
   photo: /images/people/sunyuehan.jpg
   bio: 研究方向：城市绿地
+  matched_papers:
+  - title: 'Urban Green Spaces Under Dual Pressures of Human Activity and Climate Change: A Comprehensive Review'
+    authors: Yuehan Sun,Yunfa Miao,Yaguo Zou ,Xiangnan Jing
+    journal: Sustainability
+    year: 2026
+    sort_date: '2026-07-01'
+    doi_url: https://doi.org/10.3390/su18052365
+    status: 已发表
+  paper_count: 1
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 于芳涛
   en_name: Yu Fangtao
   role: 硕士生
@@ -110,6 +1006,20 @@
   email: yufangtao24@mails.ucas.ac.cn
   photo: /images/people/YuFangtao.jpg
   bio: 研究方向：孢粉学与古生态
+  matched_papers:
+  - title: 'Pollen sources and deposition processes of modern pollen in arid areas and their implications: A case study from the Sugan Lake watershed, NW China'
+    authors: Fangtao Yu, Yongtao Zhao, Xuelian Wang, Yongheng Yang, Linyuan Ma, Haitao Wang, Shuyuan Wang, Yan Lei, Jingyi Xie, Ziyue Zhang, Gen Wang, Shabir Ahmad, Teng Zhang, Yunfa Miao
+    journal: Review of Palaeobotany and Palynology
+    year: 2026
+    sort_date: '2026-10-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2026.105556
+    status: 已发表
+    code_url: https://doi.org/10.1016/j.revpalbo.2026.105556
+  paper_count: 1
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 景向楠
   en_name: Xiangnan Jing
   role: 硕士生
@@ -117,6 +1027,12 @@
   email: jingxiangnan25@mails.ucas.ac.cn
   photo: /images/people/jingxiangnan.jpg
   bio: 研究方向：干旱环境演化、环境健康
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 高雁茹
   en_name: Yanru Gao
   role: 硕士生
@@ -124,6 +1040,12 @@
   email: gaoyanru@sxu.edu
   photo: /images/people/gaoyanru.jpg
   bio: 研究方向：微地形与植被
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 许非凡
   en_name: Feifan Xu
   role: 硕士生
@@ -131,6 +1053,12 @@
   email: x309125350@163.com
   photo: /images/people/xufeifan.jpg
   bio: 研究方向：微炭屑
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 王馨悦
   en_name: Xinyue Wang
   role: 硕士生
@@ -138,6 +1066,12 @@
   email: 2847147806@qq.com
   photo: /images/people/wangxinyue.jpg
   bio: 研究方向：柴达木盆地空气孢粉组成及其影响因素分析
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 段蓉骅
   en_name: Ronghua Duan
   role: 硕士生
@@ -145,6 +1079,12 @@
   email: 3359928094@qq.com
   photo: /images/people/duanronghua.jpg
   bio: ''
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 王金东
   en_name: Jindong Wang
   role: 硕士生
@@ -152,6 +1092,12 @@
   email: wangjindong@sxu.edu.cn
   photo: /images/people/wangjindong.jpg
   bio: 研究方向：古环境变化
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 谢景怡
   en_name: JingYi Xie
   role: 硕士生
@@ -159,3 +1105,9 @@
   email: xjy155626@163.com
   photo: /images/people/xiejingyi.png
   bio: 研究方向：孢粉学
+  matched_papers: []
+  paper_count: 0
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
