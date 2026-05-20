@@ -372,8 +372,41 @@
     doi_url: https://doi.org/10.1016/j.quaint.2010.08.014
     status: 已发表
   paper_count: 52
-  matched_awards: []
-  award_count: 0
+  matched_awards:
+  - year: 2024
+    name: 甘肃省领军人才（第一层次）
+    recipient: 苗运法
+    type: 省级
+    details: 中国科学院西北生态环境资源研究院
+  - year: 2023
+    name: 国家自然科学基金杰出青年
+    recipient: 苗运法
+    type: 国家级
+    details: 中国科学院西北生态环境资源研究院
+  - year: 2023
+    name: 甘肃省科普专家
+    recipient: 苗运法
+    details: 中国科学院西北生态环境资源研究院
+  - year: 2021
+    name: 甘肃省领军人才（第二层次）
+    recipient: 苗运法
+    type: 省级
+    details: 中国科学院西北生态环境资源研究院
+  - year: 2020
+    name: 甘肃省陇原人才（A类）
+    recipient: 苗运法
+    type: 省级
+    details: 中国科学院西北生态环境资源研究院
+  - year: 2019
+    name: 中组部万人计划青年拔尖人才
+    recipient: 苗运法
+    type: 国家级
+    details: 中国科学院西北生态环境资源研究院
+  - year: 2018
+    name: 中国科学院兰州分院科普讲师团
+    recipient: 苗运法
+    details: 中国科学院西北生态环境资源研究院
+  award_count: 7
   matched_patents: []
   patent_count: 0
 - name: 赵永涛
@@ -458,8 +491,12 @@
     doi_url: http://alg.xjegi.com/CN/Y2014/V37/I2/222
     status: 已发表
   paper_count: 10
-  matched_awards: []
-  award_count: 0
+  matched_awards:
+  - year: 2023
+    name: 晋升副研究员
+    recipient: 赵永涛
+    details: 中国科学院西北生态环境资源研究院
+  award_count: 1
   matched_patents: []
   patent_count: 0
 - name: 王雪莲
@@ -584,21 +621,19 @@
   paper_count: 14
   matched_awards:
   - year: 2025
-    name: 甘肃省“陇原人才”
+    name: 晋升助理研究员
     recipient: 王雪莲
-    type: ''
-    details: ''
+    details: 中国科学院西北生态环境资源研究院
+  - year: 2025
+    name: 甘肃省"陇原人才"
+    recipient: 王雪莲
   - year: 2020
     name: 甘肃省优秀学位论文
     recipient: 王雪莲
-    type: ''
-    details: ''
   - year: 2020
     name: 兰州大学优秀学位论文
     recipient: 王雪莲
-    type: ''
-    details: ''
-  award_count: 3
+  award_count: 4
   matched_patents:
   - year: 2019
     name: 一种针对植物化石角质层提取的前处理方法
@@ -807,15 +842,8 @@
   paper_count: 7
   matched_awards: []
   award_count: 0
-  matched_patents:
-  - year: 2022
-    name: '一种基于图像光谱原理的炭屑自动统计方
-
-      法'
-    recipient: 邹亚国，苗运法，赵永涛，王梓莎，杜安霞
-    type: 发明专利
-    details: 已发表
-  patent_count: 1
+  matched_patents: []
+  patent_count: 0
 - name: 牛改红
   en_name: Gaihong Niu
   role: 博士生
