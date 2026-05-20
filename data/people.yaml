@@ -766,8 +766,16 @@
   email: shabir@bs.qau.edu.pk
   photo: /images/people/ahmadshabir.jpg
   bio: 研究方向：古植物学
-  matched_papers: []
-  paper_count: 0
+  matched_papers:
+  - title: Palynological Studies as a Marker for Taxonomic Identifications and Evolution of Taxa Using Advanced Microscopic Techniques.
+    authors: Ahmad, S., Ahmad, M., Ullah, A., Shah, H., Shahzad, A., Iqbal, R., & Miao, Y. (
+    journal: Journal (Biology Bulletin)
+    year: 2025
+    sort_date: '2025-17-01'
+    doi_url: 10.1134/S1062359025609747
+    status: 已发表
+    code_url: https://link.springer.com/article/10.1134/S1062359025609747
+  paper_count: 1
   matched_awards: []
   award_count: 0
   matched_patents: []
