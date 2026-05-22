@@ -1068,8 +1068,26 @@
   email: lixiaole0629@163.com
   photo: /images/people/lixiaole.jpg
   bio: 研究方向：土壤微生物
-  matched_papers: []
-  paper_count: 0
+  matched_papers:
+  - title: 白刺(Nitraria tangutorum)灌丛不定根构型特征及生物量分配模式
+    authors: 李小乐，党晓宏，翟波，魏亚娟，迟旭，吴惠敏
+    journal: 中国沙漠
+    year: 2022
+    sort_date: '2022-55-01'
+    status: 已发表
+  - title: 红砂灌丛沙堆土壤粒度组成及养分积累特征
+    authors: 李小乐，魏亚娟，党晓宏，戴玉芝，翟波，迟旭，吴惠
+    journal: 干旱区研究
+    year: 2022
+    sort_date: '2022-54-01'
+    status: 已发表
+  - title: Response Mechanisms of Adventitious Root Architectural Characteristics of Nitraria tangutorum Shrubs to Soil Nutrients in Nabkha
+    authors: Li Xiaole, Dang Xiaohong, Gao Yong, Meng Zhongju, Chen Xue, Wang Yanyi
+    journal: Plants
+    year: 2022
+    sort_date: '2022-53-01'
+    status: 已发表
+  paper_count: 3
   matched_awards: []
   award_count: 0
   matched_patents: []
