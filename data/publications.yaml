@@ -1,154 +1,132 @@
-# 课题组论文列表
-- title: Relative pollen productivity estimates for major plant taxa in the Qaidam
-    Basin, northern Tibetan Plateau
+- title: 'Global, regional, and national burden of substance use disorder in 204 countries and territories, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021'
+  authors: 景向楠
+  journal: Annals of Medicine
+  year: 2026
+  sort_date: '2026-05-22'
+  status: 已发表
+- title: Relative pollen productivity estimates for major plant taxa in the Qaidam Basin, northern Tibetan Plateau
   authors: Ma L, Zhang S, ... Miao Y*.
   journal: Review of Palaeobotany and Palynology
   year: 2026
   sort_date: '2026-01-01'
   doi_url: https://doi.org/10.1016/j.revpalbo.2026.105581
   status: 已发表
-- title: 'Late Cenozoic wildfire evolution in East-Central Asia: A microcharcoal record
-    from the Junggar Basin'
+- title: 'Late Cenozoic wildfire evolution in East-Central Asia: A microcharcoal record from the Junggar Basin'
   authors: Niu G, Miao Y*, Wang X, et al.
   journal: Palaeogeography, Palaeoclimatology, Palaeoecology
   year: 2026
   sort_date: '2026-02-01'
   doi_url: https://doi.org/10.1016/j.palaeo.2025.113488
   status: 已发表
-- title: 'AI-driven microcharcoal recognition: Advancing intelligent automation for
-    paleofire reconstruction'
+- title: 'AI-driven microcharcoal recognition: Advancing intelligent automation for paleofire reconstruction'
   authors: Zhang Z, Wang Z, Miao Y*, et al.
   journal: Global and Planetary Change
   year: 2026
   sort_date: '2026-03-01'
   doi_url: https://doi.org/10.1016/j.gloplacha.2026.105356
   status: 已发表
-- title: 'Pollen sources and deposition processes of modern pollen in arid areas and
-    their implications: A case study from the Sugan Lake watershed, NW China'
-  authors: Yu, F., Zhao, Y., Wang, X., Yang, Y., Ma, L., Wang, H., Wang, S., Lei,
-    Y., Xie, J., Zhang, Z（通讯作者）
+- title: 'Pollen sources and deposition processes of modern pollen in arid areas and their implications: A case study from the Sugan Lake watershed, NW China'
+  authors: Yu, F., Zhao, Y., Wang, X., Yang, Y., Ma, L., Wang, H., Wang, S., Lei, Y., Xie, J., Zhang, Z（通讯作者）
   journal: Review of Palaeobotany & Palynology
   year: 2026
   sort_date: '2026-04-01'
   doi_url: https://doi.org/10.1016/j.revpalbo.2026.105556
   status: 已发表
-- title: 'AI-driven microcharcoal recognition: Advancing intelligent automation for
-    paleofire reconstruction'
-  authors: Zhang Ziyue,  Wang Zisha，Miao Yunfa, Zou Yaguo, Zhao Yongtao, Niu Gaihong,
-    Sophie Warny
+- title: 'AI-driven microcharcoal recognition: Advancing intelligent automation for paleofire reconstruction'
+  authors: Zhang Ziyue,  Wang Zisha，Miao Yunfa, Zou Yaguo, Zhao Yongtao, Niu Gaihong, Sophie Warny
   journal: Global and Planetary Change
   year: 2026
   sort_date: '2026-05-01'
   doi_url: https://doi.org/10.1016/j.gloplacha.2026.105356
   status: 已发表
   code_url: https://doi.org/10.6084/m9.figshare.29901263.v3
-- title: Relative pollen productivity estimates for major plant taxa in the Qaidam
-    Basin, northern Tibetan Plateau
-  authors: Ma Linyuan, Zhang Shengrui, Sun Yuanhao, Wang Haitao, Xu Qinghai, Li Dehui,
-    Zhang Ruchun, Miao Yunfa
+- title: Relative pollen productivity estimates for major plant taxa in the Qaidam Basin, northern Tibetan Plateau
+  authors: Ma Linyuan, Zhang Shengrui, Sun Yuanhao, Wang Haitao, Xu Qinghai, Li Dehui, Zhang Ruchun, Miao Yunfa
   journal: Review of Palaeobotany and Palynology
   year: 2026
   sort_date: '2026-06-01'
   doi_url: https://doi.org/10.1016/j.revpalbo.2026.105581
   status: 已发表
-- title: 'Urban Green Spaces Under Dual Pressures of Human Activity and Climate Change:
-    A Comprehensive Review'
+- title: 'Urban Green Spaces Under Dual Pressures of Human Activity and Climate Change: A Comprehensive Review'
   authors: Yuehan Sun,Yunfa Miao,Yaguo Zou ,Xiangnan Jing
   journal: Sustainability
   year: 2026
   sort_date: '2026-07-01'
   doi_url: https://doi.org/10.3390/su18052365
   status: 已发表
-- title: 'Late Cenozoic wildfire evolution in East-Central Asia: A microcharcoal record
-    from the Junggar Basin'
-  authors: Gaihong Niu, Yunfa Miao, Xuelian Wang, Xiaoze Li, Ziyue Zhang, Yaguo Zou,
-    Shabir Ahmad
+- title: 'Late Cenozoic wildfire evolution in East-Central Asia: A microcharcoal record from the Junggar Basin'
+  authors: Gaihong Niu, Yunfa Miao, Xuelian Wang, Xiaoze Li, Ziyue Zhang, Yaguo Zou, Shabir Ahmad
   journal: Palaeogeography, Palaeoclimatology, Palaeoecology
   year: 2026
   sort_date: '2026-08-01'
   doi_url: https://doi.org/10.1016/j.palaeo.2025.113488.
   status: 已发表
-- title: 'Microtopography-driven water redistribution shapes vegetation patterns:
-    a case plot in Gobi Desert'
+- title: 'Microtopography-driven water redistribution shapes vegetation patterns: a case plot in Gobi Desert'
   authors: Yaguo Zou, Teng Zhang, Ziyue Zhang, Yunfa Miao, Yanru Gao, Yuehan Sun
   journal: 投稿中
   year: 2026
   sort_date: '2026-09-01'
   doi_url: 投稿中
   status: 投稿中
-- title: 'Pollen sources and deposition processes of modern pollen in arid areas and
-    their implications: A case study from the Sugan Lake watershed, NW China'
-  authors: Fangtao Yu, Yongtao Zhao, Xuelian Wang, Yongheng Yang, Linyuan Ma, Haitao
-    Wang, Shuyuan Wang, Yan Lei, Jingyi Xie, Ziyue Zhang, Gen Wang, Shabir Ahmad,
-    Teng Zhang, Yunfa Miao
+- title: 'Pollen sources and deposition processes of modern pollen in arid areas and their implications: A case study from the Sugan Lake watershed, NW China'
+  authors: Fangtao Yu, Yongtao Zhao, Xuelian Wang, Yongheng Yang, Linyuan Ma, Haitao Wang, Shuyuan Wang, Yan Lei, Jingyi Xie, Ziyue Zhang, Gen Wang, Shabir Ahmad, Teng Zhang, Yunfa Miao
   journal: Review of Palaeobotany and Palynology
   year: 2026
   sort_date: '2026-10-01'
   doi_url: https://doi.org/10.1016/j.revpalbo.2026.105556
   status: 已发表
   code_url: https://doi.org/10.1016/j.revpalbo.2026.105556
-- title: How “wet islands” form – A case study of the Qilian Mountains on the arid
-    northern Tibetan Plateau during the Middle Miocene
+- title: How “wet islands” form – A case study of the Qilian Mountains on the arid northern Tibetan Plateau during the Middle Miocene
   authors: Yang Y, Miao Y*, Wang X, et al.
   journal: Earth-Science Reviews
   year: 2025
   sort_date: '2025-11-01'
   doi_url: https://doi.org/10.1016/j.earscirev.2025.105041
   status: 已发表
-- title: 'Relative pollen productivity in subtropical evergreen broadleaved forest:
-    Implications for reconstructing paleovegetation dynamics in East Asia'
+- title: 'Relative pollen productivity in subtropical evergreen broadleaved forest: Implications for reconstructing paleovegetation dynamics in East Asia'
   authors: Ma L, Zhang S, ... Miao Y*.
   journal: Ecological Indicators
   year: 2025
   sort_date: '2025-12-01'
   doi_url: https://doi.org/10.1016/j.ecolind.2025.114112
   status: 已发表
-- title: A new method of automatic microcharcoal identification and its demonstration
-    in revealing the spatial heterogeneity of fire over the past 40,000 years in China
+- title: A new method of automatic microcharcoal identification and its demonstration in revealing the spatial heterogeneity of fire over the past 40,000 years in China
   authors: Zou Y, Miao Y, Li Y, et al.
   journal: Quaternary International
   year: 2025
   sort_date: '2025-13-01'
   doi_url: https://doi.org/10.1016/j.quaint.2025.109743
   status: 已发表
-- title: "Holocene vegetation evolution on the Tibetan Plateau: An integrated \napproach\
-    \ utilising plant functional types"
-  authors: Yang Zhang, Xuelian Wang, Yunfa Miao, Xianyong Cao, Yongheng Yang, Yongtao
-    Zhao, Gaihong Niu, Dong Yang, Yingying Zhou
+- title: "Holocene vegetation evolution on the Tibetan Plateau: An integrated \napproach utilising plant functional types"
+  authors: Yang Zhang, Xuelian Wang, Yunfa Miao, Xianyong Cao, Yongheng Yang, Yongtao Zhao, Gaihong Niu, Dong Yang, Yingying Zhou
   journal: Palaeogeography, Palaeoclimatology, Palaeoecology
   year: 2025
   sort_date: '2025-14-01'
   doi_url: https://doi.org/10.1016/j.palaeo.2025.112749
   status: 已发表
-- title: "Spatiotemporal decoupling of floristic endemism in response \nto Qinghai–Tibet\
-    \ Plateau uplift"
+- title: "Spatiotemporal decoupling of floristic endemism in response \nto Qinghai–Tibet Plateau uplift"
   authors: Bao Yang, Xuelian Wang
   journal: PNAS
   year: 2025
   sort_date: '2025-15-01'
   doi_url: https://doi.org/10.1073/pnas.2513876122
   status: 已发表
-- title: "The cuticles of late Palaeozoic sterile leaves from the Cisuralian (Permian)\
-    \ in the \nHexi Corridor, northwest China, and its palaeoenvironmental significance"
-  authors: Yanzhao Ji, Xuelian Wang, Yifan Hua, Bainian Sun, Feng Lu, Fenxiang Li,
-    Yao Lin
+- title: "The cuticles of late Palaeozoic sterile leaves from the Cisuralian (Permian) in the \nHexi Corridor, northwest China, and its palaeoenvironmental significance"
+  authors: Yanzhao Ji, Xuelian Wang, Yifan Hua, Bainian Sun, Feng Lu, Fenxiang Li, Yao Lin
   journal: Historical Biology
   year: 2025
   sort_date: '2025-16-01'
   doi_url: https://doi.org/10.1080/08912963.2025.2557941
   status: 已发表
-- title: Palynological Studies as a Marker for Taxonomic Identifications and Evolution
-    of Taxa Using Advanced Microscopic Techniques.
-  authors: Ahmad, S., Ahmad, M., Ullah, A., Shah, H., Shahzad, A., Iqbal, R., & Miao,
-    Y. (
+- title: Palynological Studies as a Marker for Taxonomic Identifications and Evolution of Taxa Using Advanced Microscopic Techniques.
+  authors: Ahmad, S., Ahmad, M., Ullah, A., Shah, H., Shahzad, A., Iqbal, R., & Miao, Y. (
   journal: Journal (Biology Bulletin)
   year: 2025
   sort_date: '2025-17-01'
   doi_url: 10.1134/S1062359025609747
   status: 已发表
   code_url: https://link.springer.com/article/10.1134/S1062359025609747
-- title: 'Relative pollen productivity in subtropical evergreen broadleaved forest:
-    Implications for reconstructing paleovegetation dynamics in East Asia'
+- title: 'Relative pollen productivity in subtropical evergreen broadleaved forest: Implications for reconstructing paleovegetation dynamics in East Asia'
   authors: Ma Linyuan, Zhang Shengrui, Xu Qinghai, Zhou Zhongze, Miao Yunfa
   journal: Ecological Indicators
   year: 2025
@@ -182,17 +160,14 @@
   sort_date: '2025-21-01'
   doi_url: https://doi.org/10.1016/j.quaint.2025.109743
   status: 已发表
-- title: How “wet islands” form – A case study of the Qilian Mountains on the arid  northern
-    Tibetan Plateau during the Middle Miocene
-  authors: Yang Yongheng， Miao Yunfa， Wang Xuelian， Wu Jie， Ren Yulong， Zhang Tao，
-    Li Liwu，Fang Xiaomin
+- title: How “wet islands” form – A case study of the Qilian Mountains on the arid  northern Tibetan Plateau during the Middle Miocene
+  authors: Yang Yongheng， Miao Yunfa， Wang Xuelian， Wu Jie， Ren Yulong， Zhang Tao， Li Liwu，Fang Xiaomin
   journal: Earth-Science Reviews
   year: 2025
   sort_date: '2025-22-01'
   doi_url: https://doi.org/10.1016/j.earscirev.2025.105041
   status: 已发表
-- title: 'New Discovery of Calamitaceae from the Cisuralian in Northwest China: Morphological
-    Evolution of Strobilus'
+- title: 'New Discovery of Calamitaceae from the Cisuralian in Northwest China: Morphological Evolution of Strobilus'
   authors: Wang X, Miao Y*, Ji Y, et al.
   journal: Biology
   year: 2024
@@ -236,17 +211,14 @@
   sort_date: '2024-28-01'
   doi_url: https://doi.org/10.11928/j.issn.1001-7410.2024.03.04
   status: 已发表
-- title: Modern pollen assemblages from the interland of the Tibetan Plateau and their
-    significance for reconstructions of past vegetation
-  authors: Ma Linyuan, Li Zhiguang, Xu Qinghai, Li Hongmei, Zhang Kailong, Li Yuecong,Zhang
-    Ruchun, Cao Xianyong, Zhang Shengrui
+- title: Modern pollen assemblages from the interland of the Tibetan Plateau and their significance for reconstructions of past vegetation
+  authors: Ma Linyuan, Li Zhiguang, Xu Qinghai, Li Hongmei, Zhang Kailong, Li Yuecong,Zhang Ruchun, Cao Xianyong, Zhang Shengrui
   journal: Boreas
   year: 2024
   sort_date: '2024-29-01'
   doi_url: https://doi.org/10.1111/bor.12641
   status: 已发表
-- title: Assessment of desertification sensitivity using an improved MEDALUS model
-    in Northern China
+- title: Assessment of desertification sensitivity using an improved MEDALUS model in Northern China
   authors: Ningjing Tan, Caixia Zhang, Yingying Wu, Zhenting Wang
   journal: Research in Cold and Arid Regions
   year: 2024
@@ -260,40 +232,35 @@
   sort_date: '2024-31-01'
   doi_url: https://doi.org/10.1002/esp.5958
   status: 已发表
-- title: High-elevation Qilian Mountains and its inspiration for tectonics and  biodiversity
-    during the late Middle Miocene
+- title: High-elevation Qilian Mountains and its inspiration for tectonics and  biodiversity during the late Middle Miocene
   authors: Yang Yongheng， Miao Yunfa， Wang Xuelian， Zhang Tao， Li Liwu
   journal: Global and Planetary Change
   year: 2024
   sort_date: '2024-32-01'
   doi_url: https://doi.org/10.1016/j.gloplacha.2024.104632
   status: 已发表
-- title: Microcharcoals reveal more grass than trees during the Mid-Holocene Optimum
-    on the Chinese Loess Plateau
+- title: Microcharcoals reveal more grass than trees during the Mid-Holocene Optimum on the Chinese Loess Plateau
   authors: Wang Z, Miao Y*, Zou Y, et al.
   journal: Geophysical Research Letters
   year: 2023
   sort_date: '2023-33-01'
   doi_url: https://doi.org/10.1029/2023GL103637
   status: 已发表
-- title: Pollen assemblages reflect a Mid-Miocene precipitation gradient in the northeastern
-    Tibetan Plateau
+- title: Pollen assemblages reflect a Mid-Miocene precipitation gradient in the northeastern Tibetan Plateau
   authors: Miao Y*, Zhang T, Huang K, et al.
   journal: Palaeogeography, Palaeoclimatology, Palaeoecology
   year: 2023
   sort_date: '2023-34-01'
   doi_url: https://doi.org/10.1016/j.palaeo.2023.111514
   status: 已发表
-- title: The effects of meteorological conditions on allergenic airborne pollen in
-    arid Northwest China
+- title: The effects of meteorological conditions on allergenic airborne pollen in arid Northwest China
   authors: Lei Y, Miao Y*, Zhao Y, et al.
   journal: Atmospheric Environment
   year: 2023
   sort_date: '2023-35-01'
   doi_url: https://doi.org/10.1016/j.atmosenv.2023.119647
   status: 已发表
-- title: Extreme-wind events in China in the past 50 years and their impacts on sandstorm
-    variations
+- title: Extreme-wind events in China in the past 50 years and their impacts on sandstorm variations
   authors: Jiang Y, Miao Y*, Zhao Y, et al.
   journal: Frontiers in Earth Science
   year: 2023
@@ -309,72 +276,63 @@
   sort_date: '2023-37-01'
   doi_url: 'DOI: 10．7605 /gdlxb．2023．02．029'
   status: 已发表
-- title: Magnetic properties of surface soils in the upper and middle reaches of the
-    Yarlung Zangbo River, southern Tibetan Plateau, and their environmental significance
+- title: Magnetic properties of surface soils in the upper and middle reaches of the Yarlung Zangbo River, southern Tibetan Plateau, and their environmental significance
   authors: Shuyuan Wang, Zixuan Chen, Junhuai Yang, et al.
   journal: Geophysical Journal International
   year: 2023
   sort_date: '2023-38-01'
   doi_url: 10.1093/gji/ggac511
   status: 已发表
-- title: 'Miocene lake evolution in the western Qaidam Basin, northern Tibetan Plateau:
-    Evidence from aquatic-plant pollen'
+- title: 'Miocene lake evolution in the western Qaidam Basin, northern Tibetan Plateau: Evidence from aquatic-plant pollen'
   authors: Wang Haitao,Wu Fuli,Yang Liye,Fang Xiaomin
   journal: 期刊
   year: 2023
   sort_date: '2023-39-01'
   doi_url: 10.1016/j.jseaes.2023.105634
   status: 已发表
-- title: A new biologic paleoaltimetry indicating Late Miocene rapid uplift of northern
-    Tibet Plateau
+- title: A new biologic paleoaltimetry indicating Late Miocene rapid uplift of northern Tibet Plateau
   authors: Miao Y*, Fang X*, Sun J, et al.
   journal: Science
   year: 2022
   sort_date: '2022-40-01'
   doi_url: https://doi.org/10.1126/science.abo2475
   status: 已发表
-- title: Comment on “An equable subtropical climate throughout China in the Miocene
-    based on palaeofloral evidence”
+- title: Comment on “An equable subtropical climate throughout China in the Miocene based on palaeofloral evidence”
   authors: Miao Y*, Xiang M, Zhang T, et al.
   journal: Earth-Science Reviews
   year: 2022
   sort_date: '2022-41-01'
   doi_url: https://doi.org/10.1016/j.earscirev.2022.104020
   status: 已发表
-- title: Palynomorph assemblages evidence for river reorganization 8.5 million years
-    ago in Southeast Asia
+- title: Palynomorph assemblages evidence for river reorganization 8.5 million years ago in Southeast Asia
   authors: Miao Y*, Warny S*, Liu C, et al.
   journal: Global and Planetary Change
   year: 2022
   sort_date: '2022-42-01'
   doi_url: https://doi.org/10.1016/j.gloplacha.2022.103808
   status: 已发表
-- title: Holocene hydroclimate changes revealed by multiple proxies from an alpine
-    lake in the central Tianshan Mountains, Northwest China
+- title: Holocene hydroclimate changes revealed by multiple proxies from an alpine lake in the central Tianshan Mountains, Northwest China
   authors: Zhao Y, Miao Y*, Huang X, et al.
   journal: Palaeogeography, Palaeoclimatology, Palaeoecology
   year: 2022
   sort_date: '2022-43-01'
   doi_url: https://doi.org/10.1016/j.palaeo.2022.111004
   status: 已发表
-- title: Non-linear response of mid-latitude Asian dryland vegetation to Holocene
-    climate fluctuations
+- title: Non-linear response of mid-latitude Asian dryland vegetation to Holocene climate fluctuations
   authors: Zhao Y, Miao Y*, Li Y, et al.
   journal: Catena
   year: 2022
   sort_date: '2022-44-01'
   doi_url: https://doi.org/10.1016/j.catena.2022.106212
   status: 已发表
-- title: Early Oligocene—Late Miocene Wildfire History in the Northern Tibetan Plateau
-    and Links to Temperature-Driven Precipitation Changes
+- title: Early Oligocene—Late Miocene Wildfire History in the Northern Tibetan Plateau and Links to Temperature-Driven Precipitation Changes
   authors: Miao Y, Chang H*, Li L, et al.
   journal: Frontiers in Earth Science
   year: 2022
   sort_date: '2022-45-01'
   doi_url: https://doi.org/10.3389/feart.2022.850809
   status: 已发表
-- title: 'Lake Changes during the Past Five Decades in Central East Asia: Links with
-    Climate Change and Climate Future Forecasting'
+- title: 'Lake Changes during the Past Five Decades in Central East Asia: Links with Climate Change and Climate Future Forecasting'
   authors: Yang Y*, Wu J, Miao Y*, et al.
   journal: Water
   year: 2022
@@ -390,25 +348,21 @@
   sort_date: '2022-47-01'
   doi_url: https://doi.org/10.1016/j.revpalbo.2022.104789
   status: 已发表
-- title: Holocene hydroclimate changes revealed by multiple proxies from an alpine
-    lake in the central Tianshan Mountains, Northwest China
-  authors: Zhao, Y., Miao, Y., Huang, X., Chen, C., Zhao, J., Li, Y., Fang, Y., Wang,
-    X., An, C
+- title: Holocene hydroclimate changes revealed by multiple proxies from an alpine lake in the central Tianshan Mountains, Northwest China
+  authors: Zhao, Y., Miao, Y., Huang, X., Chen, C., Zhao, J., Li, Y., Fang, Y., Wang, X., An, C
   journal: Palaeogeography, Palaeoclimatology, Palaeoecology
   year: 2022
   sort_date: '2022-48-01'
   doi_url: https://doi.org/10.1016/j.palaeo.2022.111004
   status: 已发表
-- title: Non-linear response of mid-latitude Asian dryland vegetation to Holocene
-    climate fluctuations
+- title: Non-linear response of mid-latitude Asian dryland vegetation to Holocene climate fluctuations
   authors: Zhao, Y., Miao, Y., Li, Y., Fang, Y., Zhao, J., Wang, X., An, C
   journal: CATENA
   year: 2022
   sort_date: '2022-49-01'
   doi_url: https://doi.org/10.1016/j.catena.2022.106212
   status: 已发表
-- title: Variation of surface soil δ13Corg in the upper and middle reaches of the
-    Yarlung Zangbo river basin, southern Tibetan Plateau, and its climatic implications
+- title: Variation of surface soil δ13Corg in the upper and middle reaches of the Yarlung Zangbo river basin, southern Tibetan Plateau, and its climatic implications
   authors: Shuyuan Wang, Dunsheng Xia, Yijiao Fan, et al.
   journal: Sedimentary Geology
   year: 2022
@@ -431,57 +385,49 @@
   sort_date: '2022-52-01'
   doi_url: https://kns.cnki.net/kcms2/article/abstract?v=ZMT4ddBD2nzbSO9QXro54aC0f8JNXPfF7Dpgi7M6QbSRCLU7hzoQPnD5cjrV1S7eykZInVcpBb8PIF5mgf8PF-XK1MyQH3O9dkJFxFvcOJvKHdf9SMD0K3u4n-e_1UH0LNYcw1zauQj_BhgmuB_Elg==&uniplatform=NZKPT&language=CHS
   status: 已发表
-- title: Progress, problems and prospects of palynology in reconstructing environmental
-    change in inland arid areas of Asia
+- title: Progress, problems and prospects of palynology in reconstructing environmental change in inland arid areas of Asia
   authors: Zhao Y, Miao Y*, Lei Y, et al.
   journal: Sciences in Cold and Arid Regions
   year: 2021
   sort_date: '2021-53-01'
   doi_url: https://doi.org/10.3724/SP.J.1226.2021.20049.
   status: 已发表
-- title: 'Investigation of factors affecting surface pollen assemblages in the Balikun
-    Basin, central Asia: Implications for palaeoenvironmental reconstructions'
+- title: 'Investigation of factors affecting surface pollen assemblages in the Balikun Basin, central Asia: Implications for palaeoenvironmental reconstructions'
   authors: Zhao Y, Miao Y*, Fang Y. et al.
   journal: Ecological Indicators
   year: 2021
   sort_date: '2021-54-01'
   doi_url: https://doi.org/10.1016/j.ecolind.2020.107332
   status: 已发表
-- title: A new automatic statistical microcharcoal analysis method based on image
-    processing, demonstrated in the Weiyuan Section, northwest China
+- title: A new automatic statistical microcharcoal analysis method based on image processing, demonstrated in the Weiyuan Section, northwest China
   authors: Zou Y, Miao F*, Yang L, et al.
   journal: Frontiers in Earth Science
   year: 2021
   sort_date: '2021-55-01'
   doi_url: https://doi.org/10.3389/feart.2021.609916
   status: 已发表
-- title: 'Late Pleistocene hydroclimatic variabilities in arid north-west China: geochemical
-    evidence from Balikun Lake, eastern Tienshan, China'
+- title: 'Late Pleistocene hydroclimatic variabilities in arid north-west China: geochemical evidence from Balikun Lake, eastern Tienshan, China'
   authors: Zhao, Y., An, C.-B., Zhou, A., Zhang, X., Zhao, J., Dong, W., Miao, Y
   journal: Journal of Quaternary Science
   year: 2021
   sort_date: '2021-56-01'
   doi_url: https://doi.org/10.1002/jqs.3288
   status: 已发表
-- title: 'Investigation of factors affecting surface pollen assemblages in the Balikun
-    Basin, central Asia: Implications for palaeoenvironmental reconstructions'
-  authors: Zhao, Y., Miao, Y., Fang, Y., Li, Y., Lei, Y., Chen, X., Dong, W., An,
-    C
+- title: 'Investigation of factors affecting surface pollen assemblages in the Balikun Basin, central Asia: Implications for palaeoenvironmental reconstructions'
+  authors: Zhao, Y., Miao, Y., Fang, Y., Li, Y., Lei, Y., Chen, X., Dong, W., An, C
   journal: Ecological Indicators
   year: 2021
   sort_date: '2021-57-01'
   doi_url: https://doi.org/10.1016/j.ecolind.2020.107332
   status: 已发表
-- title: Progress, problems and prospects of palynology in reconstructing environmental
-    change in inland arid areas of Asia
+- title: Progress, problems and prospects of palynology in reconstructing environmental change in inland arid areas of Asia
   authors: Zhao, Y., Miao, Y., Lei, Y., Cao, X., Xiang, M
   journal: Sciences in Cold and Arid Regions
   year: 2021
   sort_date: '2021-58-01'
   doi_url: https://doi.org/10.3724/SP.J.1226.2021.20049.
   status: 已发表
-- title: A New Automatic Statistical Microcharcoal Analysis Method Based on Image
-    Processing, Demonstrated in the Weiyuan Section, Northwest China
+- title: A New Automatic Statistical Microcharcoal Analysis Method Based on Image Processing, Demonstrated in the Weiyuan Section, Northwest China
   authors: 'Yaguo Zou, Yunfa Miao, Shiling Yang, Yongtao Zhao, Zisha Wang,
 
     Guoqian Tang, Shengli Yang'
@@ -490,8 +436,7 @@
   sort_date: '2021-59-01'
   doi_url: https://doi.org/10.3389/feart.2021.609916
   status: 已发表
-- title: Late Pleistocene fire in the Ili Basin, Central Asia, and its potential links
-    to paleoclimate change and human activities
+- title: Late Pleistocene fire in the Ili Basin, Central Asia, and its potential links to paleoclimate change and human activities
   authors: Miao Y*, Song Y*, Li Y, et al.
   journal: Palaeogeography, Palaeoclimatology, Palaeoecology
   year: 2020
@@ -512,8 +457,7 @@
   sort_date: '2020-62-01'
   doi_url: https://doi.org/10.7522/j.issn.1000-694X.2020.00012
   status: 已发表
-- title: Summary and exploration of analysis experment technology on fossil plant
-    cuticles
+- title: Summary and exploration of analysis experment technology on fossil plant cuticles
   authors: Xuelian Wang, Conghui Xiong, Bainian Sun, Jingyu Wu, Baoxia Du
   journal: Acta GeologicaSinica
   year: 2020
@@ -527,8 +471,7 @@
   sort_date: '2020-64-01'
   doi_url: 10.7515/JEE192020
   status: 已发表
-- title: Miocene fire intensification linked to continuous aridification on the Tibetan
-    Plateau
+- title: Miocene fire intensification linked to continuous aridification on the Tibetan Plateau
   authors: Miao Y*, Wu F*, Warny S, et al.
   journal: Geology
   year: 2019
@@ -560,9 +503,7 @@
   sort_date: '2019-68-01'
   doi_url: 10.13292/j.1000-4890.201908.008
   status: 已发表
-- title: Climatic or tectonic control on organic matter deposition in the South China
-    Sea? A lesson learned from a comprehensive Neogene palynological study of IODP
-    Site U1433
+- title: Climatic or tectonic control on organic matter deposition in the South China Sea? A lesson learned from a comprehensive Neogene palynological study of IODP Site U1433
   authors: Miao Y*, Warny S*, Clift P et al.
   journal: International Journal of Coal Geology
   year: 2018
@@ -597,24 +538,21 @@
   sort_date: '2018-73-01'
   doi_url: https://kns.cnki.net/kcms2/article/abstract?v=ZMT4ddBD2ny0Pq_wj1ta3baagwdyXdeDbhnQ9bQsWZZtnTuGNYP75v7s4FlC6Y20JBrO9yfIB6auUApQRVWNHm8dflxpxCbFfOo-iKxR0kxT-0Gq1pkZVDzoZAtySwlTGrGWWuLr3XVCIhl1CV-a2caXFbXCWdBP&uniplatform=NZKPT&language=CHS
   status: 已发表
-- title: Evidence of continuous Asian summer monsoon weakening as a response to global
-    cooling over the last 8 Ma
+- title: Evidence of continuous Asian summer monsoon weakening as a response to global cooling over the last 8 Ma
   authors: Miao Y, Warny S*, Clift P, et al.
   journal: Gondwana Research
   year: 2017
   sort_date: '2017-74-01'
   doi_url: https://doi.org/10.1016/j.gr.2017.09.003
   status: 已发表
-- title: 'Neogene fungal record from IODP Site U1433, South China Sea: Implications
-    for paleoenvironmental change and the onset of the Mekong River'
+- title: 'Neogene fungal record from IODP Site U1433, South China Sea: Implications for paleoenvironmental change and the onset of the Mekong River'
   authors: Miao Y, Warny S*, Liu C, et al.
   journal: Marine Geology
   year: 2017
   sort_date: '2017-75-01'
   doi_url: http://dx.doi.org/10.1016/j.margeo.2017.08.019
   status: 已发表
-- title: Holocene fire on the northeast Tibetan Plateau in relation to climate change
-    and human activity
+- title: Holocene fire on the northeast Tibetan Plateau in relation to climate change and human activity
   authors: Miao Y*, Zhang D, Cai X, et al.
   journal: Quaternary International
   year: 2017
@@ -630,41 +568,35 @@
   sort_date: '2017-77-01'
   doi_url: http://dx.doi.org/10.1016/j.palwor.2015.11.002
   status: 已发表
-- title: Consistent vegetation and climate deterioration from early to late MIS3 revealed
-    by multi-proxies (mainly pollen data) in north-west China
-  authors: Zhao, Y., An, C.-B., Duan, F., Zhao, J., Mao, L., Zhou, A., Cao, Z., Chen,
-    F
+- title: Consistent vegetation and climate deterioration from early to late MIS3 revealed by multi-proxies (mainly pollen data) in north-west China
+  authors: Zhao, Y., An, C.-B., Duan, F., Zhao, J., Mao, L., Zhou, A., Cao, Z., Chen, F
   journal: Review of Palaeobotany & Palynology
   year: 2017
   sort_date: '2017-78-01'
   doi_url: https://doi.org/10.1016/j.revpalbo.2017.04.010
   status: 已发表
-- title: 'Isotopic analysis on nanogram quantities of carbon from dissolved insect
-    cuticle: a method for paleoenvironmental inferences'
+- title: 'Isotopic analysis on nanogram quantities of carbon from dissolved insect cuticle: a method for paleoenvironmental inferences'
   authors: Zhao, Y., Nelson, D.M., Clegg, B.F., An, C.B., Hu, F.S
   journal: Rapid Commun Mass Spectrom
   year: 2017
   sort_date: '2017-79-01'
   doi_url: https://doi.org/10.1002/rcm.7965
   status: 已发表
-- title: 'Late Cenozoic fire enhancement response to aridification in mid-latitude
-    Asia: Evidence from microcharcoal records.'
+- title: 'Late Cenozoic fire enhancement response to aridification in mid-latitude Asia: Evidence from microcharcoal records.'
   authors: Miao Y*, Fang X*, Song C, et al.
   journal: Quaternary Science Reviews
   year: 2016
   sort_date: '2016-80-01'
   doi_url: http://dx.doi.org/10.1016/j.quascirev.2016.02.030
   status: 已发表
-- title: Late Cenozoic pollen concentration in the western Qaidam Basin, northern
-    Tibetan Plateau, and its significance for paleoclimate and tectonics
+- title: Late Cenozoic pollen concentration in the western Qaidam Basin, northern Tibetan Plateau, and its significance for paleoclimate and tectonics
   authors: Miao Y*, Fang X, Liu Y, et al.
   journal: Review of Palaeobotany and Palynology
   year: 2016
   sort_date: '2016-81-01'
   doi_url: http://dx.doi.org/10.1016/j.revpalbo.2016.04.008
   status: 已发表
-- title: Human activity accelerating the rapid desertification of the Mu Us Sandy
-    Lands, North China
+- title: Human activity accelerating the rapid desertification of the Mu Us Sandy Lands, North China
   authors: Miao Y, Jin H, & Cui, J
   journal: Scientific reports
   year: 2016
@@ -678,57 +610,49 @@
   sort_date: '2016-83-01'
   doi_url: https://doi.org/10.13826/j.cnki.cn65-1103/x.2017.02.014
   status: 已发表
-- title: Late Cenozoic genus Fupingopollenites development and its implications for
-    the Asian summer monsoon evolution
+- title: Late Cenozoic genus Fupingopollenites development and its implications for the Asian summer monsoon evolution
   authors: Miao Y, Song C, Fang X, et al.
   journal: Gondwana Research
   year: 2016
   sort_date: '2016-84-01'
   doi_url: http://dx.doi.org/10.1016/j.gr.2014.12.007
   status: 已发表
-- title: A Late-Eocene palynological record fromthe Hoh Xil Basin, northern Tibetan
-    Plateau, and its implications for stratigraphic age, paleoclimate and paleoelevation
+- title: A Late-Eocene palynological record fromthe Hoh Xil Basin, northern Tibetan Plateau, and its implications for stratigraphic age, paleoclimate and paleoelevation
   authors: Miao Y, Wu F*, Chang H, et al.
   journal: Gondwana Research
   year: 2016
   sort_date: '2016-85-01'
   doi_url: https://doi.org/10.1016/j.gr.2015.01.007
   status: 已发表
-- title: Holocene climate change on the northeastern Tibetan Plateau inferred from
-    mountain-slope pollen and non-pollen palynomorphs
+- title: Holocene climate change on the northeastern Tibetan Plateau inferred from mountain-slope pollen and non-pollen palynomorphs
   authors: Miao Y, Jin H*, Liu B, et al.
   journal: Review of Palaeobotany and Palynology
   year: 2015
   sort_date: '2015-86-01'
   doi_url: http://dx.doi.org/10.1016/j.revpalbo.2015.05.006
   status: 已发表
-- title: Late Quaternary pollen records from the Yangtze River Delta, East China,
-    and its implications for the Asian monsoon evolution
+- title: Late Quaternary pollen records from the Yangtze River Delta, East China, and its implications for the Asian monsoon evolution
   authors: Miao Y, Zhang P*, Lu S, et al.
   journal: Arabian Journal of Geosciences
   year: 2015
   sort_date: '2015-87-01'
   doi_url: https://doi.org/10.1007/s12517-015-1777-8
   status: 已发表
-- title: 'Vegetation and climate history in arid western China during MIS2: New insights
-    from pollen and grain-size data of the Balikun Lake, eastern Tien Shan.'
-  authors: Zhao, Y., An, C.-B., Mao, L., Zhao, J., Tang, L., Zhou, A., Li, H., Dong,
-    W., Duan, F., Chen, F
+- title: 'Vegetation and climate history in arid western China during MIS2: New insights from pollen and grain-size data of the Balikun Lake, eastern Tien Shan.'
+  authors: Zhao, Y., An, C.-B., Mao, L., Zhao, J., Tang, L., Zhou, A., Li, H., Dong, W., Duan, F., Chen, F
   journal: Quaternary Science Reviews
   year: 2015
   sort_date: '2015-88-01'
   doi_url: https://doi.org/10.1016/j.quascirev.2015.08.027
   status: 已发表
-- title: Late Cenozoic fluvial-lacustrine susceptibility increases in the Linxia Basin
-    and their implications for Tibetan Plateau uplift
+- title: Late Cenozoic fluvial-lacustrine susceptibility increases in the Linxia Basin and their implications for Tibetan Plateau uplift
   authors: Yan X, Miao, Y*, Zan, J, et al.
   journal: Quaternary International
   year: 2014
   sort_date: '2014-89-01'
   doi_url: https://doi.org/10.1016/j.quaint.2013.12.046
   status: 已发表
-- title: 'Natural ecosystem response and recovery after the 8.2 ka cold event: Evidence
-    from slope sediments on the northeastern Tibetan Plateau'
+- title: 'Natural ecosystem response and recovery after the 8.2 ka cold event: Evidence from slope sediments on the northeastern Tibetan Plateau'
   authors: Miao Y *, Jin H, Liu B, et al.
   journal: Journal of Arid Environments
   year: 2014
@@ -749,40 +673,35 @@
   sort_date: '2013-92-01'
   doi_url: https://doi.org/10.3724/SP.J.1140.2013.04077
   status: 已发表
-- title: Pollen and fossil wood’s linkage with Mi-1 Glaciation in northeastern Tibetan
-    Plateau, China
+- title: Pollen and fossil wood’s linkage with Mi-1 Glaciation in northeastern Tibetan Plateau, China
   authors: Miao Y, Fang X*, Song C, et al.
   journal: Palaeoworld
   year: 2013
   sort_date: '2013-93-01'
   doi_url: http://dx.doi.org/10.1016/j.palwor.2013.06.001
   status: 已发表
-- title: 'Late early Oligocene East Asian summer monsoon in the NE Tibetan Plateau:
-    Evidence from a palynological record from the Lanzhou Basin, China'
+- title: 'Late early Oligocene East Asian summer monsoon in the NE Tibetan Plateau: Evidence from a palynological record from the Lanzhou Basin, China'
   authors: Miao Y, Wu F*, Herrmann M, et al.
   journal: Journal of Asian Earth Sciences
   year: 2013
   sort_date: '2013-94-01'
   doi_url: http://dx.doi.org/10.1016/j.jseaes.2013.07.003
   status: 已发表
-- title: 'Late Cenozoic continuous aridification in the western Qaidam Basin: evidence
-    from sporopollen records'
+- title: 'Late Cenozoic continuous aridification in the western Qaidam Basin: evidence from sporopollen records'
   authors: Miao Y, Fang X, Wu F et al.
   journal: Climate of the Past
   year: 2013
   sort_date: '2013-95-01'
   doi_url: https://doi.org/10.5194/cp-9-1863-2013
   status: 已发表
-- title: Late Cenozoic sporopollen records in the Yangtze River Delta, East China
-    and implications for East Asian summer monsoon evolution
+- title: Late Cenozoic sporopollen records in the Yangtze River Delta, East China and implications for East Asian summer monsoon evolution
   authors: Zhang, P., Miao, Y*, Zhang, Z, et al.
   journal: Palaeogeography, Palaeoclimatology, Palaeoecology
   year: 2013
   sort_date: '2013-96-01'
   doi_url: https://doi.org/10.1016/j.palaeo.2013.08.014
   status: 已发表
-- title: 'What controlled Mid-Late Miocene long-term aridification in Central Asia?
-    –Global cooling or Tibetan Plateau uplift: A review'
+- title: 'What controlled Mid-Late Miocene long-term aridification in Central Asia? –Global cooling or Tibetan Plateau uplift: A review'
   authors: Miao Y*, Herrmann M, Wu F, et al.
   journal: Earth-Science Reviews
   year: 2012
@@ -795,16 +714,14 @@
   year: 2011
   sort_date: '2011-98-01'
   status: 已发表
-- title: Miocene pollen record of KC–1 core in the Qaidam Basin, NE Tibetan Plateau
-    and implications for evolution of the East Asian monsoon
+- title: Miocene pollen record of KC–1 core in the Qaidam Basin, NE Tibetan Plateau and implications for evolution of the East Asian monsoon
   authors: Miao Y, Fang X*, Herrmann M, et al.
   journal: Palaeogeography, Palaeoclimatology, Palaeoecology
   year: 2011
   sort_date: '2011-99-01'
   doi_url: https://doi.org/10.1016/j.palaeo.2010.10.026
   status: 已发表
-- title: 'Origin and development of Artemisia (Asteraceae) in Asia and its implications
-    for the uplift history of the Tibetan Plateau: a review'
+- title: 'Origin and development of Artemisia (Asteraceae) in Asia and its implications for the uplift history of the Tibetan Plateau: a review'
   authors: Miao Y, Meng Q*, Fang X, et al.
   journal: Quaternary International
   year: 2011

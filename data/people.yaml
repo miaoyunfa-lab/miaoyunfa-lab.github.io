@@ -1063,8 +1063,14 @@
   email: jingxiangnan25@mails.ucas.ac.cn
   photo: /images/people/jingxiangnan.jpg
   bio: 研究方向：干旱环境演化、环境健康
-  matched_papers: []
-  paper_count: 0
+  matched_papers:
+  - title: 'Global, regional, and national burden of substance use disorder in 204 countries and territories, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021'
+    authors: 景向楠
+    journal: Annals of Medicine
+    year: 2026
+    sort_date: '2026-05-22'
+    status: 已发表
+  paper_count: 1
   matched_awards: []
   award_count: 0
   matched_patents: []
