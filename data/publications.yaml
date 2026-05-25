@@ -191,6 +191,13 @@
   sort_date: '2025-11-01'
   doi_url: https://doi.org/10.1016/j.earscirev.2025.105041
   status: 已发表
+- title: Robust land surface temperature record for north China over the past 21,000 years.
+  authors: Guo, J.J., Ziegler, M., Wanders, N., Vreeken, M., Yin, Q.Z., Lu, H., Fuchs, L., Dong J.B., Sun, Y.B., Peterse, F.
+  journal: Science Advances
+  year: 2024
+  sort_date: '2024-34-01'
+  doi_url: https://doi.org/10.1126/sciadv.adj4800
+  status: 已发表
 - title: Optimized air quality management based on air quality index prediction and air pollutants identification in representative cities in China
   authors: Zhilong Guo，Xiangnan Jing，Yuewei Ling
   journal: Scientific reports
@@ -334,6 +341,13 @@
   year: 2023
   sort_date: '2023-33-01'
   doi_url: https://doi.org/10.1029/2023GL103637
+  status: 已发表
+- title: Insolation and CO2 impacts on the spatial differences of the MIS-9 and MIS-11 climate between monsoonal China and central Asia
+  authors: Lu, H., Yin, Q.Z., Wu, Z.P., Shi, F., Hao, Q.Z., Xia, D.S., Guo, Z.T.
+  journal: 'Journal of Geophysical Research: Atmospheres'
+  year: 2022
+  sort_date: '2022-56-01'
+  doi_url: https://doi.org/10.1029/2022JD036505
   status: 已发表
 - title: 白刺(Nitraria tangutorum)灌丛不定根构型特征及生物量分配模式
   authors: 李小乐，党晓宏，翟波，魏亚娟，迟旭，吴惠敏
@@ -499,6 +513,20 @@
   sort_date: '2021-53-01'
   doi_url: https://doi.org/10.3724/SP.J.1226.2021.20049.
   status: 已发表
+- title: Possible link of an exceptionally strong East Asian summer monsoon to a La Niña-like condition during the interglacial MIS-13.
+  authors: Lu, H., Yin, Q.Z., Jia, J., Xia, D.S., Gao, F.Y., Lyu, A.Q., Ma, Y., Yang, F.
+  journal: Quaternary Science Reviews
+  year: 2020
+  sort_date: '2020-66-01'
+  doi_url: https://doi.org/10.1016/j.quascirev.2019.106048
+  status: 已发表
+- title: Atmospheric dynamics patterns in southern central Asia since 800 ka revealed by loess−paleosol sequences in Tajikistan
+  authors: Lu, H., Jia, J., Yin, Q.Z., Xia, D.S., Gao, F.Y., Liu, H., Fan, Y.J., Li, Z.J., Wang, X., Berger, A.,Oimuhammadzoda, I., Gadoev, M.
+  journal: Geophysical Research Letters
+  year: 2020
+  sort_date: '2020-65-01'
+  doi_url: https://doi.org/10.1029/2020GL088320
+  status: 已发表
 - title: 中中新世气候适宜期西北内陆干旱区气候演化特征
   authors: 王海涛, 吴福莉, 方小敏,杨立业
   journal: 期刊
@@ -565,6 +593,20 @@
   year: 2019
   sort_date: '2019-65-01'
   doi_url: https://doi.org/10.1130/G45720.1
+  status: 已发表
+- title: The cause of extremely high magnetic susceptibility of the S5S1 paleosol in the central Chinese Loess Plateau.
+  authors: Lu, H., Jia, J., Wang, Y.J., Yin, Q.Z., Xia, D.S.
+  journal: Quaternary International
+  year: 2018
+  sort_date: '2018-75-01'
+  doi_url: https://doi.org/10.1016/j.quaint.2018.05.046
+  status: 已发表
+- title: 'Variations in the Iron Mineralogy of a Loess Section in Tajikistan During the Mid−Pleistocene and Late Pleistocene: Implications for the Climatic Evolution in Central Asia.'
+  authors: Jia, J., Lu, H., Wang, Y.J., Xia, D.S.
+  journal: Geochemistry, Geophysics, Geosystems
+  year: 2018
+  sort_date: '2018-74-01'
+  doi_url: https://doi.org/10.1002/2017GC007371
   status: 已发表
 - title: 基于GIS的中国历代名人人生轨迹研究
   authors: 邹亚国，林先成，刘寅，邬舒玛，邱莎莎，赵灿，钟梦
@@ -686,6 +728,13 @@
   year: 2016
   sort_date: '2016-80-01'
   doi_url: http://dx.doi.org/10.1016/j.quascirev.2016.02.030
+  status: 已发表
+- title: 黄土高原记录的 MIS 6.5 期东亚夏季风信号及其古气候意义
+  authors: 陆浩，贾佳，夏敦胜，高福元，王友郡
+  journal: 第四纪研究
+  year: 2015
+  sort_date: '2015-89-01'
+  doi_url: https://doi.org/10.11928/j.issn.1001-7410.2015.06.09
   status: 已发表
 - title: 'Vegetation and climate history in arid western China during MIS2: New insights from pollen and grain-size data of the Balikun Lake, eastern Tien Shan.'
   authors: Zhao, Y., An, C.-B., Mao, L., Zhao, J., Tang, L., Zhou, A., Li, H., Dong, W., Duan, F., Chen, F

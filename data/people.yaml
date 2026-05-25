@@ -598,6 +598,68 @@
   award_count: 1
   matched_patents: []
   patent_count: 0
+- name: 陆浩
+  en_name: Hao Lu
+  role: 副研究员
+  group: staff
+  email: h.lu2@uu.nl
+  photo: /images/people/luhao.jpg
+  bio: 研究方向：黄土与古气候重建/模拟
+  matched_papers:
+  - title: Robust land surface temperature record for north China over the past 21,000 years.
+    authors: Guo, J.J., Ziegler, M., Wanders, N., Vreeken, M., Yin, Q.Z., Lu, H., Fuchs, L., Dong J.B., Sun, Y.B., Peterse, F.
+    journal: Science Advances
+    year: 2024
+    sort_date: '2024-34-01'
+    doi_url: https://doi.org/10.1126/sciadv.adj4800
+    status: 已发表
+  - title: Insolation and CO2 impacts on the spatial differences of the MIS-9 and MIS-11 climate between monsoonal China and central Asia
+    authors: Lu, H., Yin, Q.Z., Wu, Z.P., Shi, F., Hao, Q.Z., Xia, D.S., Guo, Z.T.
+    journal: 'Journal of Geophysical Research: Atmospheres'
+    year: 2022
+    sort_date: '2022-56-01'
+    doi_url: https://doi.org/10.1029/2022JD036505
+    status: 已发表
+  - title: Possible link of an exceptionally strong East Asian summer monsoon to a La Niña-like condition during the interglacial MIS-13.
+    authors: Lu, H., Yin, Q.Z., Jia, J., Xia, D.S., Gao, F.Y., Lyu, A.Q., Ma, Y., Yang, F.
+    journal: Quaternary Science Reviews
+    year: 2020
+    sort_date: '2020-66-01'
+    doi_url: https://doi.org/10.1016/j.quascirev.2019.106048
+    status: 已发表
+  - title: Atmospheric dynamics patterns in southern central Asia since 800 ka revealed by loess−paleosol sequences in Tajikistan
+    authors: Lu, H., Jia, J., Yin, Q.Z., Xia, D.S., Gao, F.Y., Liu, H., Fan, Y.J., Li, Z.J., Wang, X., Berger, A.,Oimuhammadzoda, I., Gadoev, M.
+    journal: Geophysical Research Letters
+    year: 2020
+    sort_date: '2020-65-01'
+    doi_url: https://doi.org/10.1029/2020GL088320
+    status: 已发表
+  - title: The cause of extremely high magnetic susceptibility of the S5S1 paleosol in the central Chinese Loess Plateau.
+    authors: Lu, H., Jia, J., Wang, Y.J., Yin, Q.Z., Xia, D.S.
+    journal: Quaternary International
+    year: 2018
+    sort_date: '2018-75-01'
+    doi_url: https://doi.org/10.1016/j.quaint.2018.05.046
+    status: 已发表
+  - title: 'Variations in the Iron Mineralogy of a Loess Section in Tajikistan During the Mid−Pleistocene and Late Pleistocene: Implications for the Climatic Evolution in Central Asia.'
+    authors: Jia, J., Lu, H., Wang, Y.J., Xia, D.S.
+    journal: Geochemistry, Geophysics, Geosystems
+    year: 2018
+    sort_date: '2018-74-01'
+    doi_url: https://doi.org/10.1002/2017GC007371
+    status: 已发表
+  - title: 黄土高原记录的 MIS 6.5 期东亚夏季风信号及其古气候意义
+    authors: 陆浩，贾佳，夏敦胜，高福元，王友郡
+    journal: 第四纪研究
+    year: 2015
+    sort_date: '2015-89-01'
+    doi_url: https://doi.org/10.11928/j.issn.1001-7410.2015.06.09
+    status: 已发表
+  paper_count: 7
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
 - name: 王雪莲
   en_name: Xuelian Wang
   role: 副研究员（特聘研究岗）
