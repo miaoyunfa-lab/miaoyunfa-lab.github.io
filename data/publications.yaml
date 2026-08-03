@@ -35,23 +35,33 @@
   doi_url: https://doi.org/10.1016/j.revpalbo.2026.105581
   status: 已发表
 - title: 'Explainable Deep Learning for Predicting Lake Expansion in the Siling Co Endorheic Basin: Unraveling Driver Shifts and Hydro-climatic Tipping Points'
-  authors: Xiangnan Jing, Rao Zhu，Yunfa Miao
+  authors: Xiangnan Jing, Rao Zhu, Yunfa Miao*
   journal: 'Journal of Hydrology: Regional Studies'
   year: 2026
   sort_date: '2026-05-25'
-  status: 投稿中
-- title: Short-Term Water Demand Forecasting in DMAs based on Interpretable Spatiotemporal Integration and CNN-AM-MDGCN-LSTM
-  authors: Xiangnan Jing，Yuewei Ling
-  journal: Water Resources Management
+  doi_url: https://doi.org/10.1016/j.ejrh.2026.103719
+  status: 已发表
+- title: A CEEMDAN-Transformer-BiLSTM Framework for Multi-Scale Urban Water Demand Forecasting
+  authors: Zhilong Guo, Xiangnan Jing*, Tongqiang Yi, Yuewei Ling, Qiuyang Li, Jing Ma
+  journal: Sustainability
   year: 2026
   sort_date: '2026-05-24'
-  status: 投稿中
+  doi_url: https://doi.org/10.3390/su18126057
+  status: 已发表
 - title: 'Nonlinear effects and lag patterns of eco-environmental factors on Scrub Typhus: A spatiotemporal analysis in Yunnan, China, 2015–2022'
   authors: Xiangnan Jing, Yuewei Ling, Ruonan Jing, Fuying Guo, Feifei Yi, Dongsheng Huang, Lijie Zhang, Xiangyu Yan, Tiejun Shui
   journal: Parasites & Vectors
   year: 2026
   sort_date: '2026-05-23'
-  status: 投稿中
+  doi_url: https://doi.org/10.1186/s13071-026-07547-2
+  status: 已发表
+- title: Short-Term Water Demand Forecasting in DMAs based on Interpretable Spatiotemporal Integration and CNN-AM-MDGCN-LSTM
+  authors: Xiangnan Jing, Yuewei Ling
+  journal: Water Resources Management
+  year: 2026
+  sort_date: '2026-05-22'
+  doi_url: https://doi.org/10.21203/rs.3.rs-9291235/v1
+  status: 已发表
 - title: 'Global, regional, and national burden of substance use disorder in 204 countries and territories, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021'
   authors: 景向楠
   journal: Annals of Medicine
