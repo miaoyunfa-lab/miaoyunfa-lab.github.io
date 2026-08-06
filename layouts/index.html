@@ -4,20 +4,41 @@
   <p>{{ site.Params.hero_subtext }}</p>
 </section>
 
-<section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">{{ site.Params.affiliation }}</p>
-    <h1>{{ site.Params.lab_name }}</h1>
+<section class="hero-carousel" data-carousel aria-roledescription="carousel" aria-label="课题组成果轮播">
+  <div class="carousel-viewport" aria-live="polite">
+    <article class="carousel-slide is-active" data-carousel-slide aria-hidden="false">
+      <div class="carousel-copy">
+        <p class="carousel-kicker">科普成果</p>
+        <h2>科普绘本《花粉皮皮的冒险之旅》</h2>
+        <p>跟随花粉皮皮走进自然世界，在探索与成长中认识花粉、植物与生态环境。</p>
+        <div class="button-row">
+          <a class="button" href="{{ "/news/" | relURL }}">查看课题组新闻</a>
+        </div>
+      </div>
+      <div class="carousel-media">
+        <img src="{{ "images/carousel/pollen-adventure-book.jpg" | relURL }}" alt="科普绘本《花粉皮皮的冒险之旅》封面">
+      </div>
+    </article>
 
-    <div class="button-row" aria-label="Primary pages">
-      <a class="button" href="{{ "/research/" | relURL }}">研究方向</a>
-      <a class="button button-secondary" href="{{ "/people/" | relURL }}">课题组成员</a>
-      <a class="button button-secondary" href="{{ "/publications/" | relURL }}">论文发表</a>
-    </div>
+    <article class="carousel-slide" data-carousel-slide aria-hidden="true">
+      <div class="carousel-copy">
+        <p class="carousel-kicker">代表性研究成果</p>
+        <h2>Science：青藏高原北部晚中新世快速隆升</h2>
+        <p>研究提出新的生物古高度计，揭示青藏高原北部在晚中新世发生快速隆升。</p>
+        <div class="button-row">
+          <a class="button" href="https://doi.org/10.1126/science.abo2475" target="_blank" rel="noopener">查看论文</a>
+          <a class="button button-secondary" href="{{ "/publications/" | relURL }}">更多研究成果</a>
+        </div>
+      </div>
+      <div class="carousel-media carousel-media-light">
+        <img src="{{ "images/carousel/science-paper.png" | relURL }}" alt="Science论文页面截图">
+      </div>
+    </article>
   </div>
 
-  <div class="hero-visual">
-    <img class="hero-image" src="{{ "images/research/hero.jpg" | relURL }}" alt="课题组研究示意图">
+  <div class="carousel-controls" aria-label="选择轮播内容">
+    <button class="carousel-dot is-active" type="button" data-carousel-dot aria-label="显示第1张：科普绘本" aria-current="true"></button>
+    <button class="carousel-dot" type="button" data-carousel-dot aria-label="显示第2张：Science论文" aria-current="false"></button>
   </div>
 </section>
 
@@ -98,4 +119,5 @@
     {{ end }}
   </ul>
 </section>
+<script src="{{ "js/carousel.js" | relURL }}" defer></script>
 {{ end }}
