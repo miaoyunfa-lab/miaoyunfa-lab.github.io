@@ -2,6 +2,10 @@
   <div class="container header-inner">
     <a class="site-brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Params.lab_name }} home">
       <img src="{{ "images/logo/logo.png" | relURL }}" alt="{{ site.Params.lab_name }}">
+      <span class="site-brand-copy">
+        <strong>{{ site.Params.hero_text }}</strong>
+        <span>{{ site.Params.hero_subtext }}</span>
+      </span>
     </a>
     {{ if site.Params.show_header_navigation }}
       <nav aria-label="主导航">
