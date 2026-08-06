@@ -81,44 +81,33 @@
   </div>
 </section>
 
-{{ $news := where site.RegularPages "Section" "news" }}
-<section class="home-news">
-  <div class="section-heading">
-    <h2>最新新闻</h2>
-    <a href="{{ "/news/" | relURL }}">查看全部</a>
-  </div>
-  <div class="news-timeline">
-    {{ range first 3 (sort $news "Date" "desc") }}
-    <article class="news-item">
-      <details class="news-details">
-        <summary>
-          <span class="news-date">{{ .Date.Format "2006年1月" }}</span>
-          <span class="news-title">{{ .Title }}</span>
-        </summary>
-        <div class="news-story">{{ .Content }}</div>
-      </details>
-    </article>
+<section class="panel members-panel">
+  <h2 class="title-badge">课题组成员</h2>
+  <div class="members-grid">
+    {{ $groups := slice
+      (dict "key" "staff" "label" "在职职工")
+      (dict "key" "postdoc" "label" "博士后")
+      (dict "key" "students" "label" "学生培养")
+    }}
+    {{ range $groups }}
+    {{ $rep := first 1 (where site.Data.people "group" .key) }}
+    {{ $repName := "" }}
+    {{ $repRole := "" }}
+    {{ $repPhoto := "" }}
+    {{ range $rep }}
+    {{ $repName = .name }}
+    {{ $repRole = .role }}
+    {{ $repPhoto = .photo }}
+    {{ end }}
+    <a class="member-card" href="{{ "/people/" | relURL }}?group={{ .key }}">
+      {{ if $repPhoto }}
+      <img src="{{ $repPhoto | relURL }}" alt="{{ $repName }}">
+      {{ end }}
+      <h3>{{ .label }}</h3>
+      {{ if $repName }}<span>{{ $repName }}{{ with $repRole }} · {{ . }}{{ end }}</span>{{ end }}
+    </a>
     {{ end }}
   </div>
-</section>
-
-<section class="publication-preview">
-  <div class="section-heading">
-    <h2>最新论文</h2>
-    <a href="{{ "/publications/" | relURL }}">查看全部</a>
-  </div>
-  <ul class="publication-list">
-    {{ range first 3 site.Data.publications }}
-    <li>
-      <strong>{{ .title }}</strong>
-      <span>{{ .authors }}</span>
-      <em>{{ .journal }} ({{ .year }})</em>
-      {{ if .doi_url }}<a href="{{ .doi_url }}" target="_blank" rel="noopener">DOI</a>{{ else if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">Link</a>{{ end }}
-    </li>
-    {{ else }}
-    <li>论文列表即将更新。</li>
-    {{ end }}
-  </ul>
 </section>
 <script src="{{ "js/carousel.js" | relURL }}" defer></script>
 {{ end }}

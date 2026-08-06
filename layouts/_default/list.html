@@ -142,6 +142,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  var groupParam = new URLSearchParams(window.location.search).get("group");
+  if (groupParam && ["all", "staff", "postdoc", "students", "alumni"].indexOf(groupParam) !== -1) {
+    setFilter(groupParam);
+  }
+
   // Detail tab toggle
   document.querySelectorAll(".detail-tab").forEach(function (tab) {
     tab.addEventListener("click", function () {
