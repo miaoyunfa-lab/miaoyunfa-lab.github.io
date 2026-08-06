@@ -117,5 +117,64 @@
     {{ end }}
   </div>
 </section>
+
+<section class="panel achievements-panel">
+  <h2 class="title-badge">研究成果</h2>
+  <div class="achievements-grid">
+    <a class="achievement-card achievement-card-papers" href="{{ "/publications/" | relURL }}">
+      <div class="achievement-head">
+        <h3>论文发表</h3>
+        <span class="achievement-more">查看全部 →</span>
+      </div>
+      <ol class="achievement-list">
+        {{ range first 3 (sort site.Data.publications "sort_date" "desc") }}
+        <li>
+          <span class="achievement-title">{{ .title }}</span>
+          <span class="achievement-meta">{{ .journal }} · {{ .year }}</span>
+        </li>
+        {{ end }}
+      </ol>
+    </a>
+
+    <div class="achievement-stack">
+      {{ $patents := slice }}
+      {{ range site.Data.people }}
+        {{ range .matched_patents }}
+          {{ $patents = $patents | append . }}
+        {{ end }}
+      {{ end }}
+
+      <a class="achievement-card achievement-card-patents" href="{{ "/patents/" | relURL }}">
+        <div class="achievement-head">
+          <h3>专利（软著）</h3>
+          <span class="achievement-more">查看全部 →</span>
+        </div>
+        <ol class="achievement-list">
+          {{ range first 3 (sort $patents "year" "desc") }}
+          <li>
+            <span class="achievement-title">{{ .name }}</span>
+            <span class="achievement-meta">{{ .type }} · {{ .year }}</span>
+          </li>
+          {{ end }}
+        </ol>
+      </a>
+
+      <a class="achievement-card achievement-card-news" href="{{ "/news/" | relURL }}">
+        <div class="achievement-head">
+          <h3>科普及其他</h3>
+          <span class="achievement-more">查看全部 →</span>
+        </div>
+        <ol class="achievement-list">
+          {{ range first 3 (sort (where site.RegularPages "Section" "news") "Date" "desc") }}
+          <li>
+            <span class="achievement-title">{{ .Title }}</span>
+            <span class="achievement-meta">{{ .Date.Format "2006.01" }}</span>
+          </li>
+          {{ end }}
+        </ol>
+      </a>
+    </div>
+  </div>
+</section>
 <script src="{{ "js/carousel.js" | relURL }}" defer></script>
 {{ end }}

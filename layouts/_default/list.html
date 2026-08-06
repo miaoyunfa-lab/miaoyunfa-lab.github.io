@@ -210,6 +210,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 
+{{ else if eq .Section "patents" }}
+{{ $patents := slice }}
+{{ range site.Data.people }}
+  {{ range .matched_patents }}
+    {{ $patents = $patents | append . }}
+  {{ end }}
+{{ end }}
+{{ $patents = sort $patents "year" "desc" }}
+<section class="publication-overview">
+  <p><strong>{{ len $patents }}</strong> 项专利与软著成果（课题组文献库）.</p>
+</section>
+
+<section class="patent-catalog" aria-label="专利与软著列表">
+  <ol class="patent-list">
+    {{ range $patents }}
+    <li class="patent-item">
+      <div class="patent-year">{{ .year }}</div>
+      <div class="patent-body">
+        <h2>{{ .name }}</h2>
+        {{ with .type }}<span class="patent-type">{{ . }}</span>{{ end }}
+        {{ with .recipient }}<p class="patent-recipient">发明人/著作权人：{{ . }}</p>{{ end }}
+        {{ with .details }}<p class="patent-details">{{ . }}</p>{{ end }}
+      </div>
+    </li>
+    {{ else }}
+    <li>专利列表即将更新</li>
+    {{ end }}
+  </ol>
+</section>
+
 {{ else if eq .Section "contact" }}
 <section class="card contact-card">
   <p><strong>课题组负责人：</strong> {{ site.Params.pi_name }}</p>

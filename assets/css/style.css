@@ -542,6 +542,159 @@ a {
   color: #ffffff;
 }
 
+.achievements-panel {
+  margin: 1.5rem 0;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: stretch;
+}
+
+.achievement-stack {
+  display: grid;
+  gap: 1rem;
+  align-content: stretch;
+}
+
+.achievement-card {
+  display: block;
+  padding: 1.1rem 1.15rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbfcfd;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.achievement-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(15, 118, 110, 0.14);
+  transform: translateY(-2px);
+}
+
+.achievement-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.achievement-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--accent);
+  line-height: 1.3;
+}
+
+.achievement-more {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.achievement-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.achievement-list li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.5rem 0 0.45rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.achievement-list li:last-child {
+  border-bottom: 0;
+}
+
+.achievement-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.achievement-meta {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.patent-catalog {
+  margin-top: 1.25rem;
+}
+
+.patent-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.patent-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.patent-year {
+  flex: 0 0 auto;
+  min-width: 3.4rem;
+  text-align: center;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.patent-body h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.patent-type {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.patent-recipient,
+.patent-details {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .home-research {
   display: grid;
   gap: 1rem;
@@ -1132,7 +1285,8 @@ a {
   .three-up,
   .two-up,
   .research-topic-grid,
-  .members-grid {
+  .members-grid,
+  .achievements-grid {
     grid-template-columns: 1fr;
   }
 
