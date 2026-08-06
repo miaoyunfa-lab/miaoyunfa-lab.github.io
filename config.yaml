@@ -4,6 +4,7 @@ title: "苗运法研究员课题组"
 summaryLength: 30
 params:
   lab_name: "苗运法研究员课题组"
+  show_header_navigation: false
   tagline: "欢迎访问我们的学术主页"
   pi_name: "苗运法"
   affiliation: "中国科学院西北生态环境资源研究院"
