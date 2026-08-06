@@ -3,18 +3,18 @@ title: "研究"
 draft: false
 ---
 
-## Overview
+## 研究方向
 
-Describe your main research directions here.
+本课题组围绕孢粉学与生态环境研究，聚焦以下三个方向：
 
-## Topic 1
+### 孢粉学
 
-Add a short summary and one representative figure or project.
+聚焦孢粉学基础与关键技术，开展孢粉室内提取与自动化鉴定研究，拓展代用指标体系（微炭屑），推动孢粉学相关仪器的研发与应用；
 
-## Topic 2
+### 古生态与干旱环境演化
 
-Add a short summary of the second line of work.
+探讨过去生态环境变化，包括全球气候变化、地形演变、生物多样性及碳循环过程，系统重建亚洲内陆区域生态与气候演变历史；
 
-## Methods
+### 全球变化生态学
 
-List methods such as DFT, DFPT, SSCHA, MLIPs, or experimental collaborations.
+研究空气花粉、植被现代过程及致敏花粉的动态变化，分析其对气候变化与人类活动的响应机制，预估未来生态演变趋势与应对策略。
