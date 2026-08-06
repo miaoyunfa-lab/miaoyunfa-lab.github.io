@@ -418,14 +418,19 @@ a {
 
 .research-group-heading {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 0.95rem;
 }
 
 .research-group-heading h2 {
+  display: inline-block;
   margin: 0;
+  padding: 0.45rem 0.95rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #ffffff;
   font-size: 1.22rem;
   line-height: 1.25;
 }
