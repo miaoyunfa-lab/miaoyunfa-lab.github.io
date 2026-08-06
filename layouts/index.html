@@ -90,7 +90,9 @@
       (dict "key" "students" "label" "学生培养")
     }}
     {{ range $groups }}
-    {{ $rep := first 1 (where site.Data.people "group" .key) }}
+    {{ $members := where site.Data.people "group" .key }}
+    {{ $memberCount := len $members }}
+    {{ $rep := first 1 $members }}
     {{ $repName := "" }}
     {{ $repRole := "" }}
     {{ $repPhoto := "" }}
@@ -100,11 +102,17 @@
     {{ $repPhoto = .photo }}
     {{ end }}
     <a class="member-card" href="{{ "/people/" | relURL }}?group={{ .key }}">
-      {{ if $repPhoto }}
-      <img src="{{ $repPhoto | relURL }}" alt="{{ $repName }}">
-      {{ end }}
-      <h3>{{ .label }}</h3>
-      {{ if $repName }}<span>{{ $repName }}{{ with $repRole }} · {{ . }}{{ end }}</span>{{ end }}
+      <div class="member-avatar">
+        {{ if $repPhoto }}
+        <img src="{{ $repPhoto | relURL }}" alt="{{ $repName }}">
+        {{ if gt $memberCount 1 }}<span class="avatar-badge">+{{ sub $memberCount 1 }}</span>{{ end }}
+        {{ end }}
+      </div>
+      <div class="member-info">
+        <h3>{{ .label }}</h3>
+        <p class="member-count">共 {{ $memberCount }} 位成员</p>
+        <span class="member-cta">查看成员名单 →</span>
+      </div>
     </a>
     {{ end }}
   </div>

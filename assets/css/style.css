@@ -466,39 +466,80 @@ a {
 .member-card {
   display: grid;
   justify-items: center;
-  gap: 0.55rem;
-  padding: 1.25rem 1rem;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem 1.25rem;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: #fbfcfd;
   text-align: center;
   text-decoration: none;
   color: var(--text);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .member-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.12);
+  box-shadow: 0 6px 18px rgba(15, 118, 110, 0.14);
+  transform: translateY(-2px);
 }
 
-.member-card img {
-  width: 96px;
-  height: 96px;
+.member-avatar {
+  position: relative;
+}
+
+.member-avatar img {
+  width: 88px;
+  height: 88px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid var(--accent);
 }
 
-.member-card h3 {
+.avatar-badge {
+  position: absolute;
+  right: -8px;
+  bottom: -2px;
+  display: grid;
+  place-items: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  border: 2px solid #fbfcfd;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.member-info h3 {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.3;
 }
 
-.member-card span {
+.member-count {
+  margin: 0.2rem 0 0.6rem;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+}
+
+.member-cta {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.member-card:hover .member-cta {
+  background: var(--accent);
+  color: #ffffff;
 }
 
 .home-research {
