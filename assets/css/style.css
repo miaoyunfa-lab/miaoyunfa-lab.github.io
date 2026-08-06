@@ -174,14 +174,21 @@ a {
 }
 
 .carousel-details {
-  position: relative;
-  min-height: 205px;
-  margin-top: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  min-height: 190px;
+  background: linear-gradient(90deg, rgba(7, 20, 16, 0.93), rgba(7, 20, 16, 0.78));
+  backdrop-filter: blur(6px);
 }
 
 .carousel-copy {
   position: absolute;
   inset: 0;
+  max-width: calc(100% - 8rem);
+  padding: 1.1rem clamp(1.25rem, 3vw, 2.2rem);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -196,27 +203,57 @@ a {
 
 .carousel-kicker {
   margin: 0 0 0.55rem;
-  color: var(--accent);
+  color: #8dd8ca;
   font-size: 0.88rem;
   font-weight: 700;
 }
 
 .carousel-copy h2 {
   margin: 0;
-  font-size: clamp(1.45rem, 2.7vw, 2.35rem);
+  color: #ffffff;
+  font-size: clamp(1.2rem, 2.1vw, 1.75rem);
   line-height: 1.2;
 }
 
 .carousel-copy > p:not(.carousel-kicker) {
-  margin: 0.9rem 0 0;
-  color: var(--muted);
-  font-size: clamp(0.98rem, 1.35vw, 1.1rem);
+  margin: 0.5rem 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(0.88rem, 1.15vw, 1rem);
+}
+
+.carousel-copy .button-row {
+  margin-top: 0.7rem;
+}
+
+.carousel-copy .button {
+  min-height: 2.25rem;
+  padding: 0.48rem 0.85rem;
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #0b5f59;
+  font-size: 0.9rem;
+}
+
+.carousel-copy .button:hover {
+  border-color: #dff3ef;
+  background: #dff3ef;
+}
+
+.carousel-copy .button-secondary {
+  border-color: rgba(255, 255, 255, 0.68);
+  background: transparent;
+  color: #ffffff;
+}
+
+.carousel-copy .button-secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
 }
 
 .carousel-controls {
   position: absolute;
   right: clamp(1rem, 2.5vw, 1.75rem);
-  bottom: clamp(1rem, 2.5vw, 1.5rem);
+  bottom: 1.25rem;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -933,7 +970,7 @@ a {
   }
 
   .carousel-details {
-    min-height: 225px;
+    min-height: 205px;
   }
 
   .three-up,
@@ -963,11 +1000,22 @@ a {
   }
 
   .carousel-viewport {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
   }
 
   .carousel-details {
-    min-height: 285px;
+    min-height: 265px;
+  }
+
+  .carousel-copy {
+    max-width: 100%;
+    padding-right: 1.25rem;
+    padding-bottom: 3.6rem;
+  }
+
+  .carousel-controls {
+    right: 1rem;
+    bottom: 1rem;
   }
 
   .button,
