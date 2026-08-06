@@ -3,6 +3,7 @@
 
   carousels.forEach((carousel) => {
     const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'));
+    const details = Array.from(carousel.querySelectorAll('[data-carousel-detail]'));
     const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let activeIndex = 0;
@@ -15,6 +16,12 @@
         const isActive = slideIndex === activeIndex;
         slide.classList.toggle('is-active', isActive);
         slide.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      details.forEach((detail, detailIndex) => {
+        const isActive = detailIndex === activeIndex;
+        detail.classList.toggle('is-active', isActive);
+        detail.setAttribute('aria-hidden', String(!isActive));
       });
 
       dots.forEach((dot, dotIndex) => {
