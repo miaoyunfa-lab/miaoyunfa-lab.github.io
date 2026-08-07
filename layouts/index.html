@@ -93,6 +93,9 @@
     {{ $members := where site.Data.people "group" .key }}
     {{ $memberCount := len $members }}
     {{ $rep := first 1 $members }}
+    {{ if eq .key "staff" }}
+      {{ $rep = where $members "name" "王雪莲" }}
+    {{ end }}
     {{ $repName := "" }}
     {{ $repRole := "" }}
     {{ $repPhoto := "" }}
