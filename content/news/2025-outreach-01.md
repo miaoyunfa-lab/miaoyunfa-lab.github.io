@@ -4,8 +4,7 @@ date: 2025-06-01
 draft: false
 categories:
   - outreach
+video: https://v.douyin.com/ijEgKvGw/
 ---
 
 科普视频：介绍植物异花传粉的机制与生态意义。
-
-[观看视频](https://v.douyin.com/ijEgKvGw/)

@@ -53,6 +53,22 @@
           </span>
         </summary>
         <div class="news-story">
+          {{ with .Params.image }}
+          <figure class="news-media">
+            <img src="{{ . | relURL }}" alt="{{ $page.Title }}">
+          </figure>
+          {{ end }}
+          {{ with .Params.video }}
+          <div class="news-video">
+            <a class="news-video-link" href="{{ . }}" target="_blank" rel="noopener nofollow" aria-label="播放视频：{{ $page.Title }}">
+              {{ with $page.Params.video_poster }}
+              <img class="news-video-poster" src="{{ . | relURL }}" alt="" loading="lazy">
+              {{ end }}
+              <span class="news-video-playbtn" aria-hidden="true"></span>
+              <span class="news-video-label">点击播放视频</span>
+            </a>
+          </div>
+          {{ end }}
           {{ .Content }}
         </div>
       </details>
