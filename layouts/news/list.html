@@ -4,7 +4,22 @@
   {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
 </article>
 
-{{ $news := sort .RegularPages "File.BaseFileName" "desc" }}
+{{ $timeline := slice }}
+{{ range .RegularPages }}
+  {{ $recordDate := .Date }}
+  {{ with .File }}
+    {{ if findRE "^\\d{4}-\\d{2}$" .BaseFileName }}
+      {{ $recordDate = time.AsTime (printf "%s-01" .BaseFileName) }}
+    {{ end }}
+  {{ end }}
+  {{ $timeline = $timeline | append (dict "kind" "page" "page" . "date" $recordDate) }}
+{{ end }}
+{{ range site.Data.awards }}
+  {{ $year := .year | default 0 }}
+  {{ $sortDate := time.AsTime (printf "%04d-01-01" $year) }}
+  {{ $timeline = $timeline | append (dict "kind" "award" "award" . "year" $year "date" $sortDate) }}
+{{ end }}
+{{ $timeline = sort $timeline "date" "desc" }}
 {{ $categoryLabels := dict "media" "新闻报道" "outreach" "科普" "honors" "荣誉" "life" "日常" }}
 {{ $filters := slice
   (dict "key" "media" "label" "新闻报道")
@@ -21,84 +36,76 @@
 </section>
 
 <section class="news-timeline" aria-label="News timeline">
-  {{ range $news }}
-    {{ $page := . }}
-    {{ $recordDate := .Date }}
-    {{ with .File }}
-      {{ if findRE "^\\d{4}-\\d{2}$" .BaseFileName }}
-        {{ $recordDate = time.AsTime (printf "%s-01" .BaseFileName) }}
+  {{ range $timeline }}
+    {{ if eq .kind "page" }}
+      {{ $page := .page }}
+      {{ $recordDate := .date }}
+      {{ $categories := default (slice) $page.Params.categories }}
+      {{ if reflect.IsMap $categories }}
+        {{ $categories = slice }}
       {{ end }}
-    {{ end }}
-    {{ $categories := default (slice) .Params.categories }}
-    {{ if reflect.IsMap $categories }}
-      {{ $categories = slice }}
-    {{ end }}
-    {{ $categoryKeys := slice }}
-    {{ range $categories }}
-      {{ $categoryKeys = $categoryKeys | append (urlize .) }}
-    {{ end }}
-    {{ if not $categoryKeys }}
-      {{ $categoryKeys = $categoryKeys | append "life" }}
-    {{ end }}
+      {{ $categoryKeys := slice }}
+      {{ range $categories }}
+        {{ $categoryKeys = $categoryKeys | append (urlize .) }}
+      {{ end }}
+      {{ if not $categoryKeys }}
+        {{ $categoryKeys = $categoryKeys | append "life" }}
+      {{ end }}
 
-    <article class="news-item" data-news-item data-news-categories="{{ delimit $categoryKeys " " }}">
-      <details class="news-details">
-        <summary>
-          <span class="news-date">{{ $recordDate.Format "2006年1月" }}</span>
-          <span class="news-title">{{ .Title }}</span>
-          <span class="news-keywords" aria-label="News keywords">
-            {{ range $categoryKeys }}
-            <button class="news-keyword" type="button" data-news-keyword="{{ . }}">{{ index $categoryLabels . | default (humanize .) }}</button>
-            {{ end }}
-          </span>
-        </summary>
-        <div class="news-story">
-          {{ with .Params.image }}
-          <figure class="news-media">
-            <img src="{{ . | relURL }}" alt="{{ $page.Title }}">
-          </figure>
-          {{ end }}
-          {{ with .Params.video }}
-          <div class="news-video">
-            <a class="news-video-link" href="{{ . }}" target="_blank" rel="noopener nofollow" aria-label="播放视频：{{ $page.Title }}">
-              {{ with $page.Params.video_poster }}
-              <img class="news-video-poster" src="{{ . | relURL }}" alt="" loading="lazy">
+      <article class="news-item" data-news-item data-news-categories="{{ delimit $categoryKeys " " }}">
+        <details class="news-details">
+          <summary>
+            <span class="news-date">{{ $recordDate.Format "2006年1月" }}</span>
+            <span class="news-title">{{ $page.Title }}</span>
+            <span class="news-keywords" aria-label="News keywords">
+              {{ range $categoryKeys }}
+              <button class="news-keyword" type="button" data-news-keyword="{{ . }}">{{ index $categoryLabels . | default (humanize .) }}</button>
               {{ end }}
-              <span class="news-video-playbtn" aria-hidden="true"></span>
-              <span class="news-video-label">点击播放视频</span>
-            </a>
+            </span>
+          </summary>
+          <div class="news-story">
+            {{ with $page.Params.image }}
+            <figure class="news-media">
+              <img src="{{ . | relURL }}" alt="{{ $page.Title }}">
+            </figure>
+            {{ end }}
+            {{ with $page.Params.video }}
+            <div class="news-video">
+              <a class="news-video-link" href="{{ . }}" target="_blank" rel="noopener nofollow" aria-label="播放视频：{{ $page.Title }}">
+                {{ with $page.Params.video_poster }}
+                <img class="news-video-poster" src="{{ . | relURL }}" alt="" loading="lazy">
+                {{ end }}
+                <span class="news-video-playbtn" aria-hidden="true"></span>
+                <span class="news-video-label">点击播放视频</span>
+              </a>
+            </div>
+            {{ end }}
+            {{ $page.Content }}
           </div>
-          {{ end }}
-          {{ .Content }}
-        </div>
-      </details>
-    </article>
+        </details>
+      </article>
+    {{ else }}
+      {{ $award := .award }}
+      {{ $year := .year }}
+      <article class="news-item" data-news-item data-news-categories="honors">
+        <details class="news-details">
+          <summary>
+            <span class="news-date">{{ if $year }}{{ $year }}年{{ else }}—{{ end }}</span>
+            <span class="news-title">{{ $award.name }}</span>
+            <span class="news-keywords" aria-label="News keywords">
+              <button class="news-keyword" type="button" data-news-keyword="honors">荣誉</button>
+            </span>
+          </summary>
+          <div class="news-story">
+            {{ with $award.recipient }}<p><strong>获奖人：</strong>{{ . }}</p>{{ end }}
+            {{ with $award.type }}<p><strong>类别：</strong>{{ . }}</p>{{ end }}
+            {{ with $award.details }}<p>{{ . }}</p>{{ end }}
+          </div>
+        </details>
+      </article>
+    {{ end }}
   {{ else }}
     <p class="muted">暂无新闻。</p>
-  {{ end }}
-
-  {{ $awards := slice }}
-  {{ range site.Data.awards }}
-    {{ $awards = $awards | append (merge . (dict "year" (.year | default 0))) }}
-  {{ end }}
-  {{ $awards = sort $awards "year" "desc" }}
-  {{ range $awards }}
-  <article class="news-item" data-news-item data-news-categories="honors">
-    <details class="news-details">
-      <summary>
-        <span class="news-date">{{ with .year }}{{ . }}年{{ else }}—{{ end }}</span>
-        <span class="news-title">{{ .name }}</span>
-        <span class="news-keywords" aria-label="News keywords">
-          <button class="news-keyword" type="button" data-news-keyword="honors">荣誉</button>
-        </span>
-      </summary>
-      <div class="news-story">
-        {{ with .recipient }}<p><strong>获奖人：</strong>{{ . }}</p>{{ end }}
-        {{ with .type }}<p><strong>类别：</strong>{{ . }}</p>{{ end }}
-        {{ with .details }}<p>{{ . }}</p>{{ end }}
-      </div>
-    </details>
-  </article>
   {{ end }}
 </section>
 
