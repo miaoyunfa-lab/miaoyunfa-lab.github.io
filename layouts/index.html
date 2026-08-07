@@ -127,7 +127,7 @@
         <span class="achievement-more">查看全部 →</span>
       </div>
       <ol class="achievement-list">
-        {{ range first 3 (sort site.Data.publications "sort_date" "desc") }}
+        {{ range first 6 (sort site.Data.publications "sort_date" "desc") }}
         <li>
           <span class="achievement-title">{{ .title }}</span>
           <span class="achievement-meta">{{ .journal }} · {{ .year }}</span>

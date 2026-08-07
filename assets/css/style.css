@@ -561,7 +561,8 @@ a {
 }
 
 .achievement-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 1.1rem 1.15rem 0.95rem;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -603,6 +604,10 @@ a {
 }
 
 .achievement-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
