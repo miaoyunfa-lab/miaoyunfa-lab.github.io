@@ -736,6 +736,72 @@ a {
   line-height: 1.3;
 }
 
+.recruit-banner {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 2.25rem 2.5rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.14), transparent 60%),
+    linear-gradient(135deg, #7f1d1d 0%, #b91c1c 100%);
+  border: 2px solid #e8b64c;
+  box-shadow: 0 12px 28px rgba(127, 29, 29, 0.28);
+}
+
+.recruit-banner::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(232, 182, 76, 0.55);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.recruit-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.recruit-lead {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.recruit-text {
+  margin: 0 auto 1.5rem;
+  max-width: 54rem;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.recruit-contact {
+  margin: 0;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(232, 182, 76, 0.55);
+  font-style: normal;
+  line-height: 1.9;
+  font-size: 0.92rem;
+}
+
+.recruit-contact p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.recruit-contact a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .home-research {
   display: grid;
   gap: 1rem;
@@ -1369,6 +1435,16 @@ a {
 
   .facilities-grid {
     grid-template-columns: 1fr;
+  }
+
+  .recruit-banner {
+    padding: 1.5rem 1.25rem 1.4rem;
+  }
+
+  .recruit-title {
+    font-size: 1.4rem;
+    letter-spacing: 0.35em;
+    text-indent: 0.35em;
   }
 
   .carousel-details {

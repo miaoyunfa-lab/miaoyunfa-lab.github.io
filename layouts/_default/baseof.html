@@ -12,6 +12,6 @@
   <main class="container">
     {{ block "main" . }}{{ end }}
   </main>
-  {{ partial "footer.html" . }}
+  {{ if not .IsHome }}{{ partial "footer.html" . }}{{ end }}
 </body>
 </html>
