@@ -1,6 +1,6 @@
 /* Homepage member cards
-   Reference-style layout using the user's academic artwork.
-   Use the larger pre-existing WebP assets and force a fresh browser fetch.
+   Reference-style layout using the user's original high-resolution PNG artwork.
+   The PNG files are used directly without re-encoding or stretching.
 */
 
 .members-panel {
@@ -66,8 +66,7 @@
   border-bottom: 1px solid rgba(15, 118, 110, 0.10);
   background-color: #f7fbfa;
   background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-size: 100% 100% !important;
+  background-size: cover !important;
   image-rendering: auto;
 }
 
@@ -76,17 +75,22 @@
   display: none !important;
 }
 
-/* Version query deliberately busts any cached low-quality member artwork. */
+/* Original 1448×1086 PNG files uploaded by the user.
+   Individual vertical positions preserve the important subject area while
+   keeping the same wide card composition as the reference layout. */
 .members-panel .member-card:nth-child(1) .member-avatar {
-  background-image: url("/images/member-cards/staff.webp?v=20260817-hd2");
+  background-image: url("/images/member-cards/1.png?v=20260817-original");
+  background-position: center 50% !important;
 }
 
 .members-panel .member-card:nth-child(2) .member-avatar {
-  background-image: url("/images/member-cards/postdoc.webp?v=20260817-hd2");
+  background-image: url("/images/member-cards/2.png?v=20260817-original");
+  background-position: center 40% !important;
 }
 
 .members-panel .member-card:nth-child(3) .member-avatar {
-  background-image: url("/images/member-cards/students.webp?v=20260817-hd2");
+  background-image: url("/images/member-cards/3.png?v=20260817-original");
+  background-position: center 48% !important;
 }
 
 .members-panel .member-info {
