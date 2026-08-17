@@ -13,7 +13,7 @@ jobs:
   inspect:
     runs-on: ubuntu-latest
     steps:
-      - name: Resolve public ChatGPT image share
+      - name: Inspect public ChatGPT image share metadata
         shell: bash
         env:
           SHARE_URL: 'https://chatgpt.com/s/m_6a82f9660bd8819196d8569bf5313950'
@@ -24,50 +24,49 @@ jobs:
           url=os.environ['SHARE_URL']
           req=urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
           try:
-              raw=urllib.request.urlopen(req, timeout=30).read().decode('utf-8','replace')
+              resp=urllib.request.urlopen(req, timeout=30)
+              raw=resp.read().decode('utf-8','replace')
+              print('final_url=',resp.geturl())
+              print('status=',getattr(resp,'status',None))
           except Exception as e:
               print('urllib_fetch_error=',repr(e))
               raw=''
           open('/tmp/share.html','w').write(raw)
           print('html_bytes=',len(raw.encode()))
           text=html.unescape(raw).replace('\\/','/')
-          patterns=[
-              r'https://files\.oaiusercontent\.com/[^\"\'<> ]+',
-              r'https://[^\"\'<> ]*oaistatic\.com/[^\"\'<> ]+',
-              r'https://chatgpt\.com/backend-api/estuary/content\?[^\"\'<> ]+',
-              r'https://[^\"\'<> ]+\.(?:png|webp|jpe?g)(?:\?[^\"\'<> ]*)?',
-          ]
-          found=[]
-          for pat in patterns:
-              for u in re.findall(pat,text):
-                  if u not in found: found.append(u)
-          print('html_candidates=',len(found))
-          for i,u in enumerate(found[:30],1): print(f'HTML_CANDIDATE_{i}={u}')
+          for name in ['og:image','twitter:image']:
+              pats=[
+                rf'<meta[^>]+(?:property|name)=["\']{re.escape(name)}["\'][^>]+content=["\']([^"\']+)',
+                rf'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\']{re.escape(name)}["\']',
+              ]
+              vals=[]
+              for pat in pats: vals += re.findall(pat,text,re.I)
+              print(name,'=',vals[:10])
+          terms=['m_6a82f9660bd8819196d8569bf5313950','file-','asset_pointer','image_asset_pointer','estuary','generation_id','gen_id','oaiusercontent','sora']
+          for term in terms:
+              hits=[m.start() for m in re.finditer(re.escape(term),text,re.I)]
+              print('TERM',term,'COUNT',len(hits))
+              for pos in hits[:4]:
+                  snippet=text[max(0,pos-220):min(len(text),pos+420)].replace('\n',' ')
+                  print('SNIPPET',term,repr(snippet))
           PY
 
           if command -v google-chrome >/dev/null 2>&1; then
             timeout 50s google-chrome --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --dump-dom "$SHARE_URL" > /tmp/dom.html 2>/tmp/chrome.err || true
             python - <<'PY'
           import re, html, pathlib
-          p=pathlib.Path('/tmp/dom.html')
-          raw=p.read_text(errors='replace') if p.exists() else ''
+          raw=pathlib.Path('/tmp/dom.html').read_text(errors='replace') if pathlib.Path('/tmp/dom.html').exists() else ''
           print('dom_bytes=',len(raw.encode()))
           text=html.unescape(raw).replace('\\/','/')
-          patterns=[
-              r'https://files\.oaiusercontent\.com/[^\"\'<> ]+',
-              r'https://[^\"\'<> ]*oaistatic\.com/[^\"\'<> ]+',
-              r'https://chatgpt\.com/backend-api/estuary/content\?[^\"\'<> ]+',
-              r'https://[^\"\'<> ]+\.(?:png|webp|jpe?g)(?:\?[^\"\'<> ]*)?',
-          ]
-          found=[]
-          for pat in patterns:
-              for u in re.findall(pat,text):
-                  if u not in found: found.append(u)
-          print('dom_candidates=',len(found))
-          for i,u in enumerate(found[:40],1): print(f'DOM_CANDIDATE_{i}={u}')
+          imgs=re.findall(r'<img[^>]+src=["\']([^"\']+)',text,re.I)
+          print('img_src_count=',len(imgs))
+          for i,u in enumerate(dict.fromkeys(imgs),1): print(f'IMG_{i}={u}')
+          for name in ['og:image','twitter:image']:
+              vals=re.findall(rf'<meta[^>]+(?:property|name)=["\']{re.escape(name)}["\'][^>]+content=["\']([^"\']+)',text,re.I)
+              print('DOM',name,'=',vals[:10])
+          for term in ['file-','asset_pointer','image_asset_pointer','estuary','generation_id','gen_id','oaiusercontent']:
+              hits=[m.start() for m in re.finditer(re.escape(term),text,re.I)]
+              print('DOM_TERM',term,'COUNT',len(hits))
+              for pos in hits[:3]: print('DOM_SNIPPET',term,repr(text[max(0,pos-180):min(len(text),pos+360)].replace('\n',' ')))
           PY
-            echo 'chrome_stderr_tail:'
-            tail -20 /tmp/chrome.err || true
-          else
-            echo 'google-chrome not found'
           fi
