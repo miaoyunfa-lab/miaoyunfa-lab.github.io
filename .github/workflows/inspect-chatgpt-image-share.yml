@@ -1,4 +1,4 @@
-name: Inspect ChatGPT image share
+name: Import original member artwork
 
 on:
   push:
@@ -7,66 +7,93 @@ on:
       - '.github/workflows/inspect-chatgpt-image-share.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  inspect:
+  import:
     runs-on: ubuntu-latest
     steps:
-      - name: Inspect public ChatGPT image share metadata
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download original PNG attachments from public ChatGPT share
         shell: bash
         env:
           SHARE_URL: 'https://chatgpt.com/s/m_6a82f9660bd8819196d8569bf5313950'
+          SHARE_ID: 'm_6a82f9660bd8819196d8569bf5313950'
         run: |
           set -euo pipefail
           python - <<'PY'
-          import os, re, html, urllib.request
-          url=os.environ['SHARE_URL']
-          req=urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
-          try:
-              resp=urllib.request.urlopen(req, timeout=30)
-              raw=resp.read().decode('utf-8','replace')
-              print('final_url=',resp.geturl())
-              print('status=',getattr(resp,'status',None))
-          except Exception as e:
-              print('urllib_fetch_error=',repr(e))
-              raw=''
-          open('/tmp/share.html','w').write(raw)
-          print('html_bytes=',len(raw.encode()))
-          text=html.unescape(raw).replace('\\/','/')
-          for name in ['og:image','twitter:image']:
-              pats=[
-                rf'<meta[^>]+(?:property|name)=["\']{re.escape(name)}["\'][^>]+content=["\']([^"\']+)',
-                rf'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\']{re.escape(name)}["\']',
-              ]
-              vals=[]
-              for pat in pats: vals += re.findall(pat,text,re.I)
-              print(name,'=',vals[:10])
-          terms=['m_6a82f9660bd8819196d8569bf5313950','file-','asset_pointer','image_asset_pointer','estuary','generation_id','gen_id','oaiusercontent','sora']
-          for term in terms:
-              hits=[m.start() for m in re.finditer(re.escape(term),text,re.I)]
-              print('TERM',term,'COUNT',len(hits))
-              for pos in hits[:4]:
-                  snippet=text[max(0,pos-220):min(len(text),pos+420)].replace('\n',' ')
-                  print('SNIPPET',term,repr(snippet))
+          import os, re, html, json, base64, struct, urllib.request, pathlib
+
+          share_url = os.environ['SHARE_URL']
+          share_id = os.environ['SHARE_ID']
+          req = urllib.request.Request(share_url, headers={'User-Agent': 'Mozilla/5.0'})
+          raw = urllib.request.urlopen(req, timeout=30).read().decode('utf-8', 'replace')
+          text = html.unescape(raw).replace('\\/', '/')
+
+          url_re = re.compile(r'https://chatgpt\.com/backend-api/estuary/public_content/enc/([A-Za-z0-9_-]+)')
+          attachment_re = re.compile(re.escape(share_id) + r'-attachment-(\d+)')
+
+          candidates = []
+          seen_ids = set()
+          for m in url_re.finditer(text):
+              token = m.group(1)
+              try:
+                  padded = token + '=' * (-len(token) % 4)
+                  payload = json.loads(base64.urlsafe_b64decode(padded).decode('utf-8'))
+              except Exception:
+                  continue
+              content_id = str(payload.get('id', ''))
+              if ':file_' not in content_id or 'sediment://' in content_id:
+                  continue
+              if content_id in seen_ids:
+                  continue
+
+              prefix = text[max(0, m.start() - 12000):m.start()]
+              idx_hits = list(attachment_re.finditer(prefix))
+              idx = int(idx_hits[-1].group(1)) if idx_hits else None
+              candidates.append((idx, content_id, m.group(0)))
+              seen_ids.add(content_id)
+
+          print('actual_file_candidates=', [(x[0], x[1]) for x in candidates])
+          indexed = {idx: (content_id, url) for idx, content_id, url in candidates if idx is not None}
+
+          # This share contains three attachments. The serialized share data uses attachment-0/1/2
+          # in the same order as the images uploaded by the user: staff, postdoc, students.
+          expected = {0: 'staff-source.png', 1: 'postdoc-source.png', 2: 'students-source.png'}
+          if not all(i in indexed for i in expected):
+              raise SystemExit(f'Could not resolve all three attachment indexes. Resolved indexes: {sorted(indexed)}')
+
+          out_dir = pathlib.Path('static/images/member-cards')
+          out_dir.mkdir(parents=True, exist_ok=True)
+
+          for idx, filename in expected.items():
+              content_id, url = indexed[idx]
+              r = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+              data = urllib.request.urlopen(r, timeout=60).read()
+              if not data.startswith(b'\x89PNG\r\n\x1a\n'):
+                  raise SystemExit(f'Attachment {idx} is not the original PNG; first bytes={data[:16]!r}')
+              width, height = struct.unpack('>II', data[16:24])
+              if (width, height) != (1448, 1086):
+                  raise SystemExit(f'Unexpected dimensions for attachment {idx}: {width}x{height}')
+              path = out_dir / filename
+              path.write_bytes(data)
+              print(f'{idx}: {content_id} -> {path} | {len(data)} bytes | {width}x{height}')
           PY
 
-          if command -v google-chrome >/dev/null 2>&1; then
-            timeout 50s google-chrome --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --dump-dom "$SHARE_URL" > /tmp/dom.html 2>/tmp/chrome.err || true
-            python - <<'PY'
-          import re, html, pathlib
-          raw=pathlib.Path('/tmp/dom.html').read_text(errors='replace') if pathlib.Path('/tmp/dom.html').exists() else ''
-          print('dom_bytes=',len(raw.encode()))
-          text=html.unescape(raw).replace('\\/','/')
-          imgs=re.findall(r'<img[^>]+src=["\']([^"\']+)',text,re.I)
-          print('img_src_count=',len(imgs))
-          for i,u in enumerate(dict.fromkeys(imgs),1): print(f'IMG_{i}={u}')
-          for name in ['og:image','twitter:image']:
-              vals=re.findall(rf'<meta[^>]+(?:property|name)=["\']{re.escape(name)}["\'][^>]+content=["\']([^"\']+)',text,re.I)
-              print('DOM',name,'=',vals[:10])
-          for term in ['file-','asset_pointer','image_asset_pointer','estuary','generation_id','gen_id','oaiusercontent']:
-              hits=[m.start() for m in re.finditer(re.escape(term),text,re.I)]
-              print('DOM_TERM',term,'COUNT',len(hits))
-              for pos in hits[:3]: print('DOM_SNIPPET',term,repr(text[max(0,pos-180):min(len(text),pos+360)].replace('\n',' ')))
-          PY
+      - name: Commit original PNG files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add static/images/member-cards/staff-source.png \
+                  static/images/member-cards/postdoc-source.png \
+                  static/images/member-cards/students-source.png
+          if git diff --cached --quiet; then
+            echo 'Original PNG files already match.'
+            exit 0
           fi
+          git commit -m 'Add original high-resolution member artwork'
+          git push
