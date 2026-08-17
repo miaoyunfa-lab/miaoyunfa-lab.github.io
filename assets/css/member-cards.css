@@ -4,13 +4,13 @@
 }
 
 .members-panel .member-card:nth-child(1) .member-avatar {
-  background-image: url("/images/member-cards/staff.webp");
+  background-image: url("/images/member-cards/staff.svg");
 }
 
 .members-panel .member-card:nth-child(2) .member-avatar {
-  background-image: url("/images/member-cards/postdoc.webp");
+  background-image: url("/images/member-cards/postdoc.svg");
 }
 
 .members-panel .member-card:nth-child(3) .member-avatar {
-  background-image: url("/images/member-cards/students.webp");
+  background-image: url("/images/member-cards/students.svg");
 }
