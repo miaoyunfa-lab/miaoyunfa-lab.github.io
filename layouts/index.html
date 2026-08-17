@@ -81,6 +81,154 @@
   </div>
 </section>
 
+<style id="member-card-reference-style">
+  .members-panel {
+    padding: clamp(1.7rem, 2.8vw, 2.2rem);
+    border: 1px solid rgba(15, 118, 110, 0.10);
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 12px 34px rgba(22, 33, 31, 0.065);
+  }
+
+  .members-panel > .title-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0.72rem 1.55rem;
+    border-radius: 11px;
+    background: linear-gradient(135deg, var(--accent) 0%, #0b8a7f 100%);
+    color: #ffffff;
+    box-shadow: 0 6px 16px rgba(15, 118, 110, 0.13);
+    font-size: clamp(1.28rem, 2vw, 1.55rem);
+    font-weight: 750;
+    letter-spacing: 0.035em;
+    line-height: 1.15;
+  }
+
+  .members-panel .members-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.25rem, 2.2vw, 1.75rem);
+    margin-top: 1.75rem;
+  }
+
+  .members-panel .member-card {
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid rgba(15, 118, 110, 0.12);
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(22, 33, 31, 0.055);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  .members-panel .member-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(15, 118, 110, 0.30);
+    box-shadow: 0 14px 30px rgba(22, 33, 31, 0.085);
+  }
+
+  .members-panel .member-avatar {
+    width: 100%;
+    aspect-ratio: 549 / 221;
+    min-height: 0;
+    border-bottom: 1px solid rgba(15, 118, 110, 0.08);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .members-panel .member-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.35rem 1.2rem 1.5rem;
+    background: #ffffff;
+    text-align: center;
+  }
+
+  .members-panel .member-info h3 {
+    margin: 0;
+    color: #153330;
+    font-size: clamp(1.32rem, 1.8vw, 1.58rem);
+    font-weight: 750;
+    letter-spacing: 0.015em;
+    line-height: 1.25;
+  }
+
+  .members-panel .member-count {
+    margin: 0.48rem 0 1.05rem;
+    color: var(--muted);
+    font-size: clamp(0.94rem, 1.15vw, 1.02rem);
+    line-height: 1.45;
+  }
+
+  .members-panel .member-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 178px;
+    min-height: 2.55rem;
+    margin-top: auto;
+    padding: 0.5rem 1.1rem;
+    border: 1.5px solid var(--accent);
+    border-radius: 9px;
+    background: #ffffff;
+    color: var(--accent);
+    font-size: 0.94rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .members-panel .member-card:hover .member-cta {
+    background: #eef8f5;
+    color: #0b5f59;
+    box-shadow: 0 3px 10px rgba(15, 118, 110, 0.08);
+  }
+
+  @media (max-width: 980px) {
+    .members-panel .members-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .members-panel .member-card {
+      width: 100%;
+      max-width: 680px;
+      margin-inline: auto;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .members-panel {
+      padding: 1.15rem;
+      border-radius: 15px;
+    }
+
+    .members-panel > .title-badge {
+      padding: 0.62rem 1.15rem;
+      border-radius: 9px;
+    }
+
+    .members-panel .members-grid {
+      margin-top: 1.2rem;
+    }
+
+    .members-panel .member-info {
+      padding: 1.05rem 0.9rem 1.2rem;
+    }
+
+    .members-panel .member-cta {
+      min-width: 166px;
+      min-height: 2.42rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
 <section class="panel members-panel">
   <h2 class="title-badge">课题组成员</h2>
   <div class="members-grid">
