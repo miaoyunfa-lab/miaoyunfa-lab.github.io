@@ -1,16 +1,161 @@
+/* Homepage member cards
+   Reference-style layout using the user's original high-resolution academic artwork.
+*/
+
+.members-panel {
+  margin: 1.65rem 0;
+  padding: clamp(1.35rem, 2.4vw, 1.8rem);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 10px 28px rgba(22, 33, 31, 0.055);
+}
+
+.members-panel > .title-badge {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.55rem 1.15rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), #0b5f59);
+  color: #ffffff;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.members-panel .members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.35rem);
+  margin-top: 1.35rem;
+}
+
+.members-panel .member-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  gap: 0;
+  border: 1px solid rgba(15, 118, 110, 0.14);
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 7px 20px rgba(22, 33, 31, 0.05);
+  color: var(--text);
+  text-align: center;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.members-panel .member-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(15, 118, 110, 0.38);
+  box-shadow: 0 13px 30px rgba(15, 118, 110, 0.10);
+}
+
+.members-panel .member-avatar {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1448 / 600;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(15, 118, 110, 0.10);
+  background-color: #f7fbfa;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
 .members-panel .member-avatar img,
 .members-panel .avatar-badge {
   display: none !important;
 }
 
 .members-panel .member-card:nth-child(1) .member-avatar {
-  background-image: url("/images/member-cards/staff.svg");
+  background-image: url("/images/member-cards/staff-original.webp");
 }
 
 .members-panel .member-card:nth-child(2) .member-avatar {
-  background-image: url("/images/member-cards/postdoc.svg");
+  background-image: url("/images/member-cards/postdoc-original.webp");
 }
 
 .members-panel .member-card:nth-child(3) .member-avatar {
-  background-image: url("/images/member-cards/students.svg");
+  background-image: url("/images/member-cards/students-original.webp");
+}
+
+.members-panel .member-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.05rem 1rem 1.25rem;
+  background: #ffffff;
+}
+
+.members-panel .member-info h3 {
+  margin: 0;
+  color: #153330;
+  font-size: clamp(1.16rem, 1.7vw, 1.34rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.members-panel .member-count {
+  margin: 0.38rem 0 0.95rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.members-panel .member-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.45rem;
+  margin-top: auto;
+  padding: 0.48rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 7px;
+  background: #ffffff;
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.members-panel .member-card:hover .member-cta {
+  background: #eaf5f2;
+  color: #0b5f59;
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.04);
+}
+
+@media (max-width: 900px) {
+  .members-panel .members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .members-panel .member-card {
+    width: 100%;
+    max-width: 680px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .members-panel {
+    padding: 1.1rem;
+  }
+
+  .members-panel .members-grid {
+    gap: 0.9rem;
+  }
+
+  .members-panel .member-info {
+    padding: 1rem 0.9rem 1.15rem;
+  }
 }
