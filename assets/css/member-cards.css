@@ -39,39 +39,59 @@
   min-height: 220px;
   overflow: hidden;
   border-bottom: 1px solid rgba(15, 118, 110, 0.10);
-  background-color: #f7fbfa;
-  background-repeat: no-repeat;
-  background-position: center;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(15, 118, 110, 0.10) 0 1.5px, transparent 2px) 0 0 / 15px 15px,
+    linear-gradient(180deg, #fbfefd 0%, #f1f7f5 100%);
 }
 
-/* Homepage navigation cards intentionally use generic academic illustrations,
-   never personal portraits. */
+/* Homepage member navigation uses generic academic graphics only. */
 .member-avatar img,
 .avatar-badge {
   display: none !important;
 }
 
-/* Existing open illustrations sourced from unDraw-style artwork found online.
-   unDraw permits personal/commercial web use without attribution. */
-.member-card:nth-child(1) .member-avatar {
-  background-image:
-    linear-gradient(rgba(247, 251, 250, 0.04), rgba(247, 251, 250, 0.04)),
-    url("https://images.ctfassets.net/ly2f59p4unnn/1iDsboNj7j5Q0cRuV3Dpld/64d4ef20df89d8f4fc3a8df0ac8d96bc/undraw_working_from_anywhere_ub67.png");
-  background-size: auto 94%;
+/* Formal CC0 SVG illustrations from SVG Repo.
+   1: research paper, 2: laboratory scientist, 3: books + graduation cap. */
+.member-avatar::before {
+  content: "";
+  position: absolute;
+  inset: 23px 46px 25px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: grayscale(1) sepia(0.28) hue-rotate(112deg) saturate(1.55) brightness(0.70);
+  opacity: 0.92;
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
-.member-card:nth-child(2) .member-avatar {
-  background-image:
-    linear-gradient(rgba(247, 251, 250, 0.03), rgba(247, 251, 250, 0.03)),
-    url("https://blaunon.co.jp/wp/wp-content/uploads/2023/07/undraw_Scientist_ft0o.png");
-  background-size: auto 93%;
+.member-avatar::after {
+  content: "";
+  position: absolute;
+  left: 17%;
+  right: 17%;
+  bottom: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(15, 118, 110, 0.20), transparent);
 }
 
-.member-card:nth-child(3) .member-avatar {
-  background-image:
-    linear-gradient(rgba(247, 251, 250, 0.03), rgba(247, 251, 250, 0.03)),
-    url("https://site.studychain.jp/wp-content/uploads/2021/03/undraw_book_lover_mkck-768x592.png");
-  background-size: auto 89%;
+.member-card:hover .member-avatar::before {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.member-card:nth-child(1) .member-avatar::before {
+  background-image: url("https://www.svgrepo.com/show/7224673/research-paper.svg");
+}
+
+.member-card:nth-child(2) .member-avatar::before {
+  inset: 20px 52px 22px;
+  background-image: url("https://www.svgrepo.com/show/200982/laboratory-scientist.svg");
+}
+
+.member-card:nth-child(3) .member-avatar::before {
+  inset: 27px 58px 28px;
+  background-image: url("https://www.svgrepo.com/show/116361/education-books-and-graduation-cap-on-top.svg");
 }
 
 .member-info {
@@ -127,13 +147,16 @@
     min-height: 205px;
   }
 
-  .member-card:nth-child(1) .member-avatar,
-  .member-card:nth-child(2) .member-avatar {
-    background-size: auto 92%;
+  .member-avatar::before {
+    inset: 22px 42px 24px;
   }
 
-  .member-card:nth-child(3) .member-avatar {
-    background-size: auto 86%;
+  .member-card:nth-child(2) .member-avatar::before {
+    inset: 19px 48px 21px;
+  }
+
+  .member-card:nth-child(3) .member-avatar::before {
+    inset: 25px 54px 26px;
   }
 }
 
@@ -148,6 +171,10 @@
 
   .member-avatar {
     min-height: 190px;
+  }
+
+  .member-avatar::before {
+    inset: 22px 54px 24px;
   }
 
   .member-info {
