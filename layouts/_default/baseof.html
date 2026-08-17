@@ -6,6 +6,10 @@
   <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
   {{ $css := resources.Get "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ if .IsHome }}
+    {{ $memberCSS := resources.Get "css/member-cards.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $memberCSS.RelPermalink }}">
+  {{ end }}
 </head>
 <body>
   {{ partial "header.html" . }}
