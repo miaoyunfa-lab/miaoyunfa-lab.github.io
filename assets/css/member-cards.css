@@ -13,7 +13,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0;
   min-width: 0;
   overflow: hidden;
   padding: 0;
@@ -35,44 +34,44 @@
 
 .member-avatar {
   position: relative;
+  display: block;
   width: 100%;
-  min-height: 210px;
+  min-height: 220px;
   overflow: hidden;
   border-bottom: 1px solid rgba(15, 118, 110, 0.10);
-  background:
-    radial-gradient(circle at 14% 18%, rgba(15, 118, 110, 0.12) 0 2px, transparent 2.6px) 0 0 / 13px 13px,
-    linear-gradient(180deg, #fbfefd 0%, #eef7f4 100%);
+  background-color: #f7fbfa;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.member-avatar::before,
-.member-avatar::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-
-.member-avatar::before {
-  left: -8%;
-  right: -8%;
-  bottom: -72px;
-  height: 135px;
-  border-radius: 50% 50% 0 0;
-  background: rgba(15, 118, 110, 0.045);
-}
-
-.member-avatar::after {
-  left: 32%;
-  right: -14%;
-  bottom: -82px;
-  height: 150px;
-  border-radius: 54% 46% 0 0;
-  background: rgba(21, 94, 117, 0.035);
-}
-
-/* Never show personal portraits on homepage member navigation cards. */
+/* Homepage navigation cards intentionally use generic academic illustrations,
+   never personal portraits. */
 .member-avatar img,
 .avatar-badge {
   display: none !important;
+}
+
+/* Existing open illustrations sourced from unDraw-style artwork found online.
+   unDraw permits personal/commercial web use without attribution. */
+.member-card:nth-child(1) .member-avatar {
+  background-image:
+    linear-gradient(rgba(247, 251, 250, 0.04), rgba(247, 251, 250, 0.04)),
+    url("https://images.ctfassets.net/ly2f59p4unnn/1iDsboNj7j5Q0cRuV3Dpld/64d4ef20df89d8f4fc3a8df0ac8d96bc/undraw_working_from_anywhere_ub67.png");
+  background-size: auto 94%;
+}
+
+.member-card:nth-child(2) .member-avatar {
+  background-image:
+    linear-gradient(rgba(247, 251, 250, 0.03), rgba(247, 251, 250, 0.03)),
+    url("https://blaunon.co.jp/wp/wp-content/uploads/2023/07/undraw_Scientist_ft0o.png");
+  background-size: auto 93%;
+}
+
+.member-card:nth-child(3) .member-avatar {
+  background-image:
+    linear-gradient(rgba(247, 251, 250, 0.03), rgba(247, 251, 250, 0.03)),
+    url("https://site.studychain.jp/wp-content/uploads/2021/03/undraw_book_lover_mkck-768x592.png");
+  background-size: auto 89%;
 }
 
 .member-info {
@@ -123,176 +122,18 @@
   box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.04);
 }
 
-/* Shared illustration stage. */
-.member-card .member-avatar {
-  isolation: isolate;
-}
-
-.member-card .member-avatar > * {
-  pointer-events: none;
-}
-
-/* Card 1: staff — laptop + plant, clean office/research scene. */
-.member-card:nth-child(1) .member-avatar {
-  background:
-    radial-gradient(circle at 13% 18%, rgba(15, 118, 110, 0.11) 0 2px, transparent 2.5px) 0 0 / 13px 13px,
-    linear-gradient(180deg, #fbfefd 0%, #edf6f3 100%);
-}
-
-.member-card:nth-child(1) .member-avatar::before {
-  left: 50%;
-  right: auto;
-  bottom: 42px;
-  width: 146px;
-  height: 88px;
-  transform: translateX(-58%);
-  border: 4px solid #71989a;
-  border-bottom-width: 9px;
-  border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(214, 234, 232, 0.94));
-  box-shadow:
-    0 12px 0 -8px #86a9aa,
-    0 16px 18px -16px rgba(22, 33, 31, 0.22);
-  z-index: 2;
-}
-
-.member-card:nth-child(1) .member-avatar::after {
-  left: auto;
-  right: 17%;
-  bottom: 37px;
-  width: 34px;
-  height: 62px;
-  border-radius: 5px 5px 9px 9px;
-  background: #ffffff;
-  box-shadow:
-    -12px -20px 0 -7px #75b88b,
-    11px -28px 0 -8px #8dcca0,
-    -2px -40px 0 -9px #68aa80,
-    0 8px 16px rgba(22, 33, 31, 0.07);
-  z-index: 2;
-}
-
-/* Card 2: postdoc — microscope + test tubes + flask. */
-.member-card:nth-child(2) .member-avatar {
-  background:
-    radial-gradient(circle at 78% 20%, rgba(15, 118, 110, 0.055) 0 42px, transparent 43px),
-    radial-gradient(circle at 13% 18%, rgba(15, 118, 110, 0.10) 0 2px, transparent 2.5px) 0 0 / 13px 13px,
-    linear-gradient(180deg, #fbfefd 0%, #edf6f3 100%);
-}
-
-.member-card:nth-child(2) .member-avatar::before {
-  left: 27%;
-  right: auto;
-  bottom: 27px;
-  width: 106px;
-  height: 142px;
-  border-radius: 0;
-  background:
-    linear-gradient(#2d6f68, #2d6f68) 10px 126px / 86px 9px no-repeat,
-    linear-gradient(#4d9b8b, #4d9b8b) 35px 92px / 55px 8px no-repeat,
-    radial-gradient(circle, #f8fffd 0 7px, #4f9d8d 8px 15px, transparent 16px) 57px 59px / 34px 34px no-repeat,
-    linear-gradient(33deg, transparent 0 38%, #59a995 39% 54%, transparent 55%) 25px 18px / 72px 95px no-repeat,
-    linear-gradient(#2d6f68, #2d6f68) 46px 9px / 20px 52px no-repeat,
-    linear-gradient(35deg, transparent 0 44%, #2d6f68 45% 64%, transparent 65%) 34px 3px / 56px 45px no-repeat;
-  z-index: 2;
-}
-
-.member-card:nth-child(2) .member-avatar::after {
-  left: auto;
-  right: 18%;
-  bottom: 35px;
-  width: 112px;
-  height: 96px;
-  border-radius: 0;
-  background:
-    linear-gradient(#7da7a1, #7da7a1) 0 70px / 66px 7px no-repeat,
-    linear-gradient(180deg, rgba(255,255,255,0.95) 0 38%, #a5ddd4 39% 100%) 5px 29px / 17px 41px no-repeat,
-    linear-gradient(180deg, rgba(255,255,255,0.95) 0 38%, #8dd0c7 39% 100%) 27px 23px / 17px 47px no-repeat,
-    linear-gradient(180deg, rgba(255,255,255,0.95) 0 38%, #9fd8d0 39% 100%) 49px 31px / 17px 39px no-repeat,
-    linear-gradient(#8cb9b3, #8cb9b3) 81px 16px / 16px 22px no-repeat,
-    linear-gradient(180deg, rgba(255,255,255,0.92), rgba(157,216,207,0.72)) 72px 35px / 36px 43px no-repeat;
-  clip-path: polygon(0 0, 66% 0, 66% 18%, 74% 18%, 74% 0, 100% 0, 100% 100%, 0 100%);
-  z-index: 2;
-}
-
-/* Card 3: students — stacked books + graduation cap + plant. */
-.member-card:nth-child(3) .member-avatar {
-  background:
-    radial-gradient(circle at 84% 18%, rgba(15, 118, 110, 0.10) 0 2px, transparent 2.5px) 0 0 / 13px 13px,
-    linear-gradient(180deg, #fbfefd 0%, #edf6f3 100%);
-}
-
-.member-card:nth-child(3) .member-avatar::before {
-  left: 50%;
-  right: auto;
-  bottom: 34px;
-  width: 154px;
-  height: 86px;
-  transform: translateX(-58%);
-  border-radius: 10px;
-  background:
-    linear-gradient(90deg, #4f9f86, #9dd6c3) 7px 50px / 135px 25px no-repeat,
-    linear-gradient(90deg, #6bb499, #d4ece4) 17px 20px / 120px 24px no-repeat,
-    linear-gradient(90deg, rgba(255,255,255,0.92), rgba(255,255,255,0.92)) 14px 55px / 124px 4px no-repeat,
-    linear-gradient(90deg, rgba(255,255,255,0.92), rgba(255,255,255,0.92)) 24px 25px / 110px 4px no-repeat;
-  z-index: 2;
-}
-
-.member-card:nth-child(3) .member-avatar::after {
-  left: 50%;
-  right: auto;
-  bottom: 111px;
-  width: 116px;
-  height: 54px;
-  transform: translateX(-56%);
-  border-radius: 0;
-  background:
-    linear-gradient(#26585a, #26585a) center 29px / 54px 19px no-repeat,
-    linear-gradient(#1d4f55, #1d4f55) center 3px / 112px 36px no-repeat;
-  clip-path: polygon(50% 0, 100% 46%, 74% 63%, 74% 100%, 27% 100%, 27% 63%, 0 46%);
-  z-index: 2;
-}
-
-/* Small plant for students card using an unobtrusive extra pseudo layer on the body. */
-.member-card:nth-child(3) .member-info::before {
-  content: "";
-  position: absolute;
-  top: -80px;
-  right: 17%;
-  width: 28px;
-  height: 44px;
-  border-radius: 5px 5px 8px 8px;
-  background: #ffffff;
-  box-shadow:
-    -9px -16px 0 -6px #9bd1ae,
-    8px -24px 0 -6px #77ba92,
-    0 7px 14px rgba(22, 33, 31, 0.06);
-}
-
-.member-card:nth-child(3) .member-info {
-  position: relative;
-}
-
 @media (max-width: 900px) {
   .member-avatar {
-    min-height: 200px;
+    min-height: 205px;
   }
 
-  .member-card:nth-child(1) .member-avatar::before {
-    transform: translateX(-60%) scale(0.94);
+  .member-card:nth-child(1) .member-avatar,
+  .member-card:nth-child(2) .member-avatar {
+    background-size: auto 92%;
   }
 
-  .member-card:nth-child(2) .member-avatar::before {
-    left: 31%;
-    transform: scale(0.93);
-    transform-origin: bottom left;
-  }
-
-  .member-card:nth-child(2) .member-avatar::after {
-    right: 21%;
-    transform: scale(0.93);
-    transform-origin: bottom right;
+  .member-card:nth-child(3) .member-avatar {
+    background-size: auto 86%;
   }
 }
 
@@ -306,18 +147,10 @@
   }
 
   .member-avatar {
-    min-height: 185px;
+    min-height: 190px;
   }
 
   .member-info {
     padding: 1rem 0.9rem 1.15rem;
-  }
-
-  .member-card:nth-child(2) .member-avatar::before {
-    left: 28%;
-  }
-
-  .member-card:nth-child(2) .member-avatar::after {
-    right: 17%;
   }
 }
