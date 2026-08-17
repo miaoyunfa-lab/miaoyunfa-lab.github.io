@@ -136,6 +136,37 @@
       box-shadow: none !important;
     }
 
+    /* Keep recruitment copy on a consistent vertical rhythm. */
+    .recruit-inner {
+      display: grid;
+      gap: 0.72rem;
+    }
+
+    .recruit-title {
+      margin: 0 0 0.12rem !important;
+      line-height: 1.35 !important;
+    }
+
+    .recruit-lead,
+    .recruit-text {
+      margin: 0 auto !important;
+      line-height: 1.7 !important;
+    }
+
+    .recruit-contact {
+      display: grid;
+      gap: 0.34rem;
+      width: min(54rem, 100%);
+      margin: 0.36rem auto 0 !important;
+      padding-top: 0.9rem !important;
+      line-height: 1.7 !important;
+    }
+
+    .recruit-contact p {
+      margin: 0 !important;
+      line-height: 1.7 !important;
+    }
+
     @media (max-width: 980px) {
       .members-panel .members-grid {
         grid-template-columns: 1fr !important;
@@ -172,6 +203,16 @@
         min-width: 158px !important;
         min-height: 2.35rem !important;
         font-size: 0.88rem !important;
+      }
+
+      .recruit-inner {
+        gap: 0.62rem;
+      }
+
+      .recruit-contact {
+        gap: 0.3rem;
+        margin-top: 0.3rem !important;
+        padding-top: 0.78rem !important;
       }
     }
   </style>
