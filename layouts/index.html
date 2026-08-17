@@ -8,4 +8,212 @@
   <div class="hero-carousel">
     <div class="carousel-viewport" aria-live="polite">
       <article class="carousel-slide is-active" data-carousel-slide aria-hidden="false">
-        <img src
+        <img src="{{ "images/carousel/science-paper.png" | relURL }}" alt="Science论文页面高清截图">
+      </article>
+
+      <article class="carousel-slide" data-carousel-slide aria-hidden="true">
+        <img src="{{ "images/carousel/pollen-adventure-book.jpg" | relURL }}" alt="科普绘本《花粉皮皮的冒险之旅》封面">
+      </article>
+    </div>
+
+    <div class="carousel-controls" aria-label="选择轮播内容">
+      <button class="carousel-dot is-active" type="button" data-carousel-dot aria-label="显示第1张：Science论文" aria-current="true"></button>
+      <button class="carousel-dot" type="button" data-carousel-dot aria-label="显示第2张：科普绘本" aria-current="false"></button>
+    </div>
+
+    <div class="carousel-details" aria-live="polite">
+      <article class="carousel-copy is-active" data-carousel-detail aria-hidden="false">
+        <p class="carousel-kicker">代表性研究成果</p>
+        <h2>Science：青藏高原北部晚中新世快速隆升</h2>
+        <p>研究提出新的生物古高度计，揭示青藏高原北部在晚中新世发生快速隆升。</p>
+        <div class="button-row">
+          <a class="button" href="https://www.science.org/doi/10.1126/science.abo2475" target="_blank" rel="noopener">查看论文</a>
+          <a class="button button-secondary" href="{{ "/publications/" | relURL }}">更多研究成果</a>
+        </div>
+      </article>
+
+      <article class="carousel-copy" data-carousel-detail aria-hidden="true">
+        <p class="carousel-kicker">科普成果</p>
+        <h2>科普绘本《花粉皮皮的冒险之旅》</h2>
+        <p>跟随花粉皮皮走进自然世界，在探索与成长中认识花粉、植物与生态环境。</p>
+        <div class="button-row">
+          <a class="button" href="{{ "/news/" | relURL }}">查看课题组新闻</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-research" aria-label="Research overview">
+  {{ range site.Params.research_groups }}
+  <article class="research-group-card">
+    <div class="research-group-heading">
+      <h2 class="title-badge">{{ .title }}</h2>
+      <a href="{{ "/research/" | relURL }}">了解更多</a>
+    </div>
+
+    <div class="research-topic-grid">
+      {{ range .items }}
+      <div class="research-topic-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </article>
+  {{ end }}
+</section>
+
+<section class="panel about-panel">
+  <h2 class="title-badge">关于我们</h2>
+  <div class="about-layout">
+    <figure class="about-pi">
+      <img src="{{ "/images/people/miaoyunfa.jpg" | relURL }}" alt="苗运法">
+      <figcaption>
+        <strong>苗运法</strong>
+        <span>研究员 · 博士生导师</span>
+      </figcaption>
+    </figure>
+    <div class="about-text">
+      <p>课题组依托中国科学院西北生态环境资源研究院和干旱区生态安全与可持续发展全国重点实验室，其负责人为苗运法研究员，系中国科学院西北生态环境资源研究院沙漠与沙漠化研究室主任、中国科学院特聘核心研究员、博士生导师。长期围绕干旱区生态气候演变与青藏高原环境变化等科学问题，开展孢粉学与环境变化研究。目前课题组共发表学术论文200余篇，其中在Science发表1篇，PNAS、Earth-Science Reviews、Geology等国际知名期刊发表NI论文40余篇，授权国家专利7项，登记计算机软件著作权1项，政府咨询报告1项。</p>
+      <p>课题负责人获国家青年科学基金项目（A类）支持，入选中组部“万人计划”青年拔尖人才、中国科学院青年创新促进会优秀会员、甘肃省领军人才（第一层次）、甘肃省拔尖领军人才和陇原人才（A类）等荣誉奖项。此外，荣获国土资源科学技术奖二等奖1项，带领团队获得2024年度“甘肃省工人先锋号”称号。2026年以孢粉学为主题出版了《花粉皮皮的冒险之旅》科普系列丛书第一部，并在兰州市内小学和中学多次开展科普讲座。</p>
+    </div>
+  </div>
+</section>
+
+<section class="panel members-panel">
+  <h2 class="title-badge">课题组成员</h2>
+  <div class="members-grid">
+    {{ $groups := slice
+      (dict "key" "staff" "label" "在职职工")
+      (dict "key" "postdoc" "label" "博士后")
+      (dict "key" "students" "label" "学生培养")
+    }}
+    {{ range $groups }}
+    {{ $members := where site.Data.people "group" .key }}
+    {{ $memberCount := len $members }}
+    {{ $rep := first 1 $members }}
+    {{ if eq .key "staff" }}
+      {{ $rep = where $members "name" "王雪莲" }}
+    {{ end }}
+    {{ $repName := "" }}
+    {{ $repRole := "" }}
+    {{ $repPhoto := "" }}
+    {{ range $rep }}
+    {{ $repName = .name }}
+    {{ $repRole = .role }}
+    {{ $repPhoto = .photo }}
+    {{ end }}
+    <a class="member-card" href="{{ "/people/" | relURL }}?group={{ .key }}">
+      <div class="member-avatar">
+        {{ if $repPhoto }}
+        <img src="{{ $repPhoto | relURL }}" alt="{{ $repName }}">
+        {{ if gt $memberCount 1 }}<span class="avatar-badge">+{{ sub $memberCount 1 }}</span>{{ end }}
+        {{ end }}
+      </div>
+      <div class="member-info">
+        <h3>{{ .label }}</h3>
+        <p class="member-count">共 {{ $memberCount }} 位成员</p>
+        <span class="member-cta">查看成员名单 →</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="panel achievements-panel">
+  <h2 class="title-badge">研究成果</h2>
+  <div class="achievements-grid">
+    <a class="achievement-card achievement-card-papers" href="{{ "/publications/" | relURL }}">
+      <div class="achievement-head">
+        <h3>论文发表</h3>
+        <span class="achievement-more">查看全部 →</span>
+      </div>
+      <ol class="achievement-list">
+        {{ range first 6 (sort site.Data.publications "sort_date" "desc") }}
+        <li>
+          <span class="achievement-title">{{ .title }}</span>
+          <span class="achievement-meta">{{ .journal }} · {{ .year }}</span>
+        </li>
+        {{ end }}
+      </ol>
+    </a>
+
+    <div class="achievement-stack">
+      {{ $patents := slice }}
+      {{ range site.Data.people }}
+        {{ range .matched_patents }}
+          {{ $patents = $patents | append . }}
+        {{ end }}
+      {{ end }}
+
+      <a class="achievement-card achievement-card-patents" href="{{ "/patents/" | relURL }}">
+        <div class="achievement-head">
+          <h3>专利（软著）</h3>
+          <span class="achievement-more">查看全部 →</span>
+        </div>
+        <ol class="achievement-list">
+          {{ range first 3 (sort $patents "year" "desc") }}
+          <li>
+            <span class="achievement-title">{{ .name }}</span>
+            <span class="achievement-meta">{{ .type }} · {{ .year }}</span>
+          </li>
+          {{ end }}
+        </ol>
+      </a>
+
+      <a class="achievement-card achievement-card-news" href="{{ "/news/" | relURL }}">
+        <div class="achievement-head">
+          <h3>科普及其他</h3>
+          <span class="achievement-more">查看全部 →</span>
+        </div>
+        <ol class="achievement-list">
+          {{ range first 3 (sort (where site.RegularPages "Section" "news") "Date" "desc") }}
+          <li>
+            <span class="achievement-title">{{ .Title }}</span>
+            <span class="achievement-meta">{{ .Date.Format "2006.01" }}</span>
+          </li>
+          {{ end }}
+        </ol>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="panel facilities-panel">
+  <h2 class="title-badge">硬件支撑</h2>
+  <div class="facilities-grid">
+    <figure class="facility-item">
+      <img src="{{ "images/labs/microscope-lab.jpg" | relURL }}" alt="显微镜实验室">
+      <figcaption>显微镜实验室</figcaption>
+    </figure>
+    <figure class="facility-item">
+      <img src="{{ "images/labs/pollen-pretreatment-lab.jpg" | relURL }}" alt="孢粉前处理实验室">
+      <figcaption>孢粉前处理实验室</figcaption>
+    </figure>
+    <figure class="facility-item">
+      <img src="{{ "images/labs/microcharcoal-scanner.jpg" | relURL }}" alt="碳屑扫描仪">
+      <figcaption>碳屑扫描仪</figcaption>
+    </figure>
+    <figure class="facility-item">
+      <img src="{{ "images/labs/air-pollen-lab.jpg" | relURL }}" alt="空气花粉实验室">
+      <figcaption>空气花粉实验室</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="recruit-banner" aria-label="招聘启事">
+  <div class="recruit-inner">
+    <h2 class="recruit-title">招聘启事</h2>
+    <p class="recruit-lead">诚挚邀请您加入我们！</p>
+    <p class="recruit-text">招聘方向：物理学（侧重仪器研制）、地理学、生态学、地质学、植物学、地貌学、沉积学及气候模拟等相关专业人才。</p>
+    <p class="recruit-text">期待与您共创未来，共促发展！</p>
+    <address class="recruit-contact">
+      <p>{{ site.Params.affiliation }}</p>
+      <p>{{ site.Params.address }}</p>
+      <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+    </address>
+  </div>
+</section>
+<script src="{{ "js/carousel.js" | relURL }}" defer></script>
+{{ end }}
