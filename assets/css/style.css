@@ -1509,16 +1509,25 @@ a {
   flex-direction: column;
 }
 
+.hero-about-layout > .about-panel > .title-badge {
+  align-self: flex-start;
+}
+
 .hero-about-layout .about-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 108px) minmax(0, 1fr);
-  gap: 0.9rem;
-  align-items: start;
+  display: block;
   margin-top: 0.85rem;
 }
 
+.hero-about-layout .about-layout::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .hero-about-layout .about-pi {
-  width: 100%;
+  float: left;
+  width: min(108px, 38%);
+  margin: 0 0.9rem 0.4rem 0;
 }
 
 .hero-about-layout .about-text p {
