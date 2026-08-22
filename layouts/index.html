@@ -3,6 +3,23 @@
   <h1>{{ site.Params.hero_text }}</h1>
 </section>
 
+<section class="hero-about-layout" aria-label="关于我们与课题组成果展示">
+<section class="panel about-panel">
+  <h2 class="title-badge">关于我们</h2>
+  <div class="about-layout">
+    <figure class="about-pi">
+      <img src="{{ "/images/people/miaoyunfa.jpg" | relURL }}" alt="苗运法">
+      <figcaption>
+        <strong>苗运法</strong>
+        <span>研究员 · 博士生导师</span>
+      </figcaption>
+    </figure>
+    <div class="about-text">
+      <p>本研究方向负责人，中国科学院特聘核心研究员、西北生态资源研究院沙漠与沙漠化研究室主任。国家青年科学基金（A类）获得者，入选“WR”青拔人才、中国科学院青促会优秀会员及甘肃省领军人才，获国土资源科学技术奖二等奖等。研究领域为荒漠化防治、干旱区生态-气候-地形协同演变研究等。已在Science等期刊发表论文100余篇，拥有知识产权成果（专利、软著）近10项，并承担政府决策咨询与科普传播工作。</p>
+    </div>
+  </div>
+</section>
+
 <section class="hero-showcase" data-carousel aria-roledescription="carousel" aria-label="课题组成果轮播">
   <div class="hero-carousel">
     <div class="carousel-viewport" aria-live="polite">
@@ -42,6 +59,7 @@
     </div>
   </div>
 </section>
+</section>
 
 <section class="home-research" aria-label="Research overview">
   {{ range site.Params.research_groups }}
@@ -63,21 +81,7 @@
   {{ end }}
 </section>
 
-<section class="panel about-panel">
-  <h2 class="title-badge">关于我们</h2>
-  <div class="about-layout">
-    <figure class="about-pi">
-      <img src="{{ "/images/people/miaoyunfa.jpg" | relURL }}" alt="苗运法">
-      <figcaption>
-        <strong>苗运法</strong>
-        <span>研究员 · 博士生导师</span>
-      </figcaption>
-    </figure>
-    <div class="about-text">
-      <p>本研究方向负责人，中国科学院特聘核心研究员、西北生态资源研究院沙漠与沙漠化研究室主任。国家青年科学基金（A类）获得者，入选“WR”青拔人才、中国科学院青促会优秀会员及甘肃省领军人才，获国土资源科学技术奖二等奖等。研究领域为荒漠化防治、干旱区生态-气候-地形协同演变研究等。已在Science等期刊发表论文100余篇，拥有知识产权成果（专利、软著）近10项，并承担政府决策咨询与科普传播工作。</p>
-    </div>
-  </div>
-</section>
+
 
 <style id="member-card-reference-style">
   .members-panel {
