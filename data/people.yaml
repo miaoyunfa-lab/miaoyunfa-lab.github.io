@@ -1417,6 +1417,30 @@
   award_count: 0
   matched_patents: []
   patent_count: 0
+- name: 秦彦智
+  en_name: ""
+  role: 博士研究生
+  group: students
+  email: qinyanzhi@sxu.edu.cn
+  photo: /images/people/qyz.jpg
+  bio: 研究方向：孢粉学、盐类学
+  matched_papers:
+  - title: 右玉黄沙洼沙漠-黄土过渡带沉积剖面易溶盐的组成特征及其影响因素
+    authors: 秦彦智
+    journal: 干旱区地理
+    year: 2026
+    status: 录用
+  - title: 晋西北土壤可溶盐的组成及其影响因素（2024KY691）
+    authors: 秦彦智
+    journal: 山西省教育厅
+    year: 2024
+    status: 已结项
+  paper_count: 2
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
+
 - name: 严永耀
   en_name: Yongyao YAN
   role: 城乡规划师
