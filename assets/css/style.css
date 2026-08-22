@@ -746,9 +746,9 @@ a {
   color: #ffffff;
   background:
     radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.14), transparent 60%),
-    linear-gradient(135deg, #7f1d1d 0%, #b91c1c 100%);
+    linear-gradient(135deg, #991b1b 0%, #cf3f3f 100%);
   border: 2px solid #e8b64c;
-  box-shadow: 0 12px 28px rgba(127, 29, 29, 0.28);
+  box-shadow: 0 12px 28px rgba(153, 27, 27, 0.22);
 }
 
 .recruit-banner::before {
