@@ -1664,3 +1664,13 @@ a {
     justify-content: flex-start;
   }
 }
+
+@media (max-width: 700px) {
+  .hero-about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-about-layout > .hero-showcase {
+    order: -1;
+  }
+}
