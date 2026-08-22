@@ -179,7 +179,7 @@ a {
   bottom: 0;
   left: 0;
   z-index: 2;
-  min-height: 68px;
+  min-height: 100px;
   background: linear-gradient(90deg, rgba(7, 20, 16, 0.93), rgba(7, 20, 16, 0.78));
   backdrop-filter: blur(6px);
 }
@@ -196,16 +196,20 @@ a {
 }
 
 .carousel-copy.is-active {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
   align-items: center;
-  gap: 0.65rem;
+  column-gap: 0.65rem;
+  row-gap: 0.25rem;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
 .carousel-kicker {
-  flex: 0 0 auto;
+  grid-column: 1;
+  grid-row: 1;
   margin: 0;
   color: #8dd8ca;
   font-size: 0.72rem;
@@ -213,8 +217,11 @@ a {
 }
 
 .carousel-copy h2 {
-  flex: 0 0 auto;
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
   margin: 0;
+  overflow: hidden;
   color: #ffffff;
   font-size: clamp(0.82rem, 1.2vw, 1rem);
   line-height: 1.15;
@@ -222,17 +229,22 @@ a {
 }
 
 .carousel-copy > p:not(.carousel-kicker) {
+  grid-column: 1 / -1;
+  grid-row: 2;
   min-width: 0;
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
   color: rgba(255, 255, 255, 0.82);
   font-size: clamp(0.7rem, 0.95vw, 0.82rem);
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .carousel-copy .button-row {
-  flex: 0 0 auto;
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
   margin-top: 0;
   white-space: nowrap;
 }
@@ -1465,7 +1477,7 @@ a {
   }
 
   .carousel-details {
-    min-height: 68px;
+    min-height: 100px;
   }
 
   .three-up,
@@ -1590,7 +1602,7 @@ a {
   }
 
   .carousel-details {
-    min-height: 76px;
+    min-height: 112px;
   }
 
   .carousel-copy {
