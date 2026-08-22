@@ -180,8 +180,8 @@ a {
   left: 0;
   z-index: 2;
   min-height: 100px;
-  background: linear-gradient(90deg, rgba(7, 20, 16, 0.93), rgba(7, 20, 16, 0.78));
-  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(7, 20, 16, 0.14), rgba(7, 20, 16, 0.62));
+  backdrop-filter: blur(2px);
 }
 
 .carousel-copy {
