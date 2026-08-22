@@ -1441,6 +1441,26 @@
   matched_patents: []
   patent_count: 0
 
+- name: 邵楠
+  en_name: Shao Nan
+  role: 博士生
+  group: students
+  email: sxxzxfqsn@163.com
+  photo: /images/people/ShaoNan.jpg
+  bio: 研究方向：土壤微生物
+  matched_papers:
+  - title: 平朔露天煤矿区不同植被恢复类型下土壤碳循环功能基因特征
+    authors: 邵楠，刘爽，刘勇，杜自强，李君剑
+    journal: 环境科学
+    doi_url: https://doi.org/10.13227/j.hjkx.202508160
+    code_url: https://doi.org/10.13227/j.hjkx.202508160
+    status: 已发表
+  paper_count: 1
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
+
 - name: 严永耀
   en_name: Yongyao YAN
   role: 城乡规划师
