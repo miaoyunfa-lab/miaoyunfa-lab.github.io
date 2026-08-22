@@ -30,11 +30,16 @@
       <article class="carousel-slide" data-carousel-slide aria-hidden="true">
         <img src="{{ "images/carousel/pollen-adventure-book.jpg" | relURL }}" alt="科普绘本《花粉皮皮的冒险之旅》封面">
       </article>
+
+      <article class="carousel-slide" data-carousel-slide aria-hidden="true">
+        <img src="{{ "images/carousel/firefly.jpg" | relURL }}" alt="FireFly AI微炭屑自动识别软件界面">
+      </article>
     </div>
 
     <div class="carousel-controls" aria-label="选择轮播内容">
       <button class="carousel-dot is-active" type="button" data-carousel-dot aria-label="显示第1张：Science论文" aria-current="true"></button>
       <button class="carousel-dot" type="button" data-carousel-dot aria-label="显示第2张：科普绘本" aria-current="false"></button>
+      <button class="carousel-dot" type="button" data-carousel-dot aria-label="显示第3张：FireFly微炭屑自动识别软件" aria-current="false"></button>
     </div>
 
     <div class="carousel-details" aria-live="polite">
@@ -54,6 +59,15 @@
         <p>跟随花粉皮皮走进自然世界，在探索与成长中认识花粉、植物与生态环境。</p>
         <div class="button-row">
           <a class="button" href="{{ "/news/" | relURL }}">查看课题组新闻</a>
+        </div>
+      </article>
+
+      <article class="carousel-copy" data-carousel-detail aria-hidden="true">
+        <p class="carousel-kicker">软件成果</p>
+        <h2>FireFly：AI 微炭屑自动识别软件</h2>
+        <p>FireFly 是基于 YOLOv8 开发的 AI 微炭屑自动识别软件，相关成果发表于《Global and Planetary Change》期刊。</p>
+        <div class="button-row">
+          <a class="button" href="{{ "/publications/" | relURL }}">查看相关论文</a>
         </div>
       </article>
     </div>
