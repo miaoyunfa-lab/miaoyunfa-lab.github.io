@@ -956,13 +956,15 @@
     sort_date: '2026-07-01'
     doi_url: https://doi.org/10.3390/su18052365
     status: 已发表
-  - title: 'Microtopography-driven water redistribution shapes vegetation patterns: a case plot in Gobi Desert'
-    authors: Yaguo Zou, Teng Zhang, Ziyue Zhang, Yunfa Miao, Yanru Gao, Yuehan Sun
-    journal: 投稿中
+  - title: 'Microtopography-driven water redistribution shapes vegetation patterns: A case plot in Gobi Desert'
+    authors: 'Zou, Yaguo and Zhang, Teng and Zhang, Ziyue and Miao, Yunfa and Gao, Yanru and Sun, Yuehan'
+    journal: 'Journal of Hydrology: Regional Studies'
+    volume: 66
+    pages: 103578
+    publisher: Elsevier
     year: 2026
     sort_date: '2026-09-01'
-    doi_url: 投稿中
-    status: 投稿中
+    status: 已发表
   - title: 'A new method of automatic microcharcoal identification and its
 
       demonstration in revealing the spatial heterogeneity of fire over the past
@@ -1056,13 +1058,15 @@
     doi_url: https://doi.org/10.1016/j.gloplacha.2026.105356
     status: 已发表
     code_url: https://doi.org/10.6084/m9.figshare.29901263.v3
-  - title: 'Microtopography-driven water redistribution shapes vegetation patterns: a case plot in Gobi Desert'
-    authors: Yaguo Zou, Teng Zhang, Ziyue Zhang, Yunfa Miao, Yanru Gao, Yuehan Sun
-    journal: 投稿中
+  - title: 'Microtopography-driven water redistribution shapes vegetation patterns: A case plot in Gobi Desert'
+    authors: 'Zou, Yaguo and Zhang, Teng and Zhang, Ziyue and Miao, Yunfa and Gao, Yanru and Sun, Yuehan'
+    journal: 'Journal of Hydrology: Regional Studies'
+    volume: 66
+    pages: 103578
+    publisher: Elsevier
     year: 2026
     sort_date: '2026-09-01'
-    doi_url: 投稿中
-    status: 投稿中
+    status: 已发表
   - title: 晚冰期以来乌伦古湖沉积物多指标高分辨率的古环境演化
     authors: 赵永涛, 蓝小玉, 雷艳, 王梓莎, 常婧, 陈雪梅, 张孜越, 王雪莲, 汪亘, 詹科杰
     journal: 干旱区地理
