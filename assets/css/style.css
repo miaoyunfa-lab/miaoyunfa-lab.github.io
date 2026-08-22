@@ -738,7 +738,8 @@ a {
 
 .recruit-banner {
   position: relative;
-  margin: 1.5rem 0;
+  width: min(980px, calc(100% - 1rem));
+  margin: 1.5rem auto;
   padding: 2.25rem 2.5rem 2rem;
   border-radius: 10px;
   text-align: center;
