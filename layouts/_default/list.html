@@ -21,6 +21,7 @@
 <section class="grid two-up" aria-label="People directory">
   {{ range site.Data.people }}
   {{ $personName := .name }}
+  {{ $person := . }}
   {{ $personGroup := default "" .group }}
   {{ if not $personGroup }}
     {{ $role := lower (default "" .role) }}
@@ -38,7 +39,7 @@
     <div class="person-card-header">
       {{ with .photo }}
       {{ $photo := strings.TrimPrefix "/" . }}
-      <img class="person-photo{{ if eq .photo_fit "contain" }} person-photo--contain{{ end }}" src="{{ $photo | relURL }}" alt="{{ $personName }}">
+      <img class="person-photo{{ if eq $person.photo_fit "contain" }} person-photo--contain{{ end }}" src="{{ $photo | relURL }}" alt="{{ $personName }}">
       {{ else }}
       <span class="person-photo person-photo-placeholder" aria-hidden="true">{{ substr $personName 0 1 }}</span>
       {{ end }}
