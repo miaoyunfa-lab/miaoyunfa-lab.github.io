@@ -1152,6 +1152,11 @@ a {
   background: var(--surface-soft);
 }
 
+.person-photo--contain {
+  object-fit: contain;
+  object-position: center;
+}
+
 .person-photo-placeholder {
   display: inline-flex;
   align-items: center;
