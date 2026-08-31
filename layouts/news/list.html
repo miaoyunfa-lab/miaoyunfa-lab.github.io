@@ -20,7 +20,6 @@
   {{ $timeline = $timeline | append (dict "kind" "award" "award" . "year" $year "date" $sortDate) }}
 {{ end }}
 {{ $timeline = sort $timeline "date" "desc" }}
-{{ $categoryLabels := dict "media" "新闻报道" "outreach" "科普" "honors" "荣誉" "life" "日常" }}
 {{ $filters := slice
   (dict "key" "media" "label" "新闻报道")
   (dict "key" "outreach" "label" "科普")
@@ -55,12 +54,9 @@
           <summary>
             <span class="news-date">{{ $recordDate.Format "2006年1月" }}</span>
             <span class="news-title">{{ $page.Title }}</span>
-            <span class="news-keywords" aria-label="News keywords">
-              {{ range $categoryKeys }}
-                {{ if or (eq . "media") (eq . "outreach") }}
-                <button class="news-keyword" type="button" data-news-keyword="{{ . }}">{{ index $categoryLabels . | default (humanize .) }}</button>
-                {{ end }}
-              {{ end }}
+            <span class="news-detail-cta">
+              <span class="news-detail-label news-detail-label--closed">【了解详情】</span>
+              <span class="news-detail-label news-detail-label--open">【收起详情】</span>
             </span>
           </summary>
           <div class="news-story">
@@ -92,6 +88,10 @@
           <summary>
             <span class="news-date">{{ if $year }}{{ $year }}年{{ else }}—{{ end }}</span>
             <span class="news-title">{{ $award.name }}</span>
+            <span class="news-detail-cta">
+              <span class="news-detail-label news-detail-label--closed">【了解详情】</span>
+              <span class="news-detail-label news-detail-label--open">【收起详情】</span>
+            </span>
           </summary>
           <div class="news-story">
             {{ with $award.recipient }}<p><strong>获奖人：</strong>{{ . }}</p>{{ end }}
@@ -109,7 +109,6 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = Array.from(document.querySelectorAll("[data-news-filter]"));
-  const keywordButtons = Array.from(document.querySelectorAll("[data-news-keyword]"));
   const items = Array.from(document.querySelectorAll("[data-news-item]"));
 
   function setFilter(filter) {
@@ -129,13 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  keywordButtons.forEach(function (button) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault();
-      const filter = button.dataset.newsKeyword;
-      setFilter(filter);
-    });
-  });
 });
 </script>
 {{ end }}
