@@ -1,0 +1,49 @@
+name: One-off add Bo Tan
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add Bo Tan profile
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64
+          from pathlib import Path
+          path = Path('data/people.yaml')
+          text = path.read_text(encoding='utf-8')
+          marker = '- name: 谈波\n'
+          payload = 'LSBuYW1lOiDorrDmspMKICBlbl9uYW1lOiBCbyBUYW4KICByb2xlOiDljZrlo6vlkI4KICBncm91cDogcG9zdGRvYwogIGVtYWlsOiB0YW5naW5nMDgxNUAxNjMuY29tCiAgcGhvdG86IC9pbWFnZXMvcGVvcGxlL3RhbmJvLmpwZwogIGJpbzog56CU56m25pa55ZCR77ya5YaF5Lqa5Y+y5YmN5Lq657G75rS75Yqo5LiO546v5aKD5ZON5bqUCiAgbWF0Y2hlZF9wYXBlcnM6CiAgLSB0aXRsZTogTWlsbGV0IGluIHRoZSBCcm9uemUgQWdlIEFsdGFpIE1vdW50YWluczogZGlzY292ZXJ5LCBwcm9ncmVzcyBhbmQgcmVzZWFyY2ggcHJvc3BlY3RzCiAgICBhdXRob3JzOiBCbyBUYW4sIExlaSBUYW5nLCBDaGFvIEx1LCBldCBhbC4KICAgIGpvdXJuYWw6IG5waiBIZXJpdGFnZSBTY2llbmNlCiAgICB5ZWFyOiAyMDI1CiAgICBzb3J0X2RhdGU6ICcyMDI1LTAxLTAxJwogICAgZG9pX3VybDogaHR0cHM6Ly9kb2kub3JnLzEwLjEwMzgvc
+zQwNDk0LTAyNS0wMTg3MS16CiAgICBzdGF0dXM6IOW3suWPkeihqAogIC0gdGl0bGU6IFRoZSBTdWl0YWJpbGl0eSBvZiBQcmVoaXN0b3JpYyBIdW1hbiBTZXR0bGVtZW50cyBmcm9tIHRoZSBQZXJzcGVjdGl2ZSBvZiB0aGUgUmVzaWRlbnRzCiAgICBhdXRob3JzOiBCbyBUYW4sIENoZW5nYmFuZyBBbiwgQ2hhbyBMdSwgZXQgYWwuCiAgICBqb3VybmFsOiBMYW5kCiAgICB5ZWFyOiAyMDIzCiAgICBzb3J0X2RhdGU6ICcyMDIzLTAyLTAxJwogICAgZG9pX3VybDogaHR0cHM6Ly9kb2kub3JnLzEwLjMzOTAvbGFuZDEyMTIyMDk0CiAgICBzdGF0dXM6IOW3suWPkeihqAogIC0gdGl0bGU6IFNwYXRpYWwgZGlzdHJpYnV0aW9uIGRhdGEgb2YgY3VsdHVyYWwgc2l0ZXMgZnJvbSB0aGUgUGFsZW9saXRoaWMgdG8gQnJvbnplIEFnZSBpbiBYaW5qaWFuZywgQ2hpbmEKICAgIGF1dGhvcnM6IEJvIFRhbiwgSG9uZ3dlaSBXYW5nLCBYaWFvcWluIFdhbmcsIGV0IGFsLgogICAgam91cm5hbDogU2NpZW50aWZpYyBEYXRhCiAgICB5ZWFyOiAyMDIyCiAgICBzb3J0X2RhdGU6ICcyMDIyLTAzLTAxJwogICAgZG9pX3VybDogaHR0cHM6Ly9kb2kub3JnLzEwLjEwMzgvc
+zQxNTk3LTAyMi0wMTMwNi01CiAgICBzdGF0dXM6IOW3suWPkeihqAogIC0gdGl0bGU6IFRoZSBzdHVkeSBvZiBlYXJseSBodW1hbiBzZXR0bGVtZW50IHByZWZlcmVuY2UgYW5kIHNldHRsZW1lbnQgcHJlZGljdGlvbiBpbiBYaW5qaWFuZywgQ2hpbmEKICAgIGF1dGhvcnM6IEJvIFRhbiwgSG9uZ3dlaSBXYW5nLCBYaWFvcWluIFdhbmcsIGV0IGFsLgogICAgam91cm5hbDogU2NpZW50aWZpYyBSZXBvcnRzCiAgICB5ZWFyOiAyMDIyCiAgICBzb3J0X2RhdGU6ICcyMDIyLTA0LTAxJwogICAgZG9pX3VybDogaHR0cHM6Ly9kb2kub3JnLzEwLjEwMzgvc
+zQxNTk3LTAyMi0wMTMwNi01CiAgICBzdGF0dXM6IOW3suWPkeihqAogICAgY29kZV91cmw6IGh0dHA6Ly9kYXRhLnRwZGMuYWMuY24vZW4vZGlzYWxsb3cvYmI0OWE2ZGEtYmZkNC00MzU1LTlkMGMtOTg4ZWVmNzkzZWUxLwogIC0gdGl0bGU6IEhlYWx0aCBSaXNrcyBhbmQgU291cmNlIEFuYWx5c2lzIG9mIEhlYXZ5IE1ldGFsIFBvbGx1dGlvbiBmcm9tIER1c3QgaW4gVGlhbnNodWksIENoaW5hCiAgICBhdXRob3JzOiBCbyBUYW4sIEhvbmd3ZWkgV2FuZywgWGlubWluIFdhbmcsIGV0IGFsLgogICAgam91cm5hbDogTWluZXJhbHMKICAgIHllYXI6IDIwMjEKICAgIHNvcnRfZGF0ZTogJzIwMjEtMDUtMDEnCiAgICBkb2lfdXJsOiBodHRwczovL2RvaS5vcmcvMTAuMzM5MC9taW4xMTA1MDUwMgogICAgc3RhdHVzOiDlt7Llj5HooagKICAtIHRpdGxlOiBTcGF0aWFsIGFuZCBUZW1wb3JhbCBNZWFzdXJlbWVudCBvZiB0aGUgSW50ZXJhY3Rpb24gYmV0d2VlbiB0aGUgQ291bnR5IEVjb25vbXkgYW5kIFJ1cmFsIFRyYW5zZm9ybWF0aW9uIGluIFhpbmppYW5nLCBDaGluYQogICAgYXV0aG9yczogQm8gVGFuLCBIb25nd2VpIFdhbmcsIENoZW4gTWEsIGV0IGFsLgogICAgam91cm5hbDogU3VzdGFpbmFiaWxpdHkKICAgIHllYXI6IDIwMjEKICAgIHNvcnRfZGF0ZTogJzIwMjEtMDYtMDEnCiAgICBkb2lfdXJsOiBodHRwczovL2RvaS5vcmcvMTAuMzM5MC9zdTEzMDk1MzE4CiAgICBzdGF0dXM6IOW3suWPkeihqAogIHBhcGVyX2NvdW50OiA2CiAgbWF0Y2hlZF9hd2FyZHM6IFtdCiAgYXdhcmRfY291bnQ6IDAKICBtYXRjaGVkX3BhdGVudHM6IFtdCiAgcGF0ZW50X2NvdW50OiAwCg=='
+          if marker not in text:
+              entry = base64.b64decode(payload).decode('utf-8')
+              if not text.endswith('\n'):
+                  text += '\n'
+              path.write_text(text + entry, encoding='utf-8')
+          PY
+
+          rm -f .github/workflows/one-off-add-tanbo.yml
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/people.yaml .github/workflows/one-off-add-tanbo.yml
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Add Bo Tan postdoc profile"
+          git push
