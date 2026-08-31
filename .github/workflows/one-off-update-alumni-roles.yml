@@ -1,0 +1,66 @@
+name: One-off update alumni roles
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/one-off-update-alumni-roles.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update alumni roles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("data/people.yaml")
+          lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+          changes = {
+              "严永耀": ("城乡规划师", "硕士生"),
+              "蔡晓敏": ("硕士", "硕士生"),
+              "王梓莎": ("讲师/博士生", "博士生"),
+          }
+
+          changed = []
+          for name, (old_role, new_role) in changes.items():
+              name_line = f"- name: {name}"
+              matches = [i for i, line in enumerate(lines) if line.rstrip("\r\n") == name_line]
+              if len(matches) != 1:
+                  raise SystemExit(f"Expected exactly one record for {name}, found {len(matches)}")
+              start = matches[0]
+              end = next((j for j in range(start + 1, len(lines)) if lines[j].startswith("- name: ")), len(lines))
+              role_idx = next((j for j in range(start + 1, end) if lines[j].startswith("  role: ")), None)
+              if role_idx is None:
+                  raise SystemExit(f"No role field found for {name}")
+              current = lines[role_idx].rstrip("\r\n").split(": ", 1)[1]
+              if current == new_role:
+                  continue
+              if current != old_role:
+                  raise SystemExit(f"Unexpected role for {name}: {current!r}; expected {old_role!r}")
+              newline = "\r\n" if lines[role_idx].endswith("\r\n") else "\n"
+              lines[role_idx] = f"  role: {new_role}{newline}"
+              changed.append(f"{name}: {old_role} -> {new_role}")
+
+          path.write_text("".join(lines), encoding="utf-8")
+          print("\n".join(changed) if changed else "No changes needed")
+          PY
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- data/people.yaml; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/people.yaml
+          git commit -m "Update alumni degree status labels"
+          git push
