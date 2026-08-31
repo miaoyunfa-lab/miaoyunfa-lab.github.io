@@ -1717,3 +1717,30 @@
   award_count: 0
   matched_patents: []
   patent_count: 0
+- name: 刘培伦
+  en_name: Peilun Liu
+  role: 博士后
+  group: postdoc
+  email: 17797500430@163.com
+  photo: /images/people/liupeilun.jpg
+  bio: 研究方向：孢粉学、环境考古
+  matched_papers:
+  - title: 'Vegetation history and its links to climate change during the last 36ka in arid Central Asia: Evidence from a loess-paleosol sequence in the Eastern Ili Valley'
+    authors: Peilun Liu, Shanjia Zhang, Menghan Qiu, Qiurong Ruan, Jiaming Luo, Yunfa Miao* and Zhiyong Ling*
+    journal: Frontiers in Earth Science
+    year: 2023
+    sort_date: '2023-01-01'
+    doi_url: https://doi.org/10.3389/feart.2022.1041374
+    status: 已发表
+  - title: 'Anthropogenic Impact on the Terrestrial Environment in the Lake Dian Basin, Southwestern China during the Bronze Age and Ming–Qing period'
+    authors: Peilun Liu, Fengwen Liu*, Gang Li, Yuejiao Li, Huihui Cao and Xiaorui Li
+    journal: Land
+    year: 2024
+    sort_date: '2024-01-01'
+    doi_url: https://doi.org/10.3390/land13020228
+    status: 已发表
+  paper_count: 2
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
