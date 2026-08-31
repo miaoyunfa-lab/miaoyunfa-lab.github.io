@@ -18,116 +18,18 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
+          import base64
           from pathlib import Path
-
           path = Path('data/people.yaml')
           text = path.read_text(encoding='utf-8')
           marker = '- name: Muhammad Tahir Waseem\n'
+          payload = 'LSBuYW1lOiBNdWhhbW1hZCBUYWhpciBXYXNlZW0KICBlbl9uYW1lOiBNdWhhbW1hZCBUYWhpciBXYXNlZW0KICByb2xlOiDljZrlo6vlkI4KICBncm91cDogcG9zdGRvYwogIGVtYWlsOiB0YWhpcm11aGFtbWFkMTIxM0BnbWFpbC5jb20KICBwaG90bzogL2ltYWdlcy9wZW9wbGUvdGFoaXIuanBnCiAgYmlvOiDnoJTnqbbmlrnlkJHvvJrlj6TnlJ/mgIHlrabvvIhQYWxhZW9lY29sb2d577yJCiAgbWF0Y2hlZF9wYXBlcnM6CiAgLSB0aXRsZTogQWx0ZXJhdGlvbiBvZiBjYXJib25hdGUgY2x1bXBlZCBpc290b3BlIGNvbXBvc2l0aW9uIGJ5IGJ1cmlhbCBoZWF0aW5nIGluIGZvcmVsYW5kIHNlZGltZW50cyBvZiB0aGUgSGltYWxheWEKICAgIGF1dGhvcnM6IE5pdHphbiBZYW55LCBKYXkgUXVhZGUsIFpoZW5uYW4gV2FuZywgTXVoYW1tYWQgVGFoaXIgV2FzZWVtIGFuZCBEYXZpZCBMLiBEZXR0bWFuCiAgICBqb3VybmFsOiBHZW9jaGltaWNhIGV0IENvc21vY2hpbWljYSBBY3RhCiAgICB5ZWFyOiAyMDI1CiAgICBzb3J0X2RhdGU6ICcyMDI1LTAxLTAxJwogICAgZG9pX3VybDogaHR0cHM6Ly9kb2kub3JnLzEwLjEwMTYvai5nY2EuMjAyNS4wMi4wMjMKICAgIHN0YXR1czog5bey5Y+R6KGoCiAgLSB0aXRsZTogTmljaGUgcGFydGl0aW9uaW5nIGFuZCBjb21wZXRpdGlvbiBiZXR3ZWVuIGRpZmZlcmVudCByYWJiaXQgYnJlZWRzIHVzaW5nIHN0YWJsZSBpc290b3BlcwogICAgYXV0aG9yczogVXNtYW4gU2hvdWthdCwgUmFuYSBNYW56b29yIEFobWFkLCBNdWhhbW1hZCBUYWhpciBXYXNlZW0sIEFiZHVsIE1hamlkIEtoYW4gYW5kIFNhbmlhIFp1YmFpZAogICAgam91cm5hbDogV29ybGQgUmFiYml0IFNjaWVuY2UKICAgIHllYXI6IDIwMjQKICAgIHNvcnRfZGF0ZTogJzIwMjQtMDItMDEnCiAgICBkb2lfdXJsOiBodHRwczovL2RvaS5vcmcvMTAuNDk5NS93cnMuMjAyNC4xOTkzNAogICAgc3RhdHVzOiDlt7Llj5HooagKICAtIHRpdGxlOiBHZW5vbWljIGFuYWx5c2lzIG9mIHdvbHZlcyBmcm9tIFBha2lzdGFuIGNsYXJpZmllcyBib3VuZGFyaWVzIGFtb25nIHRocmVlIGRpdmVyZ2VudCB3b2xmIGxpbmVhZ2VzCiAgICBhdXRob3JzOiBMYXVyZW4gTWFlIEhlbm5lbGx5LCBHaHVsYW0gU2Fyd2FyLCBIaXJhIEZhdGltYSwgR2VyYWxkaW5lIFdlcmhhaG4sIEZha2hhciBJLiBBYmJhcywgQWJkdWwgTS4gS2hhbiwgVGFyaXEgTWFobW9vZCwgU2hhbm5vbiBLYWNoZWwsIFphaXJiZWsgS3ViYW55Y2hiZWtvdiwgTXVoYW1tYWQgVC4gV2FzZWVtLCBSdWJhYiBaYWhyYSBOYXF2aSwgQWJkdWwgSGFtaWQsIFlhc2lyIEFiYmFzLCBIYW1lcmEgQWlzaGEsIE11aGFtbWFkIFdhc2VlbSwgTXVoYW1tYWQgRmFyb29xIGFuZCBCZW5qYW1pbiBOLiBTYWNrcwogICAgam91cm5hbDogSm91cm5hbCBvZiBIZXJlZGl0eQogICAgeWVhcjogMjAyNAogICAgc29ydF9kYXRlOiAnMjAyNC0wMS0wMScKICAgIGRvaV91cmw6IGh0dHBzOi8vZG9pLm9yZy8xMC4xMDkzL2poZXJlZC9lc2FkMDY2CiAgICBzdGF0dXM6IOW3suWPkeihqAogIC0gdGl0bGU6IEZlZWRpbmcgTmljaGUgT3ZlcmxhcCBiZXR3ZWVuIE5hdGl2ZSBhbmQgQWxpZW4gRmlzaGVzIGluIFJpdmVyIFN3YXQsIEtoeWJlciBQYWtodHVua2h3YSwgUGFraXN0YW4uCiAgICBhdXRob3JzOiBBbWlyIFNhaWQsIE11aGFtbWFkIEltcmFuLCBNdWhhbW1hZCBUYWhpciBXYXNlZW0sIEFiZHVsIE1hamlkIEtoYW4sIE5vbWFuIEtoYWxpcXVlLCBHaHVsYW0gU2Fyd2FyLCBSYW5hIE1hbnpvb3IgQWhtYWQKICAgIGpvdXJuYWw6IEVudmlyb25tZW50YWwgQmlvbG9neSBvZiBGaXNoZXMKICAgIHllYXI6IDIwMjIKICAgIHNvcnRfZGF0ZTogJzIwMjItMDEtMDEnCiAgICBkb2lfdXJsOiBodHRwczovL2RvaS5vcmcvMTAuMTAwNy9zMTA2NDEtMDIyLTAxMjU0LTQKICAgIHN0YXR1czog5bey5Y+R6KGoCiAgLSB0aXRsZTogRmlyc3QgcmVjb3JkIG9mIEJvZHkgTW9ycGhvbWV0cmljcyBhbmQgQ2hlbWljYWwgSW1tb2JpbGl6YXRpb24gb2YgV29sdmVzIGZyb20gUGFraXN0YW4KICAgIGF1dGhvcnM6IEdodWxhbSBTYXJ3YXIsIEFiZHVsIE1hamlkIEtoYW4sIEZha2hhciBpIEFiYmFzLCBNdWhhbW1hZCBUYWhpciBXYXNlZW0gYW5kIExhdXJlbiBNYWUgSGVubmVsbHkKICAgIGpvdXJuYWw6IFBha2lzdGFuIFZldGVyaW5hcnkgSm91cm5hbAogICAgeWVhcjogMjAyMQogICAgc29ydF9kYXRlOiAnMjAyMS0wNi0wMScKICAgIGRvaV91cmw6IGh0dHBzOi8vZG9pLm9yZy8xMC4yOTI2MS9wYWt2ZXRqLzIwMjEuMDU0CiAgICBzdGF0dXM6IOW3suWPkeihqAogIC0gdGl0bGU6IFN0YWJsZSBJc290b3BlIEFuYWx5c2lzIG9mIE1pZGRsZSBNaW9jZW5lIE1hbW1hbGlhbiBDb21tdW5pdGllcyBmcm9tIHRoZSBTaXdhbGlrIFN1Yi1Hcm91cCBvZiBQYWtpc3RhbgogICAgYXV0aG9yczogTXVoYW1tYWQgVGFoaXIgV2FzZWVtLCBBYmR1bCBNYWppZCBLaGFuLCBKYXkgUXVhZGUsIEFudGhvbnkgS3J1cGEsIERhdmlkIEwuIERldHRtYW4sIEFtdHVyIFJhZmVoIGFuZCBSYW5hIE1hbnpvb3IgQWhtYWQKICAgIGpvdXJuYWw6IEFjdGEgUGFsYWVvbnRvbG9naWNhIFBvbG9uaWNhCiAgICB5ZWFyOiAyMDIxCiAgICBzb3J0X2RhdGU6ICcyMDIxLTA1LTAxJwogICAgZG9pX3VybDogaHR0cHM6Ly9kb2kub3JnLzEwLjQyMDIvYXBwLjAwNzg4LjIwMjAKICAgIHN0YXR1czog5bey5Y+R6KGoCiAgLSB0aXRsZTogJ1BhbGFlb2NsaW1hdGljIGFuZCBWZWdldGF0aW9uYWwgQ2hhbmdlIGluIHRoZSBTaXdhbGlrIHN1Yi1Hcm91cCBhbmQgSXRzIENvbnRlbXBvcmFyeSBSZWdpb25zOiBBIFN0YWJsZSBJc290b3BlIFBlcnNwZWN0aXZlJwogICAgYXV0aG9yczogTXVoYW1tYWQgVGFoaXIgV2FzZWVtLCBBYmR1bCBNYWppZCBLaGFuLCBKYXkgUXVhZGUgYW5kIFNoZXJyeSBWb24gTmVsc29uCiAgICBqb3VybmFsOiBBdXN0cmFsaWFuIEpvdXJuYWwgb2YgRWFydGggU2NpZW5jZXMKICAgIHllYXI6IDIwMjEKICAgIHNvcnRfZGF0ZTogJzIwMjEtMDQtMDEnCiAgICBkb2lfdXJsOiBodHRwczovL2RvaS5vcmcvMTAuMTA4MC8wODEyMDA5OS4yMDIxLjE4OTMyMjEKICAgIHN0YXR1czog5bey5Y+R6KGoCiAgLSB0aXRsZTogUGFsYWVvZGlldGFyeSBhbmQgUGFsYWVvY2xpbWF0aWMgUmVjb25zdHJ1Y3Rpb24gZm9yIExhdGUgTWlvY2VuZSBIaXBwYXJpb25pbmVzIGZyb20gdGhlIFNpd2FsaWtzIG9mIFBha2lzdGFuCiAgICBhdXRob3JzOiBNdWhhbW1hZCBUYWhpciBXYXNlZW0sIEFiZHVsIE1hamlkIEtoYW4sIEFiZHVsIEdoYWZmYXIsIEF5ZXNoYSBJcWJhbCwgUmFuYSBNYW56b29yIEFobWFkCiAgICBqb3VybmFsOiBQYWtpc3RhbiBKb3VybmFsIG9mIFpvb2xvZ3kKICAgIHllYXI6IDIwMjEKICAgIHNvcnRfZGF0ZTogJzIwMjEtMDMtMDEnCiAgICBkb2lfdXJsOiBodHRwczovL2RvaS5vcmcvMTAuMTc1ODIvam91cm5hbC5wanovMjAxODAzMTQwNzAzNTQKICAgIHN0YXR1czog5bey5Y+R6KGoCiAgLSB0aXRsZTogJ1N5c3RlbWF0aWMgU3R1ZHkgb2YgdGhlIG5ldyByZW1haW5zIG9mIFByb3BvdGFtb2Nob2VydXMgaHlzdWRyaWN1cyAoU3VpZGFlOiBNYW1tYWxpYSkgZnJvbSB0aGUgbGF0ZSBNaW9jZW5lLWVhcmx5IFBsaW9jZW5lIE1pZGRsZSBTaXdhbGlrcyAoUGFraXN0YW4pJwogICAgYXV0aG9yczogU2FkYWYgQXNsYW0sIEFiZHVsIE1hamlkIEtoYW4sIFJhbmEgTWFuem9vciBBaG1hZCwgQXllc2hhIElxYmFsLCBNdWhhbW1hZCBUYWhpciBXYXNlZW0KICAgIGpvdXJuYWw6IEFyYWJpYW4gSm91cm5hbCBvZiBHZW9zY2llbmNlcwogICAgeWVhcjogMjAyMQogICAgc29ydF9kYXRlOiAnMjAyMS0wMi0wMScKICAgIGRvaV91cmw6IGh0dHBzOi8vZG9pLm9yZy8xMC4xMDA3L3MxMjUxNy0wMjAtMDYzMDAteQogICAgc3RhdHVzOiDlt7Llj5HooagKICAtIHRpdGxlOiBGaXJzdCBSZWNvcmQgb2YgRW90cmFndXMgbm95ZWkgZnJvbSB0aGUgbGF0ZSBNaW9jZW5lIFNpd2FsaWtzIG9mIFBha2lzdGFuCiAgICBhdXRob3JzOiBBYmR1bCBNYWppZCBLaGFuLCBNdWhhbW1hZCBUYWhpciBXYXNlZW0sIFJhbmEgTWFuem9vciBBaG1hZCwgQXllc2hhIElxYmFsLCBJbXJhbmEgTmF6LCBBbXR1ciBSZmFlaCBhbmQgTXVoYW1tYWQgQW1lZW4KICAgIGpvdXJuYWw6IFBha2lzdGFuIEpvdXJuYWwgb2YgWm9vbG9neQogICAgeWVhcjogMjAyMQogICAgc29ydF9kYXRlOiAnMjAyMS0wMS0wMScKICAgIGRvaV91cmw6IGh0dHBzOi8vZG9pLm9yZy8xMC4xNzU4Mi9qb3VybmFsLnBqei8yMDIwMDEyMjE4MDEzMQogICAgc3RhdHVzOiDlt7Llj5HooagKICAtIHRpdGxlOiAnRmlyc3QgUmVwb3J0IG9mIEVuYW1lbCBIeXBvcGxhc2lhIGluIEV4dGluY3QgVHJhZ3VsaWRzOiBBIE1hcmtlciBCZWFyaW5nIG9uIEhhYml0YXQgQ2hhbmdlJwogICAgYXV0aG9yczogUmFuYSBNYW56b29yIEFobWFkLCBBYmR1bCBNYWppZCBLaGFuLCBBeWVzaGEgSXFiYWwsIEFtdHVyIFJhZmVoLCBNdWhhbW1hZCBUYWhpciBXYXNlZW0gYW5kIE11aGFtbWFkIEFtZWVuCiAgICBqb3VybmFsOiBQYWtpc3RhbiBKb3VybmFsIG9mIFpvb2xvZ3kKICAgIHllYXI6IDIwMjAKICAgIHNvcnRfZGF0ZTogJzIwMjAtMDItMDEnCiAgICBkb2lfdXJsOiBodHRwczovL2RvaS5vcmcvMTAuMTc1ODIvam91cm5hbC5wanovMjAxOTA5MDgxMDA5MTkKICAgIHN0YXR1czog5bey5Y+R6KGoCiAgLSB0aXRsZTogUGFsYWVvZGlldGFyeSBhbmQgUGFsYWVvY2xpbWF0aWMgSW50ZXJwcmV0YXRpb25zIGZvciBIZXJiaXZvcmUgRmF1bmEgZnJvbSBMYXRlIFBsaW9jZW5lIHRvIEVhcmx5IFBsZWlzdG9jZW5lIFNpd2FsaWtzIG9mIFBha2lzdGFuCiAgICBhdXRob3JzOiBBYmR1bCBNYWppZCBLaGFuLCBBeWVzaGEgSXFiYWwsIE11aGFtbWFkIFRhaGlyIFdhc2VlbSwgUmFuYSBNYW56b29yIEFobWFkIGFuZCBadWxmaXFhciBBbGkKICAgIGpvdXJuYWw6IFRoZSBKb3VybmFsIG9mIEFuaW1hbCBhbmQgUGxhbnQgU2NpZW5jZXMKICAgIHllYXI6IDIwMjAKICAgIHNvcnRfZGF0ZTogJzIwMjAtMDEtMDEnCiAgICBkb2lfdXJsOiBodHRwczovL2RvaS5vcmcvMTAuMzY4OTkvSkFQUy4yMDIwLjIuMDA1NwogICAgc3RhdHVzOiDlt7Llj5HooagKICBwYXBlcl9jb3VudDogMTIKICBtYXRjaGVkX2F3YXJkczogW10KICBhd2FyZF9jb3VudDogMAogIG1hdGNoZWRfcGF0ZW50czogW10KICBwYXRlbnRfY291bnQ6IDAK'
           if marker not in text:
-              entry = r'''
-- name: Muhammad Tahir Waseem
-  en_name: Muhammad Tahir Waseem
-  role: 博士后
-  group: postdoc
-  email: tahirmuhammad1213@gmail.com
-  photo: /images/people/tahir.jpg
-  bio: 研究方向：古生态学（Palaeoecology）
-  matched_papers:
-  - title: Alteration of carbonate clumped isotope composition by burial heating in foreland sediments of the Himalaya
-    authors: Nitzan Yany, Jay Quade, Zhennan Wang, Muhammad Tahir Waseem and David L. Dettman
-    journal: Geochimica et Cosmochimica Acta
-    year: 2025
-    sort_date: '2025-01-01'
-    doi_url: https://doi.org/10.1016/j.gca.2025.02.023
-    status: 已发表
-  - title: Niche partitioning and competition between different rabbit breeds using stable isotopes
-    authors: Usman Shoukat, Rana Manzoor Ahmad, Muhammad Tahir Waseem, Abdul Majid Khan and Sania Zubaid
-    journal: World Rabbit Science
-    year: 2024
-    sort_date: '2024-02-01'
-    doi_url: https://doi.org/10.4995/wrs.2024.19934
-    status: 已发表
-  - title: Genomic analysis of wolves from Pakistan clarifies boundaries among three divergent wolf lineages
-    authors: Lauren Mae Hennelly, Ghulam Sarwar, Hira Fatima, Geraldine Werhahn, Fakhar I. Abbas, Abdul M. Khan, Tariq Mahmood, Shannon Kachel, Zairbek Kubanychbekov, Muhammad T. Waseem, Rubab Zahra Naqvi, Abdul Hamid, Yasir Abbas, Hamera Aisha, Muhammad Waseem, Muhammad Farooq and Benjamin N. Sacks
-    journal: Journal of Heredity
-    year: 2024
-    sort_date: '2024-01-01'
-    doi_url: https://doi.org/10.1093/jhered/esad066
-    status: 已发表
-  - title: Feeding Niche Overlap between Native and Alien Fishes in River Swat, Khyber Pakhtunkhwa, Pakistan.
-    authors: Amir Said, Muhammad Imran, Muhammad Tahir Waseem, Abdul Majid Khan, Noman Khalique, Ghulam Sarwar, Rana Manzoor Ahmad
-    journal: Environmental Biology of Fishes
-    year: 2022
-    sort_date: '2022-01-01'
-    doi_url: https://doi.org/10.1007/s10641-022-01254-4
-    status: 已发表
-  - title: First record of Body Morphometrics and Chemical Immobilization of Wolves from Pakistan
-    authors: Ghulam Sarwar, Abdul Majid Khan, Fakhar i Abbas, Muhammad Tahir Waseem and Lauren Mae Hennelly
-    journal: Pakistan Veterinary Journal
-    year: 2021
-    sort_date: '2021-06-01'
-    doi_url: https://doi.org/10.29261/pakvetj/2021.054
-    status: 已发表
-  - title: Stable Isotope Analysis of Middle Miocene Mammalian Communities from the Siwalik Sub-Group of Pakistan
-    authors: Muhammad Tahir Waseem, Abdul Majid Khan, Jay Quade, Anthony Krupa, David L. Dettman, Amtur Rafeh and Rana Manzoor Ahmad
-    journal: Acta Palaeontologica Polonica
-    year: 2021
-    sort_date: '2021-05-01'
-    doi_url: https://doi.org/10.4202/app.00788.2020
-    status: 已发表
-  - title: 'Palaeoclimatic and Vegetational Change in the Siwalik sub-Group and Its Contemporary Regions: A Stable Isotope Perspective'
-    authors: Muhammad Tahir Waseem, Abdul Majid Khan, Jay Quade and Sherry Von Nelson
-    journal: Australian Journal of Earth Sciences
-    year: 2021
-    sort_date: '2021-04-01'
-    doi_url: https://doi.org/10.1080/08120099.2021.1893221
-    status: 已发表
-  - title: Palaeodietary and Palaeoclimatic Reconstruction for Late Miocene Hipparionines from the Siwaliks of Pakistan
-    authors: Muhammad Tahir Waseem, Abdul Majid Khan, Abdul Ghaffar, Ayesha Iqbal, Rana Manzoor Ahmad
-    journal: Pakistan Journal of Zoology
-    year: 2021
-    sort_date: '2021-03-01'
-    doi_url: https://doi.org/10.17582/journal.pjz/20180314070354
-    status: 已发表
-  - title: 'Systematic Study of the new remains of Propotamochoerus hysudricus (Suidae: Mammalia) from the late Miocene-early Pliocene Middle Siwaliks (Pakistan)'
-    authors: Sadaf Aslam, Abdul Majid Khan, Rana Manzoor Ahmad, Ayesha Iqbal, Muhammad Tahir Waseem
-    journal: Arabian Journal of Geosciences
-    year: 2021
-    sort_date: '2021-02-01'
-    doi_url: https://doi.org/10.1007/s12517-020-06300-y
-    status: 已发表
-  - title: First Record of Eotragus noyei from the late Miocene Siwaliks of Pakistan
-    authors: Abdul Majid Khan, Muhammad Tahir Waseem, Rana Manzoor Ahmad, Ayesha Iqbal, Imrana Naz, Amtur Rfaeh and Muhammad Ameen
-    journal: Pakistan Journal of Zoology
-    year: 2021
-    sort_date: '2021-01-01'
-    doi_url: https://doi.org/10.17582/journal.pjz/20200122180131
-    status: 已发表
-  - title: 'First Report of Enamel Hypoplasia in Extinct Tragulids: A Marker Bearing on Habitat Change'
-    authors: Rana Manzoor Ahmad, Abdul Majid Khan, Ayesha Iqbal, Amtur Rafeh, Muhammad Tahir Waseem and Muhammad Ameen
-    journal: Pakistan Journal of Zoology
-    year: 2020
-    sort_date: '2020-02-01'
-    doi_url: https://doi.org/10.17582/journal.pjz/20190908100919
-    status: 已发表
-  - title: Palaeodietary and Palaeoclimatic Interpretations for Herbivore Fauna from Late Pliocene to Early Pleistocene Siwaliks of Pakistan
-    authors: Abdul Majid Khan, Ayesha Iqbal, Muhammad Tahir Waseem, Rana Manzoor Ahmad and Zulfiqar Ali
-    journal: The Journal of Animal and Plant Sciences
-    year: 2020
-    sort_date: '2020-01-01'
-    doi_url: https://doi.org/10.36899/JAPS.2020.2.0057
-    status: 已发表
-  paper_count: 12
-  matched_awards: []
-  award_count: 0
-  matched_patents: []
-  patent_count: 0
-'''
+              entry = base64.b64decode(payload).decode('utf-8')
               if not text.endswith('\n'):
                   text += '\n'
               path.write_text(text + entry, encoding='utf-8')
           PY
-
           rm -f .github/workflows/one-off-add-waseem.yml
 
       - name: Commit changes
