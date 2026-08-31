@@ -1620,3 +1620,100 @@
   matched_patents: []
   patent_count: 0
   photo: /images/people/leiyan.jpg
+- name: Muhammad Tahir Waseem
+  en_name: Muhammad Tahir Waseem
+  role: 博士后
+  group: postdoc
+  email: tahirmuhammad1213@gmail.com
+  photo: /images/people/tahir.jpg
+  bio: 研究方向：古生态学（Palaeoecology）
+  matched_papers:
+  - title: Alteration of carbonate clumped isotope composition by burial heating in foreland sediments of the Himalaya
+    authors: Nitzan Yany, Jay Quade, Zhennan Wang, Muhammad Tahir Waseem and David L. Dettman
+    journal: Geochimica et Cosmochimica Acta
+    year: 2025
+    sort_date: '2025-01-01'
+    doi_url: https://doi.org/10.1016/j.gca.2025.02.023
+    status: 已发表
+  - title: Niche partitioning and competition between different rabbit breeds using stable isotopes
+    authors: Usman Shoukat, Rana Manzoor Ahmad, Muhammad Tahir Waseem, Abdul Majid Khan and Sania Zubaid
+    journal: World Rabbit Science
+    year: 2024
+    sort_date: '2024-02-01'
+    doi_url: https://doi.org/10.4995/wrs.2024.19934
+    status: 已发表
+  - title: Genomic analysis of wolves from Pakistan clarifies boundaries among three divergent wolf lineages
+    authors: Lauren Mae Hennelly, Ghulam Sarwar, Hira Fatima, Geraldine Werhahn, Fakhar I. Abbas, Abdul M. Khan, Tariq Mahmood, Shannon Kachel, Zairbek Kubanychbekov, Muhammad T. Waseem, Rubab Zahra Naqvi, Abdul Hamid, Yasir Abbas, Hamera Aisha, Muhammad Waseem, Muhammad Farooq and Benjamin N. Sacks
+    journal: Journal of Heredity
+    year: 2024
+    sort_date: '2024-01-01'
+    doi_url: https://doi.org/10.1093/jhered/esad066
+    status: 已发表
+  - title: Feeding Niche Overlap between Native and Alien Fishes in River Swat, Khyber Pakhtunkhwa, Pakistan.
+    authors: Amir Said, Muhammad Imran, Muhammad Tahir Waseem, Abdul Majid Khan, Noman Khalique, Ghulam Sarwar, Rana Manzoor Ahmad
+    journal: Environmental Biology of Fishes
+    year: 2022
+    sort_date: '2022-01-01'
+    doi_url: https://doi.org/10.1007/s10641-022-01254-4
+    status: 已发表
+  - title: First record of Body Morphometrics and Chemical Immobilization of Wolves from Pakistan
+    authors: Ghulam Sarwar, Abdul Majid Khan, Fakhar i Abbas, Muhammad Tahir Waseem and Lauren Mae Hennelly
+    journal: Pakistan Veterinary Journal
+    year: 2021
+    sort_date: '2021-06-01'
+    doi_url: https://doi.org/10.29261/pakvetj/2021.054
+    status: 已发表
+  - title: Stable Isotope Analysis of Middle Miocene Mammalian Communities from the Siwalik Sub-Group of Pakistan
+    authors: Muhammad Tahir Waseem, Abdul Majid Khan, Jay Quade, Anthony Krupa, David L. Dettman, Amtur Rafeh and Rana Manzoor Ahmad
+    journal: Acta Palaeontologica Polonica
+    year: 2021
+    sort_date: '2021-05-01'
+    doi_url: https://doi.org/10.4202/app.00788.2020
+    status: 已发表
+  - title: 'Palaeoclimatic and Vegetational Change in the Siwalik sub-Group and Its Contemporary Regions: A Stable Isotope Perspective'
+    authors: Muhammad Tahir Waseem, Abdul Majid Khan, Jay Quade and Sherry Von Nelson
+    journal: Australian Journal of Earth Sciences
+    year: 2021
+    sort_date: '2021-04-01'
+    doi_url: https://doi.org/10.1080/08120099.2021.1893221
+    status: 已发表
+  - title: Palaeodietary and Palaeoclimatic Reconstruction for Late Miocene Hipparionines from the Siwaliks of Pakistan
+    authors: Muhammad Tahir Waseem, Abdul Majid Khan, Abdul Ghaffar, Ayesha Iqbal, Rana Manzoor Ahmad
+    journal: Pakistan Journal of Zoology
+    year: 2021
+    sort_date: '2021-03-01'
+    doi_url: https://doi.org/10.17582/journal.pjz/20180314070354
+    status: 已发表
+  - title: 'Systematic Study of the new remains of Propotamochoerus hysudricus (Suidae: Mammalia) from the late Miocene-early Pliocene Middle Siwaliks (Pakistan)'
+    authors: Sadaf Aslam, Abdul Majid Khan, Rana Manzoor Ahmad, Ayesha Iqbal, Muhammad Tahir Waseem
+    journal: Arabian Journal of Geosciences
+    year: 2021
+    sort_date: '2021-02-01'
+    doi_url: https://doi.org/10.1007/s12517-020-06300-y
+    status: 已发表
+  - title: First Record of Eotragus noyei from the late Miocene Siwaliks of Pakistan
+    authors: Abdul Majid Khan, Muhammad Tahir Waseem, Rana Manzoor Ahmad, Ayesha Iqbal, Imrana Naz, Amtur Rfaeh and Muhammad Ameen
+    journal: Pakistan Journal of Zoology
+    year: 2021
+    sort_date: '2021-01-01'
+    doi_url: https://doi.org/10.17582/journal.pjz/20200122180131
+    status: 已发表
+  - title: 'First Report of Enamel Hypoplasia in Extinct Tragulids: A Marker Bearing on Habitat Change'
+    authors: Rana Manzoor Ahmad, Abdul Majid Khan, Ayesha Iqbal, Amtur Rafeh, Muhammad Tahir Waseem and Muhammad Ameen
+    journal: Pakistan Journal of Zoology
+    year: 2020
+    sort_date: '2020-02-01'
+    doi_url: https://doi.org/10.17582/journal.pjz/20190908100919
+    status: 已发表
+  - title: Palaeodietary and Palaeoclimatic Interpretations for Herbivore Fauna from Late Pliocene to Early Pleistocene Siwaliks of Pakistan
+    authors: Abdul Majid Khan, Ayesha Iqbal, Muhammad Tahir Waseem, Rana Manzoor Ahmad and Zulfiqar Ali
+    journal: The Journal of Animal and Plant Sciences
+    year: 2020
+    sort_date: '2020-01-01'
+    doi_url: https://doi.org/10.36899/JAPS.2020.2.0057
+    status: 已发表
+  paper_count: 12
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
