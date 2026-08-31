@@ -1744,3 +1744,60 @@
   award_count: 0
   matched_patents: []
   patent_count: 0
+
+- name: 谈波
+  en_name: Bo Tan
+  role: 博士后
+  group: postdoc
+  email: tanging0815@163.com
+  photo: /images/people/tanbo.jpg
+  bio: 研究方向：内亚史前人类活动与环境响应
+  matched_papers:
+  - title: Millet in the Bronze Age Altai Mountains: discovery, progress and research prospects
+    authors: Bo Tan, Lei Tang, Chao Lu, et al.
+    journal: npj Heritage Science
+    year: 2025
+    sort_date: '2025-01-01'
+    doi_url: https://doi.org/10.1038/s40494-025-01871-z
+    status: 已发表
+  - title: The Suitability of Prehistoric Human Settlements from the Perspective of the Residents
+    authors: Bo Tan, Chengbang An, Chao Lu, et al.
+    journal: Land
+    year: 2023
+    sort_date: '2023-01-01'
+    doi_url: https://doi.org/10.3390/land12122094
+    status: 已发表
+  - title: Spatial distribution data of cultural sites from the Paleolithic to Bronze Age in Xinjiang, China
+    authors: Bo Tan, Hongwei Wang, Xiaoqin Wang, et al.
+    journal: Scientific Data
+    year: 2022
+    sort_date: '2022-02-01'
+    doi_url: https://doi.org/10.1038/s41597-022-01306-5
+    status: 已发表
+  - title: The study of early human settlement preference and settlement prediction in Xinjiang, China
+    authors: Bo Tan, Hongwei Wang, Xiaoqin Wang, et al.
+    journal: Scientific Reports
+    year: 2022
+    sort_date: '2022-01-01'
+    doi_url: https://doi.org/10.1038/s41597-022-01306-5
+    code_url: http://data.tpdc.ac.cn/en/disallow/bb49a6da-bfd4-4355-9d0c-988eef793ee1/
+    status: 已发表
+  - title: Health Risks and Source Analysis of Heavy Metal Pollution from Dust in Tianshui, China
+    authors: Bo Tan, Hongwei Wang, Xinmin Wang, et al.
+    journal: Minerals
+    year: 2021
+    sort_date: '2021-02-01'
+    doi_url: https://doi.org/10.3390/min11050502
+    status: 已发表
+  - title: Spatial and Temporal Measurement of the Interaction between the County Economy and Rural Transformation in Xinjiang, China
+    authors: Bo Tan, Hongwei Wang, Chen Ma, et al.
+    journal: Sustainability
+    year: 2021
+    sort_date: '2021-01-01'
+    doi_url: https://doi.org/10.3390/su13095318
+    status: 已发表
+  paper_count: 6
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
