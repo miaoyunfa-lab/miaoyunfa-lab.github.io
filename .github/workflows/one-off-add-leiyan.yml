@@ -1,0 +1,56 @@
+name: One-off add Lei Yan alumni
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add alumni profile and photo
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('data/people.yaml')
+          text = path.read_text(encoding='utf-8')
+          marker = '- name: 雷艳\n'
+          if marker not in text:
+              entry = '''
+- name: 雷艳
+  en_name: Yan Lei
+  role: 助理研究员
+  group: alumni
+  email: leiyan_dream@163.com
+  bio: 研究方向：孢粉现代过程、地质灾害，2024年1月毕业，现于甘肃省科学院地质自然灾害防治研究所
+  matched_papers:
+  - title: 'Pollen sources and deposition processes of modern pollen in arid areas and their implications: A case study from the Sugan Lake watershed, NW China'
+    authors: Fangtao Yu, Yongtao Zhao, Xuelian Wang, Yongheng Yang, Linyuan Ma, Haitao Wang, Shuyuan Wang, Yan Lei, Jingyi Xie, Ziyue Zhang, Gen Wang, Shabir Ahmad, Teng Zhang, Yunfa Miao
+    journal: Review of Palaeobotany and Palynology
+    year: 2026
+    sort_date: '2026-10-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2026.105556
+    status: 已发表
+  paper_count: 1
+  matched_awards: []
+  award_count: 0
+  matched_patents: []
+  patent_count: 0
+  photo: /images/people/leiyan.jpg
+'''
+              if not text.endswith('\n'):
+                  text += '\n'
+              text += entry
+              path.write_text(text, encoding='utf-8')
+          PY
+
+          mkdir -p static/images/people
+          printf '%s' '/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIi
