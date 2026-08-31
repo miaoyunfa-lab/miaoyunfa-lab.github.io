@@ -1,0 +1,41 @@
+name: Fix Liu Peilun full photo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-liupeilun-v3.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Switch Liu Peilun to full photo
+        run: |
+          set -euo pipefail
+          test -s static/images/people/liupeilun-v3.jpg
+          file static/images/people/liupeilun-v3.jpg
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('data/people.yaml')
+          text = path.read_text(encoding='utf-8')
+          old = 'photo: /images/people/liupeilun-v2.jpg'
+          new = 'photo: /images/people/liupeilun-v3.jpg'
+          count = text.count(old)
+          if count != 1:
+              raise SystemExit(f'Expected exactly one Liu Peilun v2 photo path, found {count}')
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+          ruby -e "require 'yaml'; YAML.load_file('data/people.yaml'); puts 'YAML OK'"
+      - name: Commit fix
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/people.yaml
+          git commit -m 'Use full Liu Peilun profile photo'
+          git push
