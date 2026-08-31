@@ -1417,7 +1417,7 @@
   award_count: 0
   matched_patents: []
   patent_count: 0
-- name: 秦彦智
+- name: 秦彦智(山西大学联合培养)
   en_name: ""
   role: 博士研究生
   group: students
@@ -1441,7 +1441,7 @@
   matched_patents: []
   patent_count: 0
 
-- name: 邵楠
+- name: 邵楠(山西大学联合培养)
   en_name: Shao Nan
   role: 博士生
   group: students
