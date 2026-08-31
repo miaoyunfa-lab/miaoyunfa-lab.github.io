@@ -54,10 +54,7 @@
           <summary>
             <span class="news-date">{{ $recordDate.Format "2006年1月" }}</span>
             <span class="news-title">{{ $page.Title }}</span>
-            <span class="news-detail-cta">
-              <span class="news-detail-label news-detail-label--closed">【了解详情】</span>
-              <span class="news-detail-label news-detail-label--open">【收起详情】</span>
-            </span>
+            <span class="news-detail-cta">了解详情</span>
           </summary>
           <div class="news-story">
             {{ with $page.Params.image }}
@@ -88,10 +85,7 @@
           <summary>
             <span class="news-date">{{ if $year }}{{ $year }}年{{ else }}—{{ end }}</span>
             <span class="news-title">{{ $award.name }}</span>
-            <span class="news-detail-cta">
-              <span class="news-detail-label news-detail-label--closed">【了解详情】</span>
-              <span class="news-detail-label news-detail-label--open">【收起详情】</span>
-            </span>
+            <span class="news-detail-cta">了解详情</span>
           </summary>
           <div class="news-story">
             {{ with $award.recipient }}<p><strong>获奖人：</strong>{{ . }}</p>{{ end }}
@@ -110,6 +104,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = Array.from(document.querySelectorAll("[data-news-filter]"));
   const items = Array.from(document.querySelectorAll("[data-news-item]"));
+  const detailRows = Array.from(document.querySelectorAll(".news-details"));
 
   function setFilter(filter) {
     filterButtons.forEach(function (button) {
@@ -126,6 +121,18 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       setFilter(button.dataset.newsFilter);
     });
+  });
+
+  detailRows.forEach(function (details) {
+    const label = details.querySelector(".news-detail-cta");
+    if (!label) return;
+
+    function updateDetailLabel() {
+      label.textContent = details.open ? "收起详情" : "了解详情";
+    }
+
+    details.addEventListener("toggle", updateDetailLabel);
+    updateDetailLabel();
   });
 
 });
