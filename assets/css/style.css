@@ -807,6 +807,14 @@ a {
   color: rgba(255, 255, 255, 0.95);
 }
 
+.recruit-line {
+  display: block;
+}
+
+.recruit-nowrap {
+  white-space: nowrap;
+}
+
 .recruit-contact {
   margin: 0;
   padding-top: 1.15rem;
