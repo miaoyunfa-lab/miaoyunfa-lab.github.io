@@ -378,16 +378,6 @@
     recipient: 苗运法
     type: 省级
     details: 中国科学院西北生态环境资源研究院
-  - name: 2024年优秀青年编委
-    type: 中科院
-    recipient: 苗运法
-    details: 中国沙漠编辑部
-    year: 2024
-  - name: 2024年度"优秀编委""优秀审稿人"
-    type: 中国科学地球科学
-    recipient: 苗运法
-    details: 中国科学地球科学
-    year: 2024
   - year: 2023
     name: 国家自然科学基金杰出青年
     recipient: 苗运法
@@ -397,11 +387,6 @@
     name: 甘肃省科普专家
     recipient: 苗运法
     details: 中国科学院西北生态环境资源研究院
-  - name: 2022年度中国科学院兰州分院"优秀研究生导师"
-    type: 中科院
-    recipient: 苗运法
-    details: 中国科学院兰州分院
-    year: 2022
   - year: 2021
     name: 甘肃省领军人才（第二层次）
     recipient: 苗运法
@@ -412,43 +397,16 @@
     recipient: 苗运法
     type: 省级
     details: 中国科学院西北生态环境资源研究院
-  - name: 青促会西北研究院小组2019-2020年突出贡献奖
-    type: 中科院
-    recipient: 苗运法
-    details: 中国科学院西北生态环境资源研究院
-    year: 2020
   - year: 2019
     name: 中组部万人计划青年拔尖人才
     recipient: 苗运法
     type: 国家级
-    details: 中国科学院西北生态环境资源研究院
-  - name: 兰州分院2019年度"优秀青年人才奖"
-    type: 中国科学院
-    recipient: 苗运法
-    details: 中国科学院兰州分院
-    year: 2019
-  - year: 2018
-    name: 中国科学院兰州分院科普讲师团
-    recipient: 苗运法
     details: 中国科学院西北生态环境资源研究院
   - name: 国土资源科学技术奖
     type: 省部级
     recipient: 苗运法
     details: KJ2018-2-26-R6
     year: 2018
-  - name: 2018年度中国科学院青年创新促进会优秀会员
-    type: 省部级
-    recipient: 苗运法
-    details: 中国科学院青年创新促进会
-    year: 2018
-  - name: 政府特殊津贴
-    type: 国家级
-    recipient: 苗运法
-    details: 国务院
-  - name: 中国科学院"西部之光"人才项目
-    type: 省部级
-    recipient: 苗运法
-    details: 中科院人事局
   - name: 甘肃省工人先锋号
     type: 省部级
     recipient: 苗运法
@@ -457,15 +415,7 @@
     type: 省部级
     recipient: 苗运法
     details: 中共甘肃省委
-  - name: 第十一届第二次学术年会
-    type: 中国古生物学会
-    recipient: 苗运法
-    details: 中国古生物学会
-  - name: 科普志愿者
-    type: 中国科学院学部工作局
-    recipient: 苗运法
-    details: 中国科学院学部工作局
-  award_count: 20
+  award_count: 9
   matched_patents:
   - name: FireFly-基于深度学习的微炭屑自动识别软件 V1.0
     type: 软件著作
@@ -1077,8 +1027,13 @@
   paper_count: 3
   matched_awards: []
   award_count: 0
-  matched_patents: []
-  patent_count: 0
+  matched_patents:
+  - name: FireFly-基于深度学习的微炭屑自动识别软件 V1.0
+    type: 软件著作
+    recipient: 张孜越，苗运法，王子英
+    details: 2024.12.09
+    year: 2024
+  patent_count: 1
 - name: 马林原
   en_name: Linyuan Ma
   role: 博士生
@@ -1605,7 +1560,7 @@
   role: 助理研究员
   group: alumni
   email: leiyan_dream@163.com
-  bio: 研究方向：孢粉现代过程、地质灾害，2024年1月毕业，现于甘肃省科学院地质自然灾害防治研究所
+  bio: 研究方向：孢粉现代过程、地质灾害，2024年毕业，现于甘肃省科学院地质自然灾害防治研究所
   matched_papers:
   - title: 'Pollen sources and deposition processes of modern pollen in arid areas and their implications: A case study from the Sugan Lake watershed, NW China'
     authors: Fangtao Yu, Yongtao Zhao, Xuelian Wang, Yongheng Yang, Linyuan Ma, Haitao Wang, Shuyuan Wang, Yan Lei, Jingyi Xie, Ziyue Zhang, Gen Wang, Shabir Ahmad, Teng Zhang, Yunfa Miao
