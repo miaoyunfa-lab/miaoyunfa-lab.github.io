@@ -6,6 +6,32 @@
   <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
   {{ $css := resources.Get "css/style.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ with site.Params.goatcounter_endpoint }}
+  <script data-goatcounter="{{ . }}" async src="https://gc.zgo.at/count.js"></script>
+  {{ end }}
+  {{ with site.Params.goatcounter_total_url }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var target = document.querySelector("[data-goatcounter-total-url]");
+      if (!target) return;
+
+      fetch(target.dataset.goatcounterTotalUrl, { cache: "no-store" })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Unable to load visitor count");
+          return response.json();
+        })
+        .then(function (data) {
+          if (data && data.count) {
+            var number = target.querySelector("[data-visitor-count]");
+            if (number) number.textContent = data.count;
+          }
+        })
+        .catch(function () {
+          target.hidden = true;
+        });
+    });
+  </script>
+  {{ end }}
   {{ if .IsHome }}
     {{ $memberCSS := resources.Get "css/member-cards.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $memberCSS.RelPermalink }}">

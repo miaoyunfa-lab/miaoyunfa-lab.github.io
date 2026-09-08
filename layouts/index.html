@@ -1,6 +1,15 @@
 {{ define "main" }}
 <section class="home-identity" aria-label="课题组名称">
   <h1>{{ site.Params.hero_text }}</h1>
+  {{ with site.Params.goatcounter_total_url }}
+    <div class="home-visitor-counter" data-goatcounter-total-url="{{ . }}" aria-label="网站累计访问量">
+      <span class="home-visitor-counter-icon" aria-hidden="true">◉</span>
+      <span class="home-visitor-counter-copy">
+        <strong class="home-visitor-counter-number" data-visitor-count>—</strong>
+        <span class="home-visitor-counter-label">累计访问</span>
+      </span>
+    </div>
+  {{ end }}
 </section>
 
 <section class="hero-about-layout" aria-label="关于我们与课题组成果展示">

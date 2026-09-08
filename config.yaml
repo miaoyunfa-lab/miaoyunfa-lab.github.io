@@ -10,6 +10,8 @@ params:
   affiliation: "中国科学院西北生态环境资源研究院"
   email: "miaoyunfa@lzb.ac.cn"
   address: "甘肃省兰州市城关区东岗西路320号，730000，中国"
+  goatcounter_endpoint: "https://miaoyunfa.goatcounter.com/count"
+  goatcounter_total_url: "https://miaoyunfa.goatcounter.com/counter/TOTAL.json"
   hero_text: "孢粉学与生态环境研究"
   research_groups:
     - title: "研究方向"
