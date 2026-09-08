@@ -63,12 +63,16 @@ jobs:
 
           python3 - <<'PY' >> "$GITHUB_ENV"
           import os
-          from datetime import datetime, timezone
+          from datetime import datetime, timedelta, timezone
           from zoneinfo import ZoneInfo
 
           local_tz = ZoneInfo(os.environ["timezone"])
           now = datetime.now(local_tz)
           current_hour = now.replace(minute=0, second=0, microsecond=0)
+          # GoatCounter's end boundary can exclude the in-progress hour.
+          # Use the next boundary so the current hour is included in the API
+          # result while future hours still contribute zero pageviews.
+          api_end = current_hour + timedelta(hours=1)
           today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
           tracking_start = datetime.strptime(
               os.environ["tracking_start"], "%Y-%m-%d"
@@ -79,7 +83,7 @@ jobs:
 
           print(f"GOATCOUNTER_API_START={iso_utc(tracking_start)}")
           print(f"GOATCOUNTER_TODAY_START={iso_utc(today_start)}")
-          print(f"GOATCOUNTER_API_END={iso_utc(current_hour)}")
+          print(f"GOATCOUNTER_API_END={iso_utc(api_end)}")
           print(f"GOATCOUNTER_TODAY={now.date().isoformat()}")
           PY
 
