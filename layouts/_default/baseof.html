@@ -18,26 +18,38 @@
       var formatCount = function (value) {
         return value.toLocaleString("zh-CN");
       };
-      fetch(target.dataset.visitorStatsUrl, { cache: "no-store" })
-        .then(function (response) {
-          if (!response.ok) throw new Error("Unable to load visitor statistics");
-          return response.json();
-        })
-        .then(function (data) {
-          var totalValue = Number(data && data.total);
-          var todayValue = Number(data && data.today);
-          if (!Number.isFinite(totalValue) || !Number.isFinite(todayValue)) {
-            throw new Error("Invalid visitor statistics");
-          }
+      var hasLoadedStats = false;
+      var loadStats = function () {
+        var statsUrl = target.dataset.visitorStatsUrl;
+        var separator = statsUrl.indexOf("?") === -1 ? "?" : "&";
+        var requestUrl = statsUrl + separator + "t=" + Date.now();
 
-          var total = target.querySelector("[data-visitor-total]");
-          var today = target.querySelector("[data-visitor-today]");
-          if (total) total.textContent = formatCount(totalValue);
-          if (today) today.textContent = formatCount(todayValue);
-        })
-        .catch(function () {
-          target.hidden = true;
-        });
+        fetch(requestUrl, { cache: "no-store" })
+          .then(function (response) {
+            if (!response.ok) throw new Error("Unable to load visitor statistics");
+            return response.json();
+          })
+          .then(function (data) {
+            var totalValue = Number(data && data.total);
+            var todayValue = Number(data && data.today);
+            if (!Number.isFinite(totalValue) || !Number.isFinite(todayValue)) {
+              throw new Error("Invalid visitor statistics");
+            }
+
+            var total = target.querySelector("[data-visitor-total]");
+            var today = target.querySelector("[data-visitor-today]");
+            if (total) total.textContent = formatCount(totalValue);
+            if (today) today.textContent = formatCount(todayValue);
+            target.hidden = false;
+            hasLoadedStats = true;
+          })
+          .catch(function () {
+            if (!hasLoadedStats) target.hidden = true;
+          });
+      };
+
+      loadStats();
+      window.setInterval(loadStats, 5 * 60 * 1000);
     });
   </script>
   {{ end }}
