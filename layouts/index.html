@@ -1,13 +1,25 @@
 {{ define "main" }}
 <section class="home-identity" aria-label="课题组名称">
   <h1>{{ site.Params.hero_text }}</h1>
-  {{ with site.Params.goatcounter_total_url }}
-    <div class="home-visitor-counter" data-goatcounter-total-url="{{ . }}" aria-label="网站累计访问量">
-      <span class="home-visitor-counter-icon" aria-hidden="true">◉</span>
-      <span class="home-visitor-counter-copy">
-        <strong class="home-visitor-counter-number" data-visitor-count>—</strong>
-        <span class="home-visitor-counter-label">累计访问</span>
-      </span>
+  {{ with site.Params.goatcounter_stats_url }}
+    <div class="home-visitor-counter"
+      data-visitor-stats-url="{{ . | relURL }}"
+      aria-label="网站访问统计">
+      <div class="home-visitor-stat">
+        <span class="home-visitor-stat-icon" aria-hidden="true">◉</span>
+        <span class="home-visitor-stat-copy">
+          <strong class="home-visitor-stat-number" data-visitor-total aria-live="polite">—</strong>
+          <span class="home-visitor-stat-label">累计访问</span>
+        </span>
+      </div>
+      <span class="home-visitor-counter-divider" aria-hidden="true"></span>
+      <div class="home-visitor-stat">
+        <span class="home-visitor-stat-icon" aria-hidden="true">↗</span>
+        <span class="home-visitor-stat-copy">
+          <strong class="home-visitor-stat-number" data-visitor-today aria-live="polite">—</strong>
+          <span class="home-visitor-stat-label">今日访问</span>
+        </span>
+      </div>
     </div>
   {{ end }}
 </section>

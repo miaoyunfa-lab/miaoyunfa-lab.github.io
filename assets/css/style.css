@@ -83,37 +83,50 @@ a[href^="tel:"] {
 .home-visitor-counter {
   display: inline-flex;
   align-items: center;
-  gap: 0.52rem;
-  padding: 0.34rem 0.72rem;
+  gap: 0.78rem;
+  padding: 0.42rem 0.82rem;
   border: 1px solid rgba(15, 118, 110, 0.2);
   border-radius: 999px;
   background: rgba(238, 248, 246, 0.9);
   color: var(--accent-strong);
+  box-shadow: 0 5px 14px rgba(22, 33, 31, 0.05);
   white-space: nowrap;
 }
 
-.home-visitor-counter-icon {
+.home-visitor-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
+}
+
+.home-visitor-stat-icon {
   color: var(--accent);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   line-height: 1;
 }
 
-.home-visitor-counter-copy {
+.home-visitor-stat-copy {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.38rem;
+  flex-direction: column;
+  gap: 0.14rem;
 }
 
-.home-visitor-counter-number {
+.home-visitor-stat-number {
   color: var(--text);
   font-size: 0.98rem;
   line-height: 1;
 }
 
-.home-visitor-counter-label {
+.home-visitor-stat-label {
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1;
+}
+
+.home-visitor-counter-divider {
+  width: 1px;
+  height: 1.7rem;
+  background: rgba(15, 118, 110, 0.2);
 }
 
 .home-identity h1 {

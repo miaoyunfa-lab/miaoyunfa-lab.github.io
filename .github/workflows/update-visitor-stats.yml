@@ -1,0 +1,117 @@
+name: Update visitor statistics
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: visitor-statistics
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Calculate time windows
+        env:
+          CONFIG_BASELINE: "${{ vars.GOATCOUNTER_BASELINE }}"
+          CONFIG_TRACKING_START: "${{ vars.GOATCOUNTER_TRACKING_START }}"
+          CONFIG_TIMEZONE: "${{ vars.GOATCOUNTER_TIMEZONE }}"
+        run: |
+          set -euo pipefail
+
+          baseline="${CONFIG_BASELINE:-}"
+          tracking_start="${CONFIG_TRACKING_START:-}"
+          timezone="${CONFIG_TIMEZONE:-}"
+
+          if [[ -z "$baseline" ]]; then
+            baseline="$(ruby -r yaml -e 'puts YAML.load_file("config.yaml").fetch("params").fetch("goatcounter_baseline")')"
+          fi
+          if [[ -z "$tracking_start" ]]; then
+            tracking_start="$(ruby -r yaml -e 'puts YAML.load_file("config.yaml").fetch("params").fetch("goatcounter_tracking_start")')"
+          fi
+          if [[ -z "$timezone" ]]; then
+            timezone="$(ruby -r yaml -e 'puts YAML.load_file("config.yaml").fetch("params").fetch("goatcounter_timezone")')"
+          fi
+
+          export baseline tracking_start timezone
+          {
+            echo "GOATCOUNTER_BASELINE=$baseline"
+            echo "GOATCOUNTER_TRACKING_START=$tracking_start"
+            echo "GOATCOUNTER_TIMEZONE=$timezone"
+          } >> "$GITHUB_ENV"
+
+          python3 - <<'PY' >> "$GITHUB_ENV"
+          import os
+          from datetime import datetime, timezone
+          from zoneinfo import ZoneInfo
+
+          local_tz = ZoneInfo(os.environ["timezone"])
+          now = datetime.now(local_tz)
+          current_hour = now.replace(minute=0, second=0, microsecond=0)
+          today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+          tracking_start = datetime.strptime(
+              os.environ["tracking_start"], "%Y-%m-%d"
+          ).replace(tzinfo=local_tz)
+
+          def iso_utc(value):
+              return value.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:00:00Z")
+
+          print(f"GOATCOUNTER_API_START={iso_utc(tracking_start)}")
+          print(f"GOATCOUNTER_TODAY_START={iso_utc(today_start)}")
+          print(f"GOATCOUNTER_API_END={iso_utc(current_hour)}")
+          PY
+
+      - name: Fetch GoatCounter statistics
+        env:
+          GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
+          GOATCOUNTER_API_URL: https://miaoyunfa.goatcounter.com/api/v0/stats/total
+        run: |
+          set -euo pipefail
+          if [[ -z "${GOATCOUNTER_API_TOKEN:-}" ]]; then
+            echo "::error::Missing repository secret GOATCOUNTER_API_TOKEN"
+            exit 1
+          fi
+
+          fetch_stats() {
+            curl --fail --silent --show-error --retry 3 \
+              --header "Authorization: Bearer ${GOATCOUNTER_API_TOKEN}" \
+              --header "Content-Type: application/json" \
+              --get "$GOATCOUNTER_API_URL" \
+              --data-urlencode "start=$1" \
+              --data-urlencode "end=$2"
+          }
+
+          since_start="$(fetch_stats "$GOATCOUNTER_API_START" "$GOATCOUNTER_API_END")"
+          today_stats="$(fetch_stats "$GOATCOUNTER_TODAY_START" "$GOATCOUNTER_API_END")"
+          goatcounter_total="$(jq -er '.total' <<< "$since_start")"
+          goatcounter_today="$(jq -er '.total' <<< "$today_stats")"
+          published_total=$((GOATCOUNTER_BASELINE + goatcounter_total))
+
+          mkdir -p static/data
+          tmp_file="$(mktemp)"
+          jq -n \
+            --argjson total "$published_total" \
+            --argjson today "$goatcounter_today" \
+            --argjson baseline "$GOATCOUNTER_BASELINE" \
+            '{total: $total, today: $today, baseline: $baseline}' > "$tmp_file"
+
+          if [[ -f static/data/visitor-stats.json ]] && cmp -s "$tmp_file" static/data/visitor-stats.json; then
+            rm -f "$tmp_file"
+            echo "Visitor statistics unchanged."
+            exit 0
+          fi
+
+          mv "$tmp_file" static/data/visitor-stats.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add static/data/visitor-stats.json
+          git commit -m "Update visitor statistics"
+          git push origin main

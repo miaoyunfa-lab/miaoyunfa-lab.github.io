@@ -9,22 +9,31 @@
   {{ with site.Params.goatcounter_endpoint }}
   <script data-goatcounter="{{ . }}" async src="https://gc.zgo.at/count.js"></script>
   {{ end }}
-  {{ with site.Params.goatcounter_total_url }}
+  {{ with site.Params.goatcounter_stats_url }}
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var target = document.querySelector("[data-goatcounter-total-url]");
+      var target = document.querySelector("[data-visitor-stats-url]");
       if (!target) return;
 
-      fetch(target.dataset.goatcounterTotalUrl, { cache: "no-store" })
+      var formatCount = function (value) {
+        return value.toLocaleString("zh-CN");
+      };
+      fetch(target.dataset.visitorStatsUrl, { cache: "no-store" })
         .then(function (response) {
-          if (!response.ok) throw new Error("Unable to load visitor count");
+          if (!response.ok) throw new Error("Unable to load visitor statistics");
           return response.json();
         })
         .then(function (data) {
-          if (data && data.count) {
-            var number = target.querySelector("[data-visitor-count]");
-            if (number) number.textContent = data.count;
+          var totalValue = Number(data && data.total);
+          var todayValue = Number(data && data.today);
+          if (!Number.isFinite(totalValue) || !Number.isFinite(todayValue)) {
+            throw new Error("Invalid visitor statistics");
           }
+
+          var total = target.querySelector("[data-visitor-total]");
+          var today = target.querySelector("[data-visitor-today]");
+          if (total) total.textContent = formatCount(totalValue);
+          if (today) today.textContent = formatCount(todayValue);
         })
         .catch(function () {
           target.hidden = true;
