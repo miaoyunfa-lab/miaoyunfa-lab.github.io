@@ -31,6 +31,11 @@ a {
   color: var(--link);
 }
 
+a[href^="mailto:"],
+a[href^="tel:"] {
+  text-decoration: none;
+}
+
 .container {
   width: min(1160px, 92vw);
   margin: 0 auto;
@@ -831,7 +836,7 @@ a {
 
 .recruit-contact a {
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .home-research {
