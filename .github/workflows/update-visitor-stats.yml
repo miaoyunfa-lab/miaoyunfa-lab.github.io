@@ -29,12 +29,14 @@ jobs:
           CONFIG_BASELINE: "${{ vars.GOATCOUNTER_BASELINE }}"
           CONFIG_TRACKING_START: "${{ vars.GOATCOUNTER_TRACKING_START }}"
           CONFIG_TIMEZONE: "${{ vars.GOATCOUNTER_TIMEZONE }}"
+          CONFIG_DAILY_MINIMUM: "${{ vars.GOATCOUNTER_DAILY_MINIMUM }}"
         run: |
           set -euo pipefail
 
           baseline="${CONFIG_BASELINE:-}"
           tracking_start="${CONFIG_TRACKING_START:-}"
           timezone="${CONFIG_TIMEZONE:-}"
+          daily_minimum="${CONFIG_DAILY_MINIMUM:-}"
 
           if [[ -z "$baseline" ]]; then
             baseline="$(ruby -r yaml -e 'puts YAML.load_file("config.yaml").fetch("params").fetch("goatcounter_baseline")')"
@@ -45,12 +47,16 @@ jobs:
           if [[ -z "$timezone" ]]; then
             timezone="$(ruby -r yaml -e 'puts YAML.load_file("config.yaml").fetch("params").fetch("goatcounter_timezone")')"
           fi
+          if [[ -z "$daily_minimum" ]]; then
+            daily_minimum="$(ruby -r yaml -e 'puts YAML.load_file("config.yaml").fetch("params").fetch("goatcounter_daily_minimum")')"
+          fi
 
-          export baseline tracking_start timezone
+          export baseline tracking_start timezone daily_minimum
           {
             echo "GOATCOUNTER_BASELINE=$baseline"
             echo "GOATCOUNTER_TRACKING_START=$tracking_start"
             echo "GOATCOUNTER_TIMEZONE=$timezone"
+            echo "GOATCOUNTER_DAILY_MINIMUM=$daily_minimum"
           } >> "$GITHUB_ENV"
 
           python3 - <<'PY' >> "$GITHUB_ENV"
@@ -72,6 +78,7 @@ jobs:
           print(f"GOATCOUNTER_API_START={iso_utc(tracking_start)}")
           print(f"GOATCOUNTER_TODAY_START={iso_utc(today_start)}")
           print(f"GOATCOUNTER_API_END={iso_utc(current_hour)}")
+          print(f"GOATCOUNTER_TODAY={now.date().isoformat()}")
           PY
 
       - name: Fetch GoatCounter statistics
@@ -96,9 +103,43 @@ jobs:
 
           since_start="$(fetch_stats "$GOATCOUNTER_API_START" "$GOATCOUNTER_API_END")"
           today_stats="$(fetch_stats "$GOATCOUNTER_TODAY_START" "$GOATCOUNTER_API_END")"
-          goatcounter_total="$(jq -er '.total' <<< "$since_start")"
           goatcounter_today="$(jq -er '.total' <<< "$today_stats")"
-          published_total=$((GOATCOUNTER_BASELINE + goatcounter_total))
+
+          since_file="$(mktemp)"
+          printf '%s' "$since_start" > "$since_file"
+          effective_total="$(python3 - "$since_file" "$GOATCOUNTER_TRACKING_START" "$GOATCOUNTER_TODAY" "$GOATCOUNTER_DAILY_MINIMUM" <<'PY'
+          import json
+          import sys
+          from datetime import date, timedelta
+
+          stats_file, tracking_start, today, daily_minimum = sys.argv[1:]
+          with open(stats_file, encoding="utf-8") as handle:
+              payload = json.load(handle)
+
+          daily_counts = {}
+          for item in payload.get("stats", []):
+              day = item.get("day")
+              if not day:
+                  continue
+              daily = item.get("daily")
+              if daily is None:
+                  daily = sum(item.get("hourly") or [])
+              daily_counts[day] = int(daily or 0)
+
+          start = date.fromisoformat(tracking_start)
+          end = date.fromisoformat(today)
+          minimum = int(daily_minimum)
+          total = 0
+          current = start
+          while current <= end:
+              total += max(daily_counts.get(current.isoformat(), 0), minimum)
+              current += timedelta(days=1)
+
+          print(total)
+          PY
+          )"
+          rm -f "$since_file"
+          published_total=$((GOATCOUNTER_BASELINE + effective_total))
 
           mkdir -p static/data
           tmp_file="$(mktemp)"
@@ -106,7 +147,8 @@ jobs:
             --argjson total "$published_total" \
             --argjson today "$goatcounter_today" \
             --argjson baseline "$GOATCOUNTER_BASELINE" \
-            '{total: $total, today: $today, baseline: $baseline}' > "$tmp_file"
+            --argjson daily_minimum "$GOATCOUNTER_DAILY_MINIMUM" \
+            '{total: $total, today: $today, baseline: $baseline, daily_minimum: $daily_minimum}' > "$tmp_file"
 
           if [[ -f static/data/visitor-stats.json ]] && cmp -s "$tmp_file" static/data/visitor-stats.json; then
             rm -f "$tmp_file"
