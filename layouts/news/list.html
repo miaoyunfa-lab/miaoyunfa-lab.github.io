@@ -14,7 +14,8 @@
   {{ end }}
   {{ $timeline = $timeline | append (dict "kind" "page" "page" . "date" $recordDate) }}
 {{ end }}
-{{ range site.Data.awards }}
+{{ $awards := partial "unique-items.html" (dict "items" site.Data.awards "field" "name" "includeYear" true) }}
+{{ range $awards }}
   {{ $year := .year | default 0 }}
   {{ $sortDate := time.AsTime (printf "%04d-01-01" $year) }}
   {{ $timeline = $timeline | append (dict "kind" "award" "award" . "year" $year "date" $sortDate) }}

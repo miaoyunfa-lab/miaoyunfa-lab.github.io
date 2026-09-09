@@ -1,0 +1,22 @@
+{{- $items := default (slice) .items -}}
+{{- $field := default "name" .field -}}
+{{- $includeYear := default false .includeYear -}}
+{{- $unique := slice -}}
+{{- $seen := slice -}}
+
+{{- range $items -}}
+  {{- $value := index . $field -}}
+  {{- $key := printf "%v" (default "" $value) | lower -}}
+  {{- $key = replaceRE `\s+` " " $key -}}
+  {{- $key = replaceRE `^\s+|\s+$` "" $key -}}
+  {{- if $includeYear -}}
+    {{- $year := default "" (index . "year") -}}
+    {{- $key = printf "%s|%v" $key $year -}}
+  {{- end -}}
+  {{- if not (in $seen $key) -}}
+    {{- $seen = $seen | append $key -}}
+    {{- $unique = $unique | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $unique -}}

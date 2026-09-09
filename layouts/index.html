@@ -520,7 +520,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <span class="achievement-more">查看全部 →</span>
       </div>
       <ol class="achievement-list">
-        {{ range first 6 (sort site.Data.publications "sort_date" "desc") }}
+        {{ $publications := partial "unique-items.html" (dict "items" site.Data.publications "field" "title") }}
+        {{ range first 6 (sort $publications "sort_date" "desc") }}
         <li>
           <span class="achievement-title">{{ .title }}</span>
           <span class="achievement-meta">{{ .journal }} · {{ .year }}</span>
@@ -536,6 +537,7 @@ document.addEventListener("DOMContentLoaded", function () {
           {{ $patents = $patents | append . }}
         {{ end }}
       {{ end }}
+      {{ $patents = partial "unique-items.html" (dict "items" $patents "field" "name") }}
 
       <a class="achievement-card achievement-card-patents" href="{{ "/patents/" | relURL }}">
         <div class="achievement-head">

@@ -163,7 +163,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 {{ else if eq .Section "publications" }}
-{{ $pubs := sort site.Data.publications "sort_date" "desc" }}
+{{ $pubs := partial "unique-items.html" (dict "items" site.Data.publications "field" "title") }}
+{{ $pubs = sort $pubs "sort_date" "desc" }}
 <section class="publication-overview">
   <p><strong>{{ len $pubs }}</strong> 篇论文（课题组文献库）.</p>
 </section>
@@ -218,6 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {{ $patents = $patents | append . }}
   {{ end }}
 {{ end }}
+{{ $patents = partial "unique-items.html" (dict "items" $patents "field" "name") }}
 {{ $patents = sort $patents "year" "desc" }}
 <section class="publication-overview">
   <p><strong>{{ len $patents }}</strong> 项专利与软著成果（课题组文献库）.</p>
