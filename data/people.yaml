@@ -552,7 +552,7 @@
   en_name: Hao Lu
   role: 副研究员
   group: staff
-  email: h.lu2@uu.nl
+  email: luhao@nieer.ac.cn
   photo: /images/people/luhao.jpg
   bio: 研究方向：古气候重建与模拟
   matched_papers:
@@ -736,6 +736,13 @@
   photo: /images/people/wangshuyuan.jpg
   bio: 研究方向：生态环境与气候变化
   matched_papers:
+  - title: Climatic forcing regulates Holocene vegetation patterns recorded by δ13Corg on the southern Tibetan Plateau
+    authors: Shuyuan Wang, Junhuai Yang, Fuyuan Gao, Cheng Bi, Zixuan Chen, Yongtao Zhao, Yunfa Miao
+    journal: Global and Planetary Change
+    year: 2026
+    sort_date: '2026-09-17'
+    doi_url: https://doi.org/10.1016/j.gloplacha.2026.105710
+    status: 已发表
   - title: Magnetic properties of surface soils in the upper and middle reaches of the Yarlung Zangbo River, southern Tibetan Plateau, and their environmental significance
     authors: Shuyuan Wang, Zixuan Chen, Junhuai Yang, et al.
     journal: Geophysical Journal International
@@ -771,7 +778,7 @@
     sort_date: '2018-71-01'
     doi_url: 10.13207/i.cnki,jnwafu,20l8.01.004
     status: 已发表
-  paper_count: 5
+  paper_count: 6
   matched_awards: []
   award_count: 0
   matched_patents: []
@@ -850,10 +857,38 @@
   en_name: Shabir Ahmad
   role: 博士后
   group: postdoc
-  email: shabir@bs.qau.edu.pk
+  email: shabirahmad@nieer.ac.cn
   photo: /images/people/ahmadshabir.jpg
   bio: 研究方向：古植物学
   matched_papers:
+  - title: A five-year monitoring record of airborne pollen in the Qaidam Basin, and its relationship with climate.
+    authors: 'Wang, H., Miao, Y., Zhao, Y., Lei, Y., Wu, F., & Ahmad, S.'
+    journal: Journal of Arid Environments
+    year: 2026
+    sort_date: '2026-09-17'
+    doi_url: https://doi.org/10.1016/j.jaridenv.2026.105654
+    status: 已发表
+  - title: 'Pollen sources and deposition processes of modern pollen in arid areas and their implications: A case study from the Sugan Lake watershed, NW China.'
+    authors: 'Yu, F., Zhao, Y., Wang, X., Yang, Y., Ma, L., Wang, H., Wang, S., Lei, Y., Xie, J., Zhang, Z. and Wang, G & Ahmad S.'
+    journal: Review of Palaeobotany and Palynology
+    year: 2026
+    sort_date: '2026-10-01'
+    doi_url: https://doi.org/10.1016/j.revpalbo.2026.105556
+    status: 已发表
+  - title: 'Late Cenozoic wildfire evolution in East-Central Asia: A microcharcoal record from the Junggar Basin.'
+    authors: 'Niu, G., Miao, Y., Wang, X., Li, X., Zhang, Z., Zou, Y., & Ahmad, S.'
+    journal: Palaeogeography, Palaeoclimatology, Palaeoecology
+    year: 2025
+    sort_date: '2025-08-01'
+    doi_url: https://doi.org/10.1016/j.palaeo.2025.113488
+    status: 已发表
+  - title: 'Using taxonomic tools to investigate the palynological record of fossil plants from Pakistan.'
+    authors: 'Ahmad, S., Ahmad, M., Rozina, Ullah, A., Shah, H., Shahzad, A., Abdullah, M., Khan, K., Khan, S., Iqbal, R., & Aghayeva, S.'
+    journal: Genetic Resources and Crop Evolution
+    year: 2025
+    sort_date: '2025-09-17'
+    doi_url: https://doi.org/10.1007/s10722-025-02503-y
+    status: 已发表
   - title: Palynological Studies as a Marker for Taxonomic Identifications and Evolution of Taxa Using Advanced Microscopic Techniques.
     authors: Ahmad, S., Ahmad, M., Ullah, A., Shah, H., Shahzad, A., Iqbal, R., & Miao, Y. (
     journal: Journal (Biology Bulletin)
@@ -862,7 +897,7 @@
     doi_url: 10.1134/S1062359025609747
     status: 已发表
     code_url: https://link.springer.com/article/10.1134/S1062359025609747
-  paper_count: 1
+  paper_count: 5
   matched_awards: []
   award_count: 0
   matched_patents: []
@@ -1135,11 +1170,18 @@
 - name: 孙玥晗
   en_name: Yuehan Sun
   role: 硕士生
-  group: students
+  group: alumni
   email: viviansunyuehan@163.com
   photo: /images/people/sunyuehan.jpg
-  bio: 研究方向：城市绿地
+  bio: 研究方向：城市绿地，2026年毕业，现博士就读于北京大学城市与环境学院
   matched_papers:
+  - title: 'How Capability of Physical Activity Moderates the Non-linear Association between Greenspace and Subjective Wellbeing: Evidence Based on COPD Patients in Beijing.'
+    authors: Mi Yao, Ziqiang Liu, Yuehan Sun, Hongjing Pei, Yujing Su, Guanning Jing, Jiapei Xu, Jianhua Chen, Qiaoli Su, Jiao Xu, Xue Jin, Jingyu Hao, Xueying Li, Jing Ma, Ying Wang, Changrui Ren, Shi Wei, Aimei Dong & Longfeng Wu
+    journal: Applied Spatial Analysis and Policy
+    year: 2026
+    sort_date: '2026-09-17'
+    doi_url: https://doi.org/10.1007/s12061-026-09995-w
+    status: 已发表
   - title: 'Urban Green Spaces Under Dual Pressures of Human Activity and Climate Change: A Comprehensive Review'
     authors: Yuehan Sun,Yunfa Miao,Yaguo Zou ,Xiangnan Jing
     journal: Sustainability
@@ -1147,7 +1189,7 @@
     sort_date: '2026-07-01'
     doi_url: https://doi.org/10.3390/su18052365
     status: 已发表
-  paper_count: 1
+  paper_count: 2
   matched_awards: []
   award_count: 0
   matched_patents: []
@@ -1386,6 +1428,7 @@
   - title: 平朔露天煤矿区不同植被恢复类型下土壤碳循环功能基因特征
     authors: 邵楠，刘爽，刘勇，杜自强，李君剑
     journal: 环境科学
+    year: 2026
     doi_url: https://doi.org/10.13227/j.hjkx.202508160
     code_url: https://doi.org/10.13227/j.hjkx.202508160
     status: 已发表
